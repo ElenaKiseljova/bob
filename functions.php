@@ -1,0 +1,169 @@
+<?php 
+// Styles theme
+add_action('wp_enqueue_scripts', 'bob_styles', 3);
+function bob_styles () 
+{
+  wp_enqueue_style('bob-style', get_stylesheet_uri());    
+}
+
+// Scripts theme
+add_action('wp_enqueue_scripts', 'bob_scripts', 5);
+function bob_scripts () 
+{    
+  wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/script.min.js', $deps = array(), $ver = null, $in_footer = true );
+}
+
+add_action( 'after_setup_theme', 'bob_after_setup_theme_function' );
+
+if (!function_exists('bob_after_setup_theme_function')) :
+  function bob_after_setup_theme_function () {
+    load_theme_textdomain('bob', get_template_directory() . '/languages');
+
+    add_theme_support( 'post-thumbnails' );
+    
+    /* ==============================================
+    ********  //Меню
+    =============================================== */
+    register_nav_menu( 'header', 'Хедер' );
+    register_nav_menu( 'footer', 'Футер' );
+    register_nav_menu( 'social', 'Социальные сети' );
+    // register_nav_menu( 'contact', 'Контакты' );
+
+    /* ==============================================
+    ********  //Размеры картирок
+    =============================================== */
+    /* Член команды */
+    // add_image_size( 'member', 440, 440, false);
+
+    /* Проект */
+    // add_image_size( 'project_mobile', 280, 220, false);
+    // add_image_size( 'project_mobile_2x', 560, 440, false);
+
+    // add_image_size( 'project_desktop', 660, 400, false);
+    // add_image_size( 'project_desktop_2x', 1320, 800, false);
+
+    // /* Главная - Первый экран */
+    // add_image_size( 'main_mobile', 320, 450, false);
+    // add_image_size( 'main_mobile_2x', 640, 900, false);
+
+    // add_image_size( 'main_desktop', 1440, 780, false);
+    // add_image_size( 'main_desktop_2x', 2880, 1560, false);
+  }
+endif;
+
+// Init
+add_action( 'init', 'bob_init_function' );
+  
+if (!function_exists('bob_init_function')) :
+  function bob_init_function () 
+  {
+    /* ==============================================
+    ********  //Регистрация кастомных типов постов
+    =============================================== */
+    function register_custom_post_types () 
+    {
+      // Продукция
+      register_post_type( 'products', [
+        'label'  => null,
+        'labels' => [
+          'name'               => 'Продукция', // основное название для типа записи
+          'singular_name'      => 'Продукция', // название для одной записи этого типа
+          'add_new'            => 'Добавить продукцию', // для добавления новой записи
+          'add_new_item'       => 'Добавление продукции', // заголовка у вновь создаваемой записи в админ-панели.
+          'edit_item'          => 'Редактирование продукции', // для редактирования типа записи
+          'new_item'           => 'Новая продукция', // текст новой записи
+          'view_item'          => 'Показать продукцию', // для просмотра записи этого типа.
+          'search_items'       => 'Искать продукцию', // для поиска по этим типам записи
+          'not_found'          => 'Продукция не найдена', // если в результате поиска ничего не было найдено
+          'not_found_in_trash' => 'Продукция не найдена в корзине', // если не было найдено в корзине
+          'parent_item_colon'  => 'Родительская продукция', // для родителей (у древовидных типов) [P.S.ЧЕРТОВА СТРОЧКА РЕАЛЬНО ВАЖНАЯ!!]
+          'menu_name'          => 'Продукция', // название меню
+        ],
+        'description'         => 'Это наша продукция',
+        'public'              => true,
+        'publicly_queryable'  => true, // зависит от public
+        'exclude_from_search' => true, // зависит от public
+        'show_ui'             => true, // зависит от public
+        'show_in_nav_menus'   => true, // зависит от public
+        'show_in_menu'        => true, // показывать ли в меню адмнки
+        'show_in_admin_bar'   => true, // зависит от show_in_menu
+        'show_in_rest'        => true, // добавить в REST API. C WP 4.7
+        'rest_base'           => null, // $post_type. C WP 4.7
+        'menu_position'       => 20,
+        'menu_icon'           => 'dashicons-cart',
+        'hierarchical'        => false,
+        'supports'            => [ 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies'          => [],
+        'has_archive'         => true,
+        'rewrite'             => true,
+        'query_var'           => true,
+      ] );
+    }       
+    
+    register_custom_post_types();
+
+    /* ==============================================
+    ********  //ACF опциональные страницы
+    =============================================== */
+    function bob_create_acf_pages() 
+    {
+      if(function_exists('acf_add_options_page')) {
+        acf_add_options_page(array(
+          'page_title' 	=> 'Настройки для темы Bob Snail',
+          'menu_title'	=> 'Настройки для темы Bob Snail',
+          'menu_slug' 	=> 'bob-settings',
+          'capability'	=> 'edit_posts',
+          'icon_url' => 'dashicons-admin-settings',
+          'position' => 23,
+          'redirect'		=> false,
+        ));
+      }    
+    }
+
+    bob_create_acf_pages();
+  }  
+endif;
+
+/* ==============================================
+  ********  //ACF редактирование набора инструментов редактора
+  =============================================== */
+
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'bob_acf_custom_toolbars'  );
+function bob_acf_custom_toolbars( $toolbars )
+{
+  
+  array_push($toolbars['Full' ][1], 'underline');
+
+  // return $toolbars - IMPORTANT!
+  return $toolbars;
+}
+
+/* ==============================================
+  ********  //Получение ссылок на спецстраницы
+  =============================================== */
+  /**
+   * $type: products
+   */
+  function bob_get_special_page( $type = 'products', $format = 'id' )
+  {
+    $page_name = $type . '_page_id';
+
+    $page_id = get_field( $page_name, 'options' ) ?? null;
+    
+    if ( function_exists( 'pll_get_post' ) ) {
+      $page_id = pll_get_post( $page_id ) ?? $page_id;
+    }
+
+    if ( $format === 'id') {
+      return $page_id;
+    }
+
+    if ( $format === 'url') {
+      $page_url = get_permalink( $page_id );
+    
+      return $page_url;
+    }
+  
+    return;
+  }
+?>

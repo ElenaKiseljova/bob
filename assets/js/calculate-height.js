@@ -1,0 +1,1 @@
+const appHeight=()=>{document.documentElement.style.setProperty("--app-height",`${window.innerHeight}px`)};window.addEventListener("resize",appHeight),appHeight();const mass=document.querySelectorAll(".contact-btn");mass&&mass.forEach((e=>{e.addEventListener("click",(()=>{mobileNav.classList.remove("--show"),document.body.classList.remove("active")}))}));

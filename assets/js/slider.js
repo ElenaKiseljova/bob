@@ -1,0 +1,1 @@
+const swiper=new Swiper(".swiper-js",{loop:!0,speed:1e3,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{clickable:!0,el:".swiper-pagination"},breakpoints:{0:{allowTouchMove:!0},1023:{allowTouchMove:!1}}});
