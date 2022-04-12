@@ -1,9 +1,5 @@
 <?php 
-  get_header(  );
-?>
+  wp_redirect( bob_get_special_page( 'products', 'url'  ) );
 
-<h1>Архив продукции</h1>
-
-<?php 
-  get_footer(  );
+  exit;
 ?>

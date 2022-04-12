@@ -10,7 +10,17 @@ function bob_styles ()
 add_action('wp_enqueue_scripts', 'bob_scripts', 5);
 function bob_scripts () 
 {    
-  wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/script.min.js', $deps = array(), $ver = null, $in_footer = true );
+  if ( is_page_template( 'page-products.php' ) ) {
+    wp_enqueue_script('gsap-script', get_template_directory_uri() . '/assets/js/libs/gsap/gsap.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('scroll-trigger-script', get_template_directory_uri() . '/assets/js/libs/gsap/ScrollTrigger.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('locomotive-scroll-script', get_template_directory_uri() . '/assets/js/libs/locomotive-scroll/locomotive-scroll.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('custom-scroll-script', get_template_directory_uri() . '/assets/js/libs/custom-scroll/custom-scroll.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('animation-script', get_template_directory_uri() . '/assets/js/animation.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('change-color-script', get_template_directory_uri() . '/assets/js/change-color.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('calculate-height-script', get_template_directory_uri() . '/assets/js/calculate-height.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('mobile-menu-script', get_template_directory_uri() . '/assets/js/mobile-menu.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('header-script', get_template_directory_uri() . '/assets/js/header.js', $deps = array(), $ver = null, $in_footer = true );
+  }
 }
 
 add_action( 'after_setup_theme', 'bob_after_setup_theme_function' );
@@ -19,6 +29,9 @@ if (!function_exists('bob_after_setup_theme_function')) :
   function bob_after_setup_theme_function () {
     load_theme_textdomain('bob', get_template_directory() . '/languages');
 
+    /* ==============================================
+    ********  //Картинки постов
+    =============================================== */
     add_theme_support( 'post-thumbnails' );
     
     /* ==============================================
