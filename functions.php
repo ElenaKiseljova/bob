@@ -10,16 +10,24 @@ function bob_styles ()
 add_action('wp_enqueue_scripts', 'bob_scripts', 5);
 function bob_scripts () 
 {    
+  wp_enqueue_script('custom-scroll-script', get_template_directory_uri() . '/assets/js/libs/custom-scroll/custom-scroll.js', $deps = array(), $ver = null, $in_footer = true );
+  wp_enqueue_script('calculate-height-script', get_template_directory_uri() . '/assets/js/calculate-height.js', $deps = array(), $ver = null, $in_footer = true );
+  wp_enqueue_script('mobile-menu-script', get_template_directory_uri() . '/assets/js/mobile-menu.js', $deps = array(), $ver = null, $in_footer = true );
+  wp_enqueue_script('header-script', get_template_directory_uri() . '/assets/js/header.js', $deps = array(), $ver = null, $in_footer = true );
+
   if ( is_page_template( 'page-products.php' ) ) {
     wp_enqueue_script('gsap-script', get_template_directory_uri() . '/assets/js/libs/gsap/gsap.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('scroll-trigger-script', get_template_directory_uri() . '/assets/js/libs/gsap/ScrollTrigger.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('locomotive-scroll-script', get_template_directory_uri() . '/assets/js/libs/locomotive-scroll/locomotive-scroll.js', $deps = array(), $ver = null, $in_footer = true );
-    wp_enqueue_script('custom-scroll-script', get_template_directory_uri() . '/assets/js/libs/custom-scroll/custom-scroll.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('animation-script', get_template_directory_uri() . '/assets/js/animation.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('change-color-script', get_template_directory_uri() . '/assets/js/change-color.js', $deps = array(), $ver = null, $in_footer = true );
-    wp_enqueue_script('calculate-height-script', get_template_directory_uri() . '/assets/js/calculate-height.js', $deps = array(), $ver = null, $in_footer = true );
-    wp_enqueue_script('mobile-menu-script', get_template_directory_uri() . '/assets/js/mobile-menu.js', $deps = array(), $ver = null, $in_footer = true );
-    wp_enqueue_script('header-script', get_template_directory_uri() . '/assets/js/header.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+  
+  if ( is_front_page(  ) ) {
+    wp_enqueue_script('custom-select-script', get_template_directory_uri() . '/assets/js/libs/custom-select.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/js/libs/swiper.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('slider-script', get_template_directory_uri() . '/assets/js/slider.js', $deps = array(), $ver = null, $in_footer = true );
+
   }
 }
 
@@ -45,8 +53,9 @@ if (!function_exists('bob_after_setup_theme_function')) :
     /* ==============================================
     ********  //Размеры картирок
     =============================================== */
-    /* Член команды */
-    // add_image_size( 'member', 440, 440, false);
+    /* Главная - Слайдер */
+    add_image_size( 'slider_mobile', 455, 750, true);
+    add_image_size( 'slider_desktop', 1920, 1080, false);
 
     /* Проект */
     // add_image_size( 'project_mobile', 280, 220, false);
@@ -178,5 +187,50 @@ function bob_acf_custom_toolbars( $toolbars )
     }
   
     return;
+  }
+
+  /* ==============================================
+  ********  //Recognize Country by Geo
+  =============================================== */
+  function bob_get_ip() {
+    $keys = [
+      'HTTP_CLIENT_IP',
+      'HTTP_X_FORWARDED_FOR',
+      'REMOTE_ADDR'
+    ];
+
+    foreach ($keys as $key) {
+      if (!empty($_SERVER[$key])) {
+        $ip = trim(end(explode(',', $_SERVER[$key])));
+        if (filter_var($ip, FILTER_VALIDATE_IP)) {
+          return $ip;
+        }
+      }
+    }
+  }
+
+  function bob_get_country_code() {
+    $ip = bob_get_ip();
+
+    // подключим файл SxGeo.php
+    require_once TEMPLATEPATH . '/SxGeo/SxGeo.php';
+
+    // создадим объект SxGeo (
+    // 1 аргумент – имя файла базы данных, 
+    // 2 аргумент – режим работы: 
+    //   SXGEO_FILE (по умолчанию), 
+    //   SXGEO_BATCH  (пакетная обработка, увеличивает скорость при обработке множества IP за раз), 
+    //   SXGEO_MEMORY (кэширование БД в памяти, еще увеличивает скорость пакетной обработки, но требует больше памяти, для загрузки всей базы в память).
+    
+    if (class_exists( 'SxGeo' ) && $ip) {
+      $SxGeo = new SxGeo( TEMPLATEPATH . '/SxGeo/SxGeo.dat', SXGEO_BATCH | SXGEO_MEMORY );
+
+      // получаем двухзначный ISO-код страны (RU, UA и др.)
+      $country_code = $SxGeo->getCountry($ip);
+    }
+    
+    $country_code = ($country_code && !empty($country_code)) ? $country_code : 'UA';
+
+    return $country_code;
   }
 ?>
