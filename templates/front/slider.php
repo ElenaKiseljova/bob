@@ -1,7 +1,7 @@
 <?php 
   $list = get_sub_field( 'list' );
 ?>
-<?php if ($list && !empty($list) && !is_wp_error( $list )) : ?>
+<?php if ($list && is_array($list) && !empty($list) && !is_wp_error( $list )) : ?>
   <section class="slider">
     <div class="swiper swiper-js slider__container">
       <div class="swiper-wrapper slider__wrapper">

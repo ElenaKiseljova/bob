@@ -22,25 +22,13 @@
         if( get_row_layout() == 'slider' ):
             get_template_part( 'templates/front/slider' );
 
-        // // Case: Unique Team layout.
-        // elseif( get_row_layout() == 'unique_team' ):
-        //   get_template_part( 'templates/front/unique_team' );
+        // Case: Composition layout.
+        elseif( get_row_layout() == 'composition' ):
+          get_template_part( 'templates/front/composition' );
         
-        // // Case: CEO layout.
-        // elseif( get_row_layout() == 'ceo' ):
-        //   get_template_part( 'templates/front/ceo' );
-
-        // // Case: Services layout.
-        // elseif( get_row_layout() == 'services' ): 
-        //     get_template_part( 'templates/front/services' ); 
-
-        // // Case: Projects layout.
-        // elseif( get_row_layout() == 'projects' ): 
-        //   get_template_part( 'templates/front/projects' ); 
-        
-        // // Case: Selected without text layout.
-        // elseif( get_row_layout() == 'selected' ): 
-        //   get_template_part( 'templates/front/selected' ); 
+        // Case: Fruit rolls layout.
+        elseif( get_row_layout() == 'fruit-rolls' ):
+          get_template_part( 'templates/front/fruit-rolls' );
                   
         endif;
 

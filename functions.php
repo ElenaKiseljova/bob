@@ -188,49 +188,4 @@ function bob_acf_custom_toolbars( $toolbars )
   
     return;
   }
-
-  /* ==============================================
-  ********  //Recognize Country by Geo
-  =============================================== */
-  function bob_get_ip() {
-    $keys = [
-      'HTTP_CLIENT_IP',
-      'HTTP_X_FORWARDED_FOR',
-      'REMOTE_ADDR'
-    ];
-
-    foreach ($keys as $key) {
-      if (!empty($_SERVER[$key])) {
-        $ip = trim(end(explode(',', $_SERVER[$key])));
-        if (filter_var($ip, FILTER_VALIDATE_IP)) {
-          return $ip;
-        }
-      }
-    }
-  }
-
-  function bob_get_country_code() {
-    $ip = bob_get_ip();
-
-    // подключим файл SxGeo.php
-    require_once TEMPLATEPATH . '/SxGeo/SxGeo.php';
-
-    // создадим объект SxGeo (
-    // 1 аргумент – имя файла базы данных, 
-    // 2 аргумент – режим работы: 
-    //   SXGEO_FILE (по умолчанию), 
-    //   SXGEO_BATCH  (пакетная обработка, увеличивает скорость при обработке множества IP за раз), 
-    //   SXGEO_MEMORY (кэширование БД в памяти, еще увеличивает скорость пакетной обработки, но требует больше памяти, для загрузки всей базы в память).
-    
-    if (class_exists( 'SxGeo' ) && $ip) {
-      $SxGeo = new SxGeo( TEMPLATEPATH . '/SxGeo/SxGeo.dat', SXGEO_BATCH | SXGEO_MEMORY );
-
-      // получаем двухзначный ISO-код страны (RU, UA и др.)
-      $country_code = $SxGeo->getCountry($ip);
-    }
-    
-    $country_code = ($country_code && !empty($country_code)) ? $country_code : 'UA';
-
-    return $country_code;
-  }
 ?>
