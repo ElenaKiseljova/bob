@@ -10,24 +10,32 @@ function bob_styles ()
 add_action('wp_enqueue_scripts', 'bob_scripts', 5);
 function bob_scripts () 
 {    
+  wp_enqueue_script('gsap-script', get_template_directory_uri() . '/assets/js/libs/gsap/gsap.js', $deps = array(), $ver = null, $in_footer = true );
+  wp_enqueue_script('scroll-trigger-script', get_template_directory_uri() . '/assets/js/libs/gsap/ScrollTrigger.js', $deps = array(), $ver = null, $in_footer = true );
+  wp_enqueue_script('custom-select-script', get_template_directory_uri() . '/assets/js/libs/custom-select.js', $deps = array(), $ver = null, $in_footer = true );
+
   wp_enqueue_script('custom-scroll-script', get_template_directory_uri() . '/assets/js/libs/custom-scroll/custom-scroll.js', $deps = array(), $ver = null, $in_footer = true );
   wp_enqueue_script('calculate-height-script', get_template_directory_uri() . '/assets/js/calculate-height.js', $deps = array(), $ver = null, $in_footer = true );
   wp_enqueue_script('mobile-menu-script', get_template_directory_uri() . '/assets/js/mobile-menu.js', $deps = array(), $ver = null, $in_footer = true );
   wp_enqueue_script('header-script', get_template_directory_uri() . '/assets/js/header.js', $deps = array(), $ver = null, $in_footer = true );
 
   if ( is_page_template( 'page-products.php' ) ) {
-    wp_enqueue_script('gsap-script', get_template_directory_uri() . '/assets/js/libs/gsap/gsap.js', $deps = array(), $ver = null, $in_footer = true );
-    wp_enqueue_script('scroll-trigger-script', get_template_directory_uri() . '/assets/js/libs/gsap/ScrollTrigger.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('locomotive-scroll-script', get_template_directory_uri() . '/assets/js/libs/locomotive-scroll/locomotive-scroll.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('animation-script', get_template_directory_uri() . '/assets/js/animation.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('change-color-script', get_template_directory_uri() . '/assets/js/change-color.js', $deps = array(), $ver = null, $in_footer = true );
   }
   
   if ( is_front_page(  ) ) {
-    wp_enqueue_script('custom-select-script', get_template_directory_uri() . '/assets/js/libs/custom-select.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/js/libs/swiper.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('slider-script', get_template_directory_uri() . '/assets/js/slider.js', $deps = array(), $ver = null, $in_footer = true );
+  }
 
+  if ( is_page_template( 'single-products-fruit-rolls.php' ) ) {
+    wp_enqueue_script('motion-path-script', get_template_directory_uri() . '/assets/js/libs/gsap/motion-path.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('animation-rolls-script', get_template_directory_uri() . '/assets/js/animation-rolls.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('tabs-script', get_template_directory_uri() . '/assets/js/tabs.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('background-fill-script', get_template_directory_uri() . '/assets/js/background-fill.js', $deps = array(), $ver = null, $in_footer = true );
   }
 }
 
@@ -164,7 +172,7 @@ function bob_acf_custom_toolbars( $toolbars )
   ********  //Получение ссылок на спецстраницы
   =============================================== */
   /**
-   * $type: products
+   * $type: products, shops
    */
   function bob_get_special_page( $type = 'products', $format = 'id' )
   {

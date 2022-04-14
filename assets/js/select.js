@@ -1,1 +1,0 @@
-const select1=new CustomSelect("#select-1");
