@@ -28,3 +28,30 @@ input[type=radio].visually-hidden {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%)
 }
+
+.form__block br {
+  display: none;
+}
+
+.form__block .wpcf7-form-control-wrap {
+  position: static;
+
+  width: 100%;
+}
+
+.form__block .wpcf7-not-valid-tip {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  
+  color: #e62856;
+}
+
+.form__block .wpcf7-not-valid-tip,
+.form .wpcf7-response-output {
+  font-family: Circe;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}

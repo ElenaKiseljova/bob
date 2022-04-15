@@ -38,8 +38,19 @@ function bob_scripts ()
   if ( is_singular( 'products') ) {
     wp_enqueue_script('tabs-script', get_template_directory_uri() . '/assets/js/tabs.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+
+  if ( is_singular( 'products') || (is_front_page(  ) && !is_home(  )) ) {
     wp_enqueue_script('background-fill-script', get_template_directory_uri() . '/assets/js/background-fill.js', $deps = array(), $ver = null, $in_footer = true );
   }
+
+  if ( is_page_template( 'page-partners.php' ) ) {
+    wp_enqueue_script('select-script', get_template_directory_uri() . '/assets/js/custom-select.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+
+  wp_enqueue_script('maskinput-script', get_template_directory_uri() . '/assets/js/libs/maskinput.js', $deps = array('jquery'), $ver = null, $in_footer = true );
+
+  wp_enqueue_script('additional-script', get_template_directory_uri() . '/assets/js/additional.js', $deps = array('jquery'), $ver = null, $in_footer = true );
 }
 
 add_action( 'after_setup_theme', 'bob_after_setup_theme_function' );
@@ -175,7 +186,7 @@ function bob_acf_custom_toolbars( $toolbars )
   ********  //Получение ссылок на спецстраницы
   =============================================== */
   /**
-   * $type: products, shops
+   * $type: products, shops, thanks
    */
   function bob_get_special_page( $type = 'products', $format = 'id' )
   {
@@ -198,5 +209,16 @@ function bob_acf_custom_toolbars( $toolbars )
     }
   
     return;
+  }
+
+  /* ==============================================
+  ********  //Класс форм
+  =============================================== */
+  add_filter( 'wpcf7_form_class_attr', 'bob_filter_cf7_class' );
+
+  function bob_filter_cf7_class( $class ){
+    $class .= ' partners__form form';
+
+    return $class;
   }
 ?>
