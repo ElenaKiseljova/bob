@@ -7,10 +7,7 @@
     <div class="partners__inner">
       <div class="partners__text">
         <?php the_content(); ?>
-      </div>
-      <?= 
-        do_shortcode( '[contact-form-7 id="248" title="Партнерам"]' );
-      ?>     
+      </div>   
     </div>
   </div>
 </section>
