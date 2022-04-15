@@ -21,7 +21,7 @@
     $background = $archive['background'] ?? '';
 
     $button_text = $archive['button_text'] ?? '';
-    $button_text = !empty($button_text) ? $button_text : __( 'Знайди', 'bob' );
+    $button_text = !empty($button_text) ? $button_text : __( 'Знайди свій смак', 'bob' );
   ?>
 
   <div class="product__block block-<?= $index; ?>">

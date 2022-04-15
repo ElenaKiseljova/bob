@@ -33,6 +33,9 @@ function bob_scripts ()
   if ( is_page_template( 'single-products-fruit-rolls.php' ) ) {
     wp_enqueue_script('motion-path-script', get_template_directory_uri() . '/assets/js/libs/gsap/motion-path.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('animation-rolls-script', get_template_directory_uri() . '/assets/js/animation-rolls.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+
+  if ( is_singular( 'products') ) {
     wp_enqueue_script('tabs-script', get_template_directory_uri() . '/assets/js/tabs.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('background-fill-script', get_template_directory_uri() . '/assets/js/background-fill.js', $deps = array(), $ver = null, $in_footer = true );

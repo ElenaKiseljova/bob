@@ -10,13 +10,6 @@
   <?= $title; ?>
 </h2>
 
-<div class="composition__snail-top">
-  <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-rolls.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
-  <div class="composition__snail-text">
-    <p>А ще їх можна розкручувати!</p>
-  </div>
-</div>
-
 <div class="composition__wrapper">
   <svg
     width="100%"

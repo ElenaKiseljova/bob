@@ -6814,9 +6814,33 @@ body.color {
           flex-direction: column;
 }
 
+.form__error {
+  position: absolute;
+  bottom: -25px;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  color: #e62856;
+}
+
 .form__select {
   max-width: 100%;
   width: 100%;
+}
+
+.form__select.select_show .select__toggle::after {
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: translateY(-50%) rotateX(180deg);
+          transform: translateY(-50%) rotateX(180deg);
+}
+
+.form__select #select-4 .select__toggle {
+  padding-right: 60px;
 }
 
 .form__select--mobile {
@@ -6832,13 +6856,21 @@ body.color {
 }
 
 .form__select .select__toggle {
+  text-align: left;
   padding-top: 13px;
   padding-bottom: 13px;
   font-size: 20px;
   padding-left: 28px;
+  position: relative;
 }
 
 .form__select .select__toggle::after {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   background: url(../img/icons/arrow-line-down.svg) no-repeat center;
 }
 
@@ -6858,6 +6890,10 @@ body.color {
           justify-content: space-between;
   margin-bottom: 45px;
   position: relative;
+}
+
+.form__block--error .form__input {
+  border: 1px solid red;
 }
 
 .form__block:last-child {
@@ -6909,6 +6945,7 @@ body.color {
   font-size: 20px;
   color: #043314;
   opacity: 0.5;
+  width: 100%;
 }
 
 .form__input::-moz-placeholder {
@@ -6918,6 +6955,7 @@ body.color {
   font-size: 20px;
   color: #043314;
   opacity: 0.5;
+  width: 100%;
 }
 
 .form__input:-ms-input-placeholder {
@@ -6927,6 +6965,7 @@ body.color {
   font-size: 20px;
   color: #043314;
   opacity: 0.5;
+  width: 100%;
 }
 
 .form__input::-ms-input-placeholder {
@@ -6936,6 +6975,7 @@ body.color {
   font-size: 20px;
   color: #043314;
   opacity: 0.5;
+  width: 100%;
 }
 
 .form__input::placeholder {
@@ -6945,6 +6985,7 @@ body.color {
   font-size: 20px;
   color: #043314;
   opacity: 0.5;
+  width: 100%;
 }
 
 .footer {
@@ -8935,6 +8976,10 @@ body.color {
     padding-top: 92px;
   }
 
+  .partners__text {
+    margin-bottom: 48px;
+  }
+
   .form__input {
     padding: 13px 18px;
   }
@@ -8944,6 +8989,7 @@ body.color {
   }
 
   .form__select .select__toggle {
+    display: block;
     white-space: nowrap;
     /* Текст не переносится */
     overflow: hidden;
@@ -8955,7 +9001,7 @@ body.color {
   }
 
   .form__select .select__toggle::after {
-    margin-left: 10px;
+    right: 13px;
   }
 
   .form__block::before {
@@ -8972,9 +9018,11 @@ body.color {
   }
 
   .footer {
-    background-size: 110%;
-    overflow: visible;
     height: 500px;
+  }
+
+  .footer__background-mobile {
+    display: block;
   }
 
   .footer__background svg {
@@ -8994,6 +9042,8 @@ body.color {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
+    top: 8px;
   }
 
   .footer__nav .nav__list {

@@ -1,7 +1,16 @@
-<section class="composition">
+<?php 
+  global $class;
+
+  if ( !isset($class) ) {
+    $class = '';
+  }
+?>
+<section class="composition <?= $class; ?>">
   <div class="container">
     <div class="composition__inner">
       <?php 
+        get_template_part( 'templates/product/composition-bob', 'top' );
+      
         // Check value exists.
         if( have_rows('content') ):
 
@@ -34,6 +43,6 @@
   </div>
 
   <?php 
-    get_template_part( 'templates/product/bob-right' );
+    get_template_part( 'templates/product/composition-bob', 'right' );
   ?>
 </section>

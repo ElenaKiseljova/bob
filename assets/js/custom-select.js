@@ -1,0 +1,1 @@
+for(let e=1;e<6;e++){if(document.querySelector(`#select-${e}`)){new CustomSelect(`#select-${e}`)}}
