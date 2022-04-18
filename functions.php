@@ -38,6 +38,7 @@ function bob_scripts ()
   if ( is_singular( 'products') ) {
     wp_enqueue_script('tabs-script', get_template_directory_uri() . '/assets/js/tabs.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('card-flip-script', get_template_directory_uri() . '/assets/js/card-flip.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
   if ( is_singular( 'products') || (is_front_page(  ) && !is_home(  )) ) {

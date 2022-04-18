@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Bob Snail\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-15 17:26+0000\n"
-"PO-Revision-Date: 2022-04-15 17:27+0000\n"
+"PO-Revision-Date: 2022-04-18 10:22+0000\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -32,6 +32,10 @@ msgstr ""
 msgid "Webnauts"
 msgstr ""
 
+#: templates/product/tabs.php:128
+msgid "Інгредієнти:"
+msgstr ""
+
 #: templates/product/advantages.php:9
 msgid "А ти - розкручуєш, щоб насолода була до-о-овшою!"
 msgstr ""
@@ -54,6 +58,10 @@ msgstr ""
 
 #. Name of the template
 msgid "Детское пюрэ"
+msgstr ""
+
+#: templates/product/tabs.php:114
+msgid "Дивитися інгредієнти"
 msgstr ""
 
 #: templates/product/top.php:28 templates/products/item.php:24
@@ -121,7 +129,7 @@ msgid ""
 "Я уважно прочитаю <br>та невдовзі відповім. <br>Не забудь перевірити email!"
 msgstr ""
 
-#: templates/product/tabs.php:93
+#: templates/product/tabs.php:144
 msgid "де купити"
 msgstr ""
 
