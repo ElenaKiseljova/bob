@@ -221,4 +221,24 @@ function bob_acf_custom_toolbars( $toolbars )
 
     return $class;
   }
+
+  /* ==============================================
+  ********  //Отключение автозаполнения полей CF7
+  =============================================== */
+  add_filter( 'wpcf7_form_elements', 'bob_wpcf7_form_elements' );
+  function bob_wpcf7_form_elements( $content ) {
+      $str_pos = strpos( $content, 'name="full-name"' );
+      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+
+      $str_pos = strpos( $content, 'name="email"' );
+      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+
+      $str_pos = strpos( $content, 'name="social"' );
+      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+
+      $str_pos = strpos( $content, 'name="phone"' );
+      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+
+      return $content;
+  }
 ?>

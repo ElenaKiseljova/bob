@@ -1,0 +1,1 @@
+const cards=document.querySelectorAll(".content__wrapper");cards&&cards.forEach((c=>{c.addEventListener("click",(e=>{c.classList.toggle("active")}))}));

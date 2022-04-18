@@ -26,8 +26,9 @@
     if (phoneBlock) {
       const phoneSelect = phoneBlock.querySelector('.form__select');
       const phoneInput = phoneBlock.querySelector('input[name="phone"]');
+      const phoneCodeInput = phoneBlock.querySelector('input[name="phone-code"]');
 
-      if (phoneSelect && phoneInput) {
+      if (phoneSelect && phoneInput && phoneCodeInput) {
         $('input[name="phone"]').inputmask({
           mask: "99 999-99-99",
           greedy: !1,
@@ -44,155 +45,84 @@
           phoneSelectItem.addEventListener('click', () => {
             phoneInput.value = '';
 
+            let attr = {
+              greedy: !1,
+              clearIncomplete: !0,
+              placeholder: 'X',
+              rightAlign: !1,
+              showMaskOnHover: !1,
+              showMaskOnFocus: !0
+            };
+
             const code = phoneSelectItem.dataset.value ?? '';
 
             switch (code) {
               case 'ua':
-                $('input[name="phone"]').inputmask({
-                  mask: "99 999-99-99",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '99 999-99-99';
 
                 break;
 
               case 'pl':
-                $('input[name="phone"]').inputmask({
-                  mask: "999-999-999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '999-999-999';
 
                 break;
 
               case 'cz':
-                $('input[name="phone"]').inputmask({
-                  mask: "999-999-999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '999-999-999';
 
                 break;
 
               case 'lt':
-                $('input[name="phone"]').inputmask({
-                  mask: "99 999-99-99",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '99 999-99-99';
 
                 break;
 
               case 'lv':
-                $('input[name="phone"]').inputmask({
-                  mask: "9999-9999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '9999-9999';
 
                 break;
 
               case 'mda':
-                $('input[name="phone"]').inputmask({
-                  mask: "999-99-99",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '999-99-99';
 
                 break;
 
               case 'est':
-                $('input[name="phone"]').inputmask({
-                  mask: "99 999-999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '99 999-999';
 
                 break;
 
               case 'rou':
-                $('input[name="phone"]').inputmask({
-                  mask: "999-999-999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '999-999-999';
 
                 break;
 
               case 'bel':
-                $('input[name="phone"]').inputmask({
-                  mask: "999-999-999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '999-999-999';
 
                 break;
 
               case 'hun':
-                $('input[name="phone"]').inputmask({
-                  mask: "9 999-9999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '9 999-9999';
 
                 break;
 
               case 'svk':
-                $('input[name="phone"]').inputmask({
-                  mask: "9 999-9999",
-                  greedy: !1,
-                  clearIncomplete: !0,
-                  placeholder: "_",
-                  rightAlign: !1,
-                  showMaskOnHover: !1,
-                  showMaskOnFocus: !0
-                });
+                attr['mask'] = '9 999-9999';
 
                 break;
 
               default:
                 break;
             }
+
+            $('input[name="phone"]').inputmask(attr);
+
+            const codeText = phoneSelectItem.textContent ?? '';
+
+            phoneCodeInput.value = codeText.trim();
+
+            console.log(phoneCodeInput.value);
           });
         });
       }
