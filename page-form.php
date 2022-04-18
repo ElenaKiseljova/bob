@@ -1,6 +1,6 @@
 <?php 
   /**
-   * Template Name: Партнёрам
+   * Template Name: Форма
    * Template Post Type: page
    */
 ?>

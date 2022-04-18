@@ -45,7 +45,7 @@ function bob_scripts ()
     wp_enqueue_script('background-fill-script', get_template_directory_uri() . '/assets/js/background-fill.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
-  if ( is_page_template( 'page-partners.php' ) ) {
+  if ( is_page_template( 'page-form.php' ) ) {
     wp_enqueue_script('select-script', get_template_directory_uri() . '/assets/js/custom-select.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
