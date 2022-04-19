@@ -87,7 +87,7 @@
             <ul class="content__list">
               <?php foreach ($products as $key => $product) : ?>
                 <?php 
-                  $image = ($product['image'] && is_array($product['image'])) ? $product['image']['sizes']['medium'] : '';
+                  $image = $product['image'] ?? '';
 
                   $title = $product['title'] ?? '';
                   
