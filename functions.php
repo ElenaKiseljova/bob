@@ -75,7 +75,7 @@ if (!function_exists('bob_after_setup_theme_function')) :
     register_nav_menu( 'header', 'Хедер' );
     register_nav_menu( 'footer', 'Футер' );
     register_nav_menu( 'social', 'Социальные сети' );
-    // register_nav_menu( 'contact', 'Контакты' );
+    register_nav_menu( '404', '404' );
 
     /* ==============================================
     ********  //Размеры картирок
@@ -83,20 +83,6 @@ if (!function_exists('bob_after_setup_theme_function')) :
     /* Главная - Слайдер */
     add_image_size( 'slider_mobile', 455, 750, true);
     add_image_size( 'slider_desktop', 1920, 1080, false);
-
-    /* Проект */
-    // add_image_size( 'project_mobile', 280, 220, false);
-    // add_image_size( 'project_mobile_2x', 560, 440, false);
-
-    // add_image_size( 'project_desktop', 660, 400, false);
-    // add_image_size( 'project_desktop_2x', 1320, 800, false);
-
-    // /* Главная - Первый экран */
-    // add_image_size( 'main_mobile', 320, 450, false);
-    // add_image_size( 'main_mobile_2x', 640, 900, false);
-
-    // add_image_size( 'main_desktop', 1440, 780, false);
-    // add_image_size( 'main_desktop_2x', 2880, 1560, false);
   }
 endif;
 
