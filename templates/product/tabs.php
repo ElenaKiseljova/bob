@@ -26,7 +26,18 @@
       src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/banana.svg"
       alt="<?=get_bloginfo( 'name' ); ?>"
     />
-  <?php else : ?>
+  <?php elseif( $class === 'smoothies' ) : ?>
+    <img
+      class="icon composition__fruit composition__fruit--left"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/banana.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+  <?php elseif( $class === 'chief' ) : ?>
+    <img
+      class="icon composition__fruit composition__fruit--left"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/orange.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
   <?php endif; ?>
   
 

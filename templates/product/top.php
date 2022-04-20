@@ -12,6 +12,16 @@
     $class = 'marmalade';
   } else if ( is_page_template('single-products-chocolate.php') ) {
     $class = 'sweets';
+  } else if ( is_page_template('single-products-smoothies.php') ) {
+    $class = 'smoothies';
+  } else if ( is_page_template('single-products-cocos.php') ) {
+    $class = 'desserts';
+  } else if ( is_page_template('single-products-baby-puree.php') ) {
+    $class = 'baby';
+  } else if ( is_page_template('single-products-chef-puree.php') ) {
+    $class = 'chief';
+  } else if ( is_page_template('single-products-party-box.php') ) {
+    $class = 'party';
   }
 ?>
 <section class="top <?= $class; ?>">
@@ -34,7 +44,7 @@
     <?php endif; ?>
   </div>
 
-  <?php if ( is_page_template( 'single-products-fruit-rolls.php' ) ) : ?>
+  <?php if ( $class === '' ) : ?>
     <img
       class="icon top__image top__image--1"
       src="<?= get_template_directory_uri(  ); ?>/assets/img/rolls/roll_1.png"
@@ -152,10 +162,6 @@
       src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear-original.svg"
       alt="<?= get_bloginfo( 'name' ); ?>"
     />
-    
-    <?php 
-      get_template_part( 'templates/product/top-bob', 'left' );
-    ?>
   <?php elseif ( $class === 'marmalade' ) : ?>
     <img
       src="<?= get_template_directory_uri(  ); ?>/assets/img/marmalade/marmelad_rectangle-1.png"
@@ -258,5 +264,181 @@
       class="icon sweets__image sweets__image--8"
       alt="<?= get_bloginfo( 'name' ); ?>"
     />
-  <?php endif; ?>  
+  <?php elseif ( $class === 'smoothies' ) : ?>
+    <img
+      class="icon smoothies__image smoothies__image--1"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/smoothies/smoothies-1.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--2"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/smoothies/smoothies-2.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--3"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/strawberry-2.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--4"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--5"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/persimmon.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--6"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/banana.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--7"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-piece.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--8"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/persimmon.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--9"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/persimmon.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon smoothies__image smoothies__image--10"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pineapple-slice.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+  <?php elseif ( $class === 'desserts' ) : ?>
+    <img
+      class="icon desserts__image desserts__image--1"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/desserts/coconut-1.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--2"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/desserts/coconut-2.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+
+    <img
+      class="icon desserts__image desserts__image--3"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/blueberry-2.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--4"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/raspberries.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--5"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/papaya.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--6"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-original.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--7"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/raspberries-2.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--8"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/blueberry-2.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--9"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/grass.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon desserts__image desserts__image--10"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/blueberry.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+  <?php elseif ( $class === 'baby' ) : ?>
+    <img class="icon baby__image baby__image--1" src="<?= get_template_directory_uri(  ); ?>/assets/img/baby/1.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+    <img class="icon baby__image baby__image--2" src="<?= get_template_directory_uri(  ); ?>/assets/img/baby/2.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+    <img
+      class="icon baby__image baby__image--3"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/lime.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon baby__image baby__image--4"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/orange-2.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon baby__image baby__image--5"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/banana.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon baby__image baby__image--6"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-original.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon baby__image baby__image--7"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon baby__image baby__image--8"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/mango.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+  <?php elseif ( $class === 'chief' ) : ?>
+    <img class="icon chief__image chief__image--1" src="<?= get_template_directory_uri(  ); ?>/assets/img/baby/1.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+    <img class="icon chief__image chief__image--2" src="<?= get_template_directory_uri(  ); ?>/assets/img/baby/2.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+    <img class="icon chief__image chief__image--3" src="<?= get_template_directory_uri(  ); ?>/assets/img/boxs/20.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+    <img
+      class="icon chief__image chief__image--4"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/lime.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon chief__image chief__image--5"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/orange-2.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon chief__image chief__image--6"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/banana.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon chief__image chief__image--7"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-original.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon chief__image chief__image--8"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon chief__image chief__image--9"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/mango.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+  <?php elseif( $class === 'party' ) : ?>
+    <div id="confetti"></div>
+  <?php endif; ?> 
+  
+  <?php 
+    get_template_part( 'templates/product/top', 'bob' );
+  ?>
 </section>

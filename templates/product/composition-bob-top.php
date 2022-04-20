@@ -1,4 +1,5 @@
 <?php 
+  // Улитка сверху
   global $class;
 
   if ( !isset($class) ) {
@@ -37,6 +38,33 @@
         alt="<?= get_bloginfo( 'name' ); ?>"
       />
     </div>
+  <?php elseif ( $class === 'smoothies' ) : ?>
+    <div class="smoothies__snail">
+      <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-sings.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
+      <div class="smoothies__snail-text">
+        <p>
+          <?= $bob_top_text; ?>
+        </p>
+      </div>
+    </div>
+  <?php elseif ( $class === 'desserts' ) : ?>
+    <div class="desserts__snail">
+      <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-with-glasses.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
+      <div class="desserts__snail-text">
+        <p>
+          <?= $bob_top_text; ?>
+        </p>
+      </div>
+    </div>
+  <?php elseif( $class === 'chief' ) : ?>
+    <div class="chief__snail">
+        <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-cook.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
+        <div class="chief__snail-text">
+          <p>
+            <?= $bob_top_text; ?>
+          </p>
+        </div>
+      </div>
   <?php else : ?>
     <div class="composition__snail-top">
       <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-rolls.svg" alt="<?= get_bloginfo( 'name' ); ?>" />

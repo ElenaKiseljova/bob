@@ -1,4 +1,5 @@
 <?php 
+  // Улитка справа
   $bob_right = get_field( 'bob_right' );
 
   $bob_right_text = get_field( 'bob_right_text' );
