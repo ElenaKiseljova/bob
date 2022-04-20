@@ -65,6 +65,15 @@
           </p>
         </div>
       </div>
+  <?php elseif( $class === 'party' ) : ?>
+    <div class="party__snail">
+      <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-thanks.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
+      <div class="party__snail-text">
+        <p>
+          <?= $bob_top_text; ?>
+        </p>
+      </div>
+    </div>
   <?php else : ?>
     <div class="composition__snail-top">
       <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-rolls.svg" alt="<?= get_bloginfo( 'name' ); ?>" />

@@ -436,6 +436,63 @@
     />
   <?php elseif( $class === 'party' ) : ?>
     <div id="confetti"></div>
+
+    <img
+      class="icon party__image party__image--1"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/rolls/roll_1.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img class="icon party__image party__image--2" src="<?= get_template_directory_uri(  ); ?>/assets/img/baby/3.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+    <img
+      class="icon party__image party__image--3"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/marmalade/marmelad_chia.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--4"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--5"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/orange-2.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--6"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/mango.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--7"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pineapple-slice.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--8"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/banana.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--9"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-piece.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--10"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/sweets/chocolate-marmalade-3.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--11"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/fruit-group/pair-lemon-piece.svg"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--12"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/marmalade/marmelad_orang.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
   <?php endif; ?> 
   
   <?php 
