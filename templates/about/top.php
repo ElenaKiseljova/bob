@@ -4,9 +4,9 @@
 <section class="top about">
   <div class="top__inner">
     <div class="top__head">
-      <h1 class="top__title title--big title">
-        <?= get_the_title(  ); ?>
-      </h1>
+      <?php 
+        the_content(  );
+      ?>
       <div class="about__snail">
         <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-smile.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
         <div class="about__snail-text">
@@ -15,11 +15,6 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="top__descr">
-      <?php 
-        the_content(  );
-      ?>
     </div>
   </div>
   <img

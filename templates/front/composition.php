@@ -2,7 +2,7 @@
   global $list;
 
   $title = get_sub_field( 'title' ) ?? '';
-  $list = get_field( 'list' ) ?? [];
+  $list = get_sub_field( 'list' ) ?? [];
   $button = get_sub_field( 'button' ) ?? [];
 ?>
 <section class="composition">

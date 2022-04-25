@@ -1,28 +1,45 @@
+<?php 
+  $bob_text = get_field( 'bob_text' ) ?? '';
+  $text = get_field( 'text' ) ?? '';
+
+  $buttons = get_field( 'buttons' ) ?? [];
+?>
 <section class="thanks">
   <div class="container">
     <div class="thanks__inner">
-      <div class="thanks__head">
-        <h1 class="thanks__title title">
-          <?= __( 'юхууу, дякую <br>тобі за лист!', 'bob' ); ?>
-        </h1>
+      <div class="thanks__head">    
+        <?php 
+          the_content(  );
+        ?>
+
         <div class="thanks__snail-top">
           <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-thanks.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
           <div class="thanks__snail-text">
-            <p><?= __( 'Сенк ю!', 'bob' ); ?></p>
+            <p><?= $bob_text; ?></p>
           </div>
         </div>
       </div>
       <div class="thanks__descr">
         <p>          
-          <?= __( 'Я уважно прочитаю <br>та невдовзі відповім. <br>Не забудь перевірити email!', 'bob' ); ?>
+          <?= $text; ?>
         </p>
       </div>
 
-      <a class="thanks__btn btn" href="<?= get_bloginfo( 'url' ); ?>">        
-        <?= __( 'повернутись на головну', 'bob' ); ?>
-      </a>
+      <?php if ( $buttons && !empty($buttons) && is_array($buttons) && !is_wp_error( $buttons ) ) : ?>
+        <?php foreach ($buttons as $key => $button) : ?>
+          <?php 
+            $title = $button['title'] ?? '';  
+            $link = $button['link'] ?? '';  
+          ?>
+
+          <a class="thanks__btn btn" href="<?= $link; ?>">        
+            <?= $title; ?>
+          </a>
+        <?php endforeach; ?>
+      <?php endif; ?>      
     </div>
   </div>
+  
   <img
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/strawberry-2.svg"
     class="icon thanks__image thanks__image--1"

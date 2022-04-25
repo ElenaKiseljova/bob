@@ -18,7 +18,7 @@
                 <picture>
                   <source
                     srcset="<?= $banner['sizes']['slider_desktop']; ?>"
-                    media="(min-width: 767px)"
+                    media="(min-width: 425px)"
                   />
                   <img src="<?= $banner['sizes']['slider_mobile']; ?>" alt="<?= get_bloginfo( 'name'); ?>" />
                 </picture>

@@ -40,13 +40,16 @@ function bob_scripts ()
   }
 
   if ( is_singular( 'products') ) {
-    wp_enqueue_script('tabs-script', get_template_directory_uri() . '/assets/js/tabs.js', $deps = array(), $ver = null, $in_footer = true );
-    wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('card-flip-script', get_template_directory_uri() . '/assets/js/card-flip.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
   if ( is_singular( 'products') || (is_front_page(  ) && !is_home(  )) || is_page_template( 'page-about.php' ) ) {
     wp_enqueue_script('background-fill-script', get_template_directory_uri() . '/assets/js/background-fill.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+
+  if ( is_singular( 'products') || is_page_template( 'page-shops.php' ) ) {
+    wp_enqueue_script('tabs-script', get_template_directory_uri() . '/assets/js/tabs.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
   if ( is_singular( 'products') || is_page_template( 'page-form.php' ) ) {
@@ -75,6 +78,7 @@ if (!function_exists('bob_after_setup_theme_function')) :
     register_nav_menu( 'header', 'Хедер' );
     register_nav_menu( 'footer', 'Футер' );
     register_nav_menu( 'social', 'Социальные сети' );
+    register_nav_menu( 'contacts', 'Контакты' );
     register_nav_menu( '404', '404' );
 
     /* ==============================================
@@ -130,7 +134,7 @@ if (!function_exists('bob_init_function')) :
         'supports'            => [ 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
         'taxonomies'          => [],
         'has_archive'         => true,
-        'rewrite'             => true,
+        'rewrite'             => [ 'slug' => 'menu' ],
         'query_var'           => true,
       ] );
     }       
@@ -219,17 +223,40 @@ function bob_acf_custom_toolbars( $toolbars )
   add_filter( 'wpcf7_form_elements', 'bob_wpcf7_form_elements' );
   function bob_wpcf7_form_elements( $content ) {
       $str_pos = strpos( $content, 'name="full-name"' );
-      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+
+      if ($str_pos) {
+        $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+      }      
 
       $str_pos = strpos( $content, 'name="email"' );
-      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+      if ($str_pos) {
+        $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+      }      
 
       $str_pos = strpos( $content, 'name="social"' );
-      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+      if ($str_pos) {
+        $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+      }      
 
       $str_pos = strpos( $content, 'name="phone"' );
-      $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+      if ($str_pos) {
+        $content = substr_replace( $content, ' autocomplete="both" autocomplete="off" ', $str_pos, 0 );
+      }      
 
       return $content;
+  }
+
+  /* ==============================================
+  ********  //Класс для пунктов меню
+  =============================================== */
+  add_filter( 'nav_menu_css_class', 'bob_change_menu_item_css_classes', 10, 4 );
+  function bob_change_menu_item_css_classes( $classes, $item, $args, $depth ) {
+  	if( $args->theme_location === 'contacts' ){
+      if ($depth === 0) {
+        $classes[] = 'links__item';
+      }   		
+  	}
+
+  	return $classes;
   }
 ?>

@@ -485,12 +485,17 @@
     />
     <img
       class="icon party__image party__image--11"
-      src="<?= get_template_directory_uri(  ); ?>/assets/img/fruit-group/pair-lemon-piece.svg"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/orange.svg"
       alt="<?= get_bloginfo( 'name' ); ?>"
     />
     <img
       class="icon party__image party__image--12"
       src="<?= get_template_directory_uri(  ); ?>/assets/img/marmalade/marmelad_orang.png"
+      alt="<?= get_bloginfo( 'name' ); ?>"
+    />
+    <img
+      class="icon party__image party__image--13"
+      src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/orange-2.svg"
       alt="<?= get_bloginfo( 'name' ); ?>"
     />
   <?php endif; ?> 
