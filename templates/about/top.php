@@ -1,5 +1,5 @@
 <?php 
-  $bob_text = get_field( 'bob_text' );
+  $bob_text = get_field( 'bob_text' ) ?? '';
 ?>
 <section class="top about">
   <div class="top__inner">

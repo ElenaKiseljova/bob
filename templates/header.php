@@ -2,14 +2,14 @@
   $color_header = get_field( 'color_header' ) ?? '';
 ?>
 
-<header class="header <?= !empty($color_header) ? $color_header : ''; ?>">
+<header class="header <?= !empty($color_header) ? $color_header : ''; ?> <?= is_404(  ) ? 'white header--unfixed' : ''; ?>">
   <div class="container">
     <div class="header__inner">
       <?php 
         get_template_part( 'templates/logo', 'header' );
       ?>
 
-      <div class="header__overlay">
+      <div class="header__overlay <?= is_404(  ) ? 'none' : ''; ?>">
         <div class="header__wrapper">
           <?php 
             get_template_part( 'templates/menu', 'header' );
@@ -26,7 +26,7 @@
           </button>
         </div>
       </div>
-      <div class="header__hamburger hamburger">
+      <div class="header__hamburger hamburger <?= is_404(  ) ? 'none' : ''; ?>">
         <button class="hamburger__btn">
           <svg width="30" height="30">
             <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#hamburger"></use>

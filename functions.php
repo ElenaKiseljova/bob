@@ -56,6 +56,10 @@ function bob_scripts ()
     wp_enqueue_script('select-script', get_template_directory_uri() . '/assets/js/custom-select.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
+  if ( is_page_template( 'page-recipes.php' ) ) {
+    wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/js/accordion.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+
   wp_enqueue_script('maskinput-script', get_template_directory_uri() . '/assets/js/libs/maskinput.js', $deps = array('jquery'), $ver = null, $in_footer = true );
 
   wp_enqueue_script('additional-script', get_template_directory_uri() . '/assets/js/additional.js', $deps = array('jquery'), $ver = null, $in_footer = true );
@@ -79,7 +83,7 @@ if (!function_exists('bob_after_setup_theme_function')) :
     register_nav_menu( 'footer', 'Футер' );
     register_nav_menu( 'social', 'Социальные сети' );
     register_nav_menu( 'contacts', 'Контакты' );
-    register_nav_menu( '404', '404' );
+    register_nav_menu( 'not_found', '404' );
 
     /* ==============================================
     ********  //Размеры картирок
@@ -256,6 +260,13 @@ function bob_acf_custom_toolbars( $toolbars )
         $classes[] = 'links__item';
       }   		
   	}
+
+    if( $args->theme_location === 'not_found' ){
+      if ($depth === 0) {
+        $classes[] = 'links__item links__item--button';
+      }   		
+  	}
+
 
   	return $classes;
   }
