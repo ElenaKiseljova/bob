@@ -13,7 +13,9 @@
 
       <?php if ( !empty($bob_text) ) : ?>
         <div class="fruit-rolls__cloud">
-          <?= $bob_text; ?>
+          <div class="fruit-rolls__wrapper">
+            <?= $bob_text; ?>
+          </div>          
         </div>
       <?php endif; ?>
       

@@ -2885,8 +2885,8 @@ button.swiper-pagination-bullet {
 
   1% {
     opacity: 1;
-    -webkit-transform: translateX(-500px) translateY(500px) rotate(-135deg) scale(1, 1);
-            transform: translateX(-500px) translateY(500px) rotate(-135deg) scale(1, 1);
+    -webkit-transform: translateX(-500px) translateY(0) rotate(-135deg) scale(1, 1);
+            transform: translateX(-500px) translateY(0) rotate(-135deg) scale(1, 1);
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
   }
@@ -2917,8 +2917,8 @@ button.swiper-pagination-bullet {
 
   1% {
     opacity: 1;
-    -webkit-transform: translateX(-500px) translateY(500px) rotate(-135deg) scale(1, 1);
-            transform: translateX(-500px) translateY(500px) rotate(-135deg) scale(1, 1);
+    -webkit-transform: translateX(-500px) translateY(0) rotate(-135deg) scale(1, 1);
+            transform: translateX(-500px) translateY(0) rotate(-135deg) scale(1, 1);
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
   }
@@ -2949,8 +2949,8 @@ button.swiper-pagination-bullet {
 
   1% {
     opacity: 1;
-    -webkit-transform: translateX(432px) translateY(748px) rotate(-135deg) scale(1, 1);
-            transform: translateX(432px) translateY(748px) rotate(-135deg) scale(1, 1);
+    -webkit-transform: translateX(432px) translateY(348px) rotate(-135deg) scale(1, 1);
+            transform: translateX(432px) translateY(348px) rotate(-135deg) scale(1, 1);
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
   }
@@ -2981,8 +2981,8 @@ button.swiper-pagination-bullet {
 
   1% {
     opacity: 1;
-    -webkit-transform: translateX(432px) translateY(748px) rotate(-135deg) scale(1, 1);
-            transform: translateX(432px) translateY(748px) rotate(-135deg) scale(1, 1);
+    -webkit-transform: translateX(432px) translateY(348px) rotate(-135deg) scale(1, 1);
+            transform: translateX(432px) translateY(348px) rotate(-135deg) scale(1, 1);
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
   }
@@ -3295,6 +3295,7 @@ body.color {
 }
 
 .product__snail-text p {
+  text-align: center;
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -7862,8 +7863,8 @@ body.color {
 }
 
 .baby__snail-text {
-  width: 260px;
-  height: 144px;
+  width: 280px;
+  height: 164px;
   position: absolute;
   bottom: 10px;
   display: -webkit-box;
@@ -8463,6 +8464,10 @@ body.color {
   position: relative;
 }
 
+.order .tabs__content {
+  padding: 0;
+}
+
 .order .top__title {
   max-width: 860px;
 }
@@ -8475,9 +8480,12 @@ body.color {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 24px;
+  width: 100%;
 }
 
 .order__item {
+  width: 250px;
+  height: 200px;
   padding: 40px 33px 27px 33px;
   background: #ffffff;
   border-radius: 5.06px;
@@ -8516,8 +8524,6 @@ body.color {
 }
 
 .order__logo {
-  max-width: 170px;
-  margin-bottom: 40px;
   font-size: 0;
 }
 
@@ -8786,8 +8792,17 @@ body.color {
 }
 
 .error__links .links__list {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(6, 1fr); */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .error__links .links__item {
@@ -9237,7 +9252,8 @@ body.color {
 
 .footer__snail-text span {
   display: block;
-  max-width: 120px;
+  text-align: center;
+  max-width: 130px;
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -9818,11 +9834,16 @@ body.color {
     left: 0;
   }
 
+  .order__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contacts__fruit--1 {
     left: -20px;
   }
 
   .error__links .links__list {
+    display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -10999,10 +11020,6 @@ body.color {
 
   .order .top__title br {
     display: none;
-  }
-
-  .order__list {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .order .top__inner {
