@@ -46,6 +46,13 @@
             </div>
           </div>
         </div>
+
+        <button class="btn btn--up">
+          <svg width="12" height="8">
+            <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#arrow-down-white"></use>
+          </svg>
+        </button>
+
       </div>
     </footer>
 

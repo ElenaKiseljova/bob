@@ -6,7 +6,10 @@
   $color_top = get_field( 'color_top' ) ?? '';
 
   $class = '';
-  if ( is_page_template('single-products-stripes.php') ) {
+  
+  if ( is_page_template('single-products-fruit-rolls.php') ) {
+    $class = 'rolls';
+  } else if ( is_page_template('single-products-stripes.php') ) {
     $class = 'stripes';
   } else if ( is_page_template('single-products-marmalade.php') ) {
     $class = 'marmalade';

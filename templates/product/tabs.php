@@ -9,6 +9,8 @@
 
   $list = get_sub_field( 'list' );
 
+  $button = get_sub_field( 'button' );
+
   $shops_page_url = bob_get_special_page( 'shops', 'url' ) ?? get_permalink(  );
 
   $selected = '';
@@ -152,5 +154,7 @@
     </div>
   <?php endif; ?>
 
-  <a href="<?= $shops_page_url; ?>" class="tabs__link btn"><?= __( 'де купити', 'bob' ); ?></a>
+  <?php if ( $button && !empty($button) && isset($button['text']) && !empty($button['text']) && isset($button['link']) && !empty($button['link']) ) : ?>
+    <a href="<?= $button['link']; ?>" class="tabs__link btn"><?= $button['text']; ?></a>
+  <?php endif; ?>  
 </div>

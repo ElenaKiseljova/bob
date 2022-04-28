@@ -19,6 +19,8 @@ function bob_scripts ()
   wp_enqueue_script('mobile-menu-script', get_template_directory_uri() . '/assets/js/mobile-menu.js', $deps = array(), $ver = null, $in_footer = true );
   wp_enqueue_script('header-script', get_template_directory_uri() . '/assets/js/header.js', $deps = array(), $ver = null, $in_footer = true );
 
+  wp_enqueue_script('btn-up-script', get_template_directory_uri() . '/assets/js/btn-up.js', $deps = array(), $ver = null, $in_footer = true );
+
   if ( is_page_template( 'page-products.php' ) ) {
     wp_enqueue_script('locomotive-scroll-script', get_template_directory_uri() . '/assets/js/libs/locomotive-scroll/locomotive-scroll.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('animation-script', get_template_directory_uri() . '/assets/js/animation.js', $deps = array(), $ver = null, $in_footer = true );

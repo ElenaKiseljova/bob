@@ -1,0 +1,1 @@
+!function(n){jQuery(document).ready((function(){const o=n(".btn--up");n(window).scroll((function(){n(window).scrollTop()>600?o.addClass("active"):o.removeClass("active")})),o.on("click",(function(o){o.preventDefault(),n("html, body").animate({scrollTop:0},"300")}))}))}(jQuery);

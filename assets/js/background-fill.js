@@ -1,1 +1,1 @@
-window.addEventListener("scroll",(()=>{window.scrollY>600?document.body.style.backgroundColor="#fff":document.body.style.backgroundColor=document.body.dataset.color}));
+window.addEventListener("scroll",(()=>{window.scrollY>500?document.body.style.backgroundColor="#fff":document.body.style.backgroundColor=document.body.dataset.color}));
