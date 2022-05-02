@@ -1,15 +1,17 @@
 <section class="top order">
-  <div class="top__inner">
-    <div class="top__head top__head--dark">
+  <div class="container">
+    <div class="top__inner">
+      <div class="top__head top__head--dark">
+        <?php 
+          the_content(  );
+        ?>
+      </div>
+
       <?php 
-        the_content(  );
+        get_template_part( 'templates/shops/tabs' );
       ?>
     </div>
-
-    <?php 
-      get_template_part( 'templates/shops/tabs' );
-    ?>
-  </div>
+  </div>  
 
   <img
     class="icon order__fruit order__fruit--1"

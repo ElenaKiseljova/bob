@@ -1,1 +1,1 @@
-window.addEventListener("scroll",(()=>{window.scrollY>500?document.body.style.backgroundColor="#fff":document.body.style.backgroundColor=document.body.dataset.color}));
+const inside=document.querySelector(".inside");window.addEventListener("scroll",(()=>{window.scrollY>500?document.body.style.backgroundColor="#fff":document.body.style.backgroundColor=document.body.dataset.color,inside&&window.scrollY>inside.getBoundingClientRect().bottom+500&&(document.body.style.backgroundColor=inside.dataset.color)}));

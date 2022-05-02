@@ -5,6 +5,8 @@
 
   $color_top = get_field( 'color_top' ) ?? '';
 
+  $image = '';
+
   $class = '';
   
   if ( is_page_template('single-products-fruit-rolls.php') ) {
@@ -23,6 +25,8 @@
     $class = 'baby';
   } else if ( is_page_template('single-products-chef-puree.php') ) {
     $class = 'chief';
+
+    $image = get_field( 'image' ) ?? '';
   } else if ( is_page_template('single-products-party-box.php') ) {
     $class = 'party';
   }
@@ -47,7 +51,7 @@
     <?php endif; ?>
   </div>
 
-  <?php if ( $class === '' ) : ?>
+  <?php if ( $class === 'rolls' ) : ?>
     <img
       class="icon top__image top__image--1"
       src="<?= get_template_directory_uri(  ); ?>/assets/img/rolls/roll_1.png"
@@ -406,7 +410,11 @@
   <?php elseif ( $class === 'chief' ) : ?>
     <img class="icon chief__image chief__image--1" src="<?= get_template_directory_uri(  ); ?>/assets/img/baby/1.png" alt="<?= get_bloginfo( 'name' ); ?>" />
     <img class="icon chief__image chief__image--2" src="<?= get_template_directory_uri(  ); ?>/assets/img/baby/2.png" alt="<?= get_bloginfo( 'name' ); ?>" />
-    <img class="icon chief__image chief__image--3" src="<?= get_template_directory_uri(  ); ?>/assets/img/boxs/20.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+    
+    <?php if ( !empty($image) ) : ?>
+      <img class="icon chief__image chief__image--3" src="<?= $image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
+    <?php endif; ?>
+    
     <img
       class="icon chief__image chief__image--4"
       src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/lime.svg"

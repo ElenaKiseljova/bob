@@ -18,7 +18,7 @@ function bob_scripts ()
   wp_enqueue_script('calculate-height-script', get_template_directory_uri() . '/assets/js/calculate-height.js', $deps = array(), $ver = null, $in_footer = true );
   wp_enqueue_script('mobile-menu-script', get_template_directory_uri() . '/assets/js/mobile-menu.js', $deps = array(), $ver = null, $in_footer = true );
   wp_enqueue_script('header-script', get_template_directory_uri() . '/assets/js/header.js', $deps = array(), $ver = null, $in_footer = true );
-
+ 
   wp_enqueue_script('btn-up-script', get_template_directory_uri() . '/assets/js/btn-up.js', $deps = array(), $ver = null, $in_footer = true );
 
   if ( is_page_template( 'page-products.php' ) ) {
@@ -26,10 +26,18 @@ function bob_scripts ()
     wp_enqueue_script('animation-script', get_template_directory_uri() . '/assets/js/animation.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('change-color-script', get_template_directory_uri() . '/assets/js/change-color.js', $deps = array(), $ver = null, $in_footer = true );
   }
+
+  if ( is_front_page(  ) || is_page_template( 'page-eat-and-play.php' ) ) {
+    wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/js/libs/swiper.js', $deps = array(), $ver = null, $in_footer = true );
+  }
   
   if ( is_front_page(  ) ) {
-    wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/js/libs/swiper.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('slider-script', get_template_directory_uri() . '/assets/js/slider.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+
+  if ( is_page_template( 'page-eat-and-play.php' ) ) {
+    wp_enqueue_script('slider-toys-script', get_template_directory_uri() . '/assets/js/slider-toys.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('video-script', get_template_directory_uri() . '/assets/js/video.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
   if ( is_page_template( 'single-products-fruit-rolls.php' ) ) {
@@ -45,11 +53,11 @@ function bob_scripts ()
     wp_enqueue_script('card-flip-script', get_template_directory_uri() . '/assets/js/card-flip.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
-  if ( is_singular( 'products') || (is_front_page(  ) && !is_home(  )) || is_page_template( 'page-about.php' ) ) {
+  if ( is_singular( 'products') || (is_front_page(  ) && !is_home(  )) || is_page_template( 'page-about.php' ) || is_page_template( 'page-eat-and-play.php' ) ) {
     wp_enqueue_script('background-fill-script', get_template_directory_uri() . '/assets/js/background-fill.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
-  if ( is_singular( 'products') || is_page_template( 'page-shops.php' ) ) {
+  if ( is_singular( 'products') || is_page_template( 'page-shops.php' ) || is_page_template( 'page-eat-and-play.php' ) ) {
     wp_enqueue_script('tabs-script', get_template_directory_uri() . '/assets/js/tabs.js', $deps = array(), $ver = null, $in_footer = true );
     wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
   }

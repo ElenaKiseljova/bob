@@ -4,10 +4,12 @@
 ?>
 
 <div class="order__tabs tabs">
-  <div class="tabs__btns">
-    <button class="tabs__btn active" data-tab="1"><?= $title_1; ?></button>
-    <button class="tabs__btn" data-tab="2"><?= $title_2; ?></button>
-  </div>
+  <?php if ( !empty($title_1 ) && !empty($title_2) ) : ?>
+    <div class="tabs__btns">
+      <button class="tabs__btn active" data-tab="1"><?= $title_1; ?></button>
+      <button class="tabs__btn" data-tab="2"><?= $title_2; ?></button>
+    </div>
+  <?php endif; ?>  
   
   <div class="tabs__contents">   
     <?php 
@@ -25,16 +27,18 @@
                 <?php foreach ($shops as $key => $shop) : ?>
                   <?php 
                     $image = $shop['image'] ?? '';
-                    $button = $shop['button'] ?? [];
+                    $link = $shop['link'] ?? '';
                   ?>
                   <li class="order__item">
-                    <div class="order__logo">
-                      <img src="<?= $image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
-                    </div>
-
-                    <?php if ($button && !empty($button) && !empty($button['text']) && !empty($button['link'])) : ?>
-                      <a href="<?= $button['link']; ?>" class="order__btn btn"><?= $button['text']; ?></a>
-                    <?php endif; ?>                        
+                    <?php if ( !empty($link) ) : ?>
+                      <a class="order__logo" href="<?= $link; ?>">
+                        <img src="<?= $image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
+                      </a>
+                    <?php else : ?>
+                      <div class="order__logo">
+                        <img src="<?= $image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
+                      </div>
+                    <?php endif; ?>                      
                   </li>
                 <?php endforeach; ?>                  
               </ul>
