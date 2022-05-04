@@ -2,7 +2,6 @@
   $slides = get_sub_field( 'slides' ) ?? [];
 
   $bob_text_left = get_sub_field( 'bob_text_left' ) ?? '';
-  $button = get_sub_field( 'button' ) ?? [];
 
   $image = get_sub_field( 'image' ) ?? '';
   $bob_image_text = get_sub_field( 'bob_image_text' ) ?? '';
@@ -20,6 +19,8 @@
                 $text = $slide['text'] ?? '';
 
                 $list = $slide['list'] ?? [];
+
+                $button = $slide['button'] ?? [];
               ?>
               <div class="play__slide swiper-slide" <?= !empty($background) ? 'style="background-color: ' . $background . ';"' : ''; ?>>
                 <div class="play__head">
@@ -47,6 +48,9 @@
                       <?php endforeach; ?>                    
                     </ul>
                   </div>
+                  <?php if ( $button && !empty($button) && isset($button['text']) && !empty($button['text']) && isset($button['link']) && !empty($button['link']) ) : ?>
+                    <a href="<?= $button['link']; ?>" class="play__link btn"><?= $button['text']; ?></a>
+                  <?php endif; ?>  
                 <?php endif; ?>                
               </div>
             <?php endforeach; ?>            
@@ -62,11 +66,7 @@
                 <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#arrow-down-white"></use>
               </svg>
             </button>
-          </div>
-
-          <?php if ( $button && !empty($button) && isset($button['text']) && !empty($button['text']) && isset($button['link']) && !empty($button['link']) ) : ?>
-            <a href="<?= $button['link']; ?>" class="play__link btn"><?= $button['text']; ?></a>
-          <?php endif; ?>  
+          </div>         
         </div>
       <?php endif; ?>      
     </div>

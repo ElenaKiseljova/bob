@@ -5,11 +5,6 @@
   <?php foreach ($images as $key => $image) : ?>
     <img
       class="icon product__smoothies product__smoothies--<?= $key + 1; ?> parallax"
-      <?php if ( ($key + 1) === 1 ) : ?>
-        data-y="-50"
-      <?php else : ?>
-        data-y="-10"
-      <?php endif; ?>
       
       src="<?= $image['image']; ?>"
       alt="<?= strip_tags( get_the_title(  ) ); ?>"

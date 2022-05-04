@@ -29,6 +29,7 @@ function bob_scripts ()
 
   if ( is_front_page(  ) || is_page_template( 'page-eat-and-play.php' ) ) {
     wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/js/libs/swiper.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('cards-inside-script', get_template_directory_uri() . '/assets/js/cards-inside.js', $deps = array(), $ver = null, $in_footer = true );
   }
   
   if ( is_front_page(  ) ) {

@@ -5,7 +5,6 @@
   <?php foreach ($images as $key => $image) : ?>
     <img
       class="icon product__tube product__tube--<?= $key + 1; ?> parallax"
-      data-y="-50"
       
       src="<?= $image['image']; ?>"
       alt="<?= strip_tags( get_the_title(  ) ); ?>"

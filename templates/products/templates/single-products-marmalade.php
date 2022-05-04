@@ -5,19 +5,6 @@
   <?php foreach ($images as $key => $image) : ?>
     <img
       class="icon product__marmalade product__marmalade--<?= $key + 1; ?> parallax"
-      <?php if ( ($key + 1) === 1 ) : ?>
-        data-y="-10"
-        data-x="-30"
-      <?php elseif ( ($key + 1) === 2 ) : ?>
-        data-y="-20"
-        data-x="-20"
-      <?php elseif ( ($key + 1) === 3 ) : ?>
-        data-y="-30"
-        data-x="30"
-      <?php elseif ( ($key + 1) === 4 ) : ?>
-        data-y="-40"
-        data-x="20"
-      <?php endif; ?>
       
       src="<?= $image['image']; ?>"
       alt="<?= strip_tags( get_the_title(  ) ); ?>"
