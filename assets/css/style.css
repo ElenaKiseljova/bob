@@ -9774,6 +9774,53 @@ body.color {
   margin-top: 40px;
 }
 
+.play__left {
+  position: absolute;
+  left: 10px;
+  top: 55%;
+  z-index: 100;
+}
+
+.play__left img {
+  position: relative;
+  z-index: 10;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.play__left-text {
+  position: absolute;
+  top: -20px;
+  left: 78px;
+  width: 210px;
+  height: 150px;
+  background: url(../img/icons/cloud-orange-big.svg) no-repeat center/contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.play__left-text p {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-3.64deg);
+      -ms-transform: rotate(-3.64deg);
+          transform: rotate(-3.64deg);
+}
+
 .play__snail {
   position: absolute;
   top: -80px;
@@ -12481,6 +12528,10 @@ body.color {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 15px;
+  }
+
+  .play__left {
+    display: none;
   }
 
   .play__btns {

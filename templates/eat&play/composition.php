@@ -123,4 +123,12 @@
       alt="<?= get_bloginfo( 'name' ); ?>"
     />
   </div>
+  <div class="play__left">
+    <div class="play__left-text">
+      <p>
+        <?= $bob_text_left; ?>
+      </p>
+    </div>
+    <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-sings.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
+  </div>
 </section>
