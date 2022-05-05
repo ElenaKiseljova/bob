@@ -15,6 +15,8 @@
             <?php foreach ($slides as $key => $slide) : ?>
               <?php 
                 $background = $slide['background'] ?? '';
+                $background_image = $slide['background_image'] ?? '';
+
                 $title = $slide['title'] ?? '';
                 $text = $slide['text'] ?? '';
 
@@ -23,6 +25,17 @@
                 $button = $slide['button'] ?? [];
               ?>
               <div class="play__slide swiper-slide" <?= !empty($background) ? 'style="background-color: ' . $background . ';"' : ''; ?>>
+                <div class="play__banner">
+                  <?php if ( !empty($background_image) ) : ?>
+                    <picture>
+                      <img
+                        src="<?= $background_image; ?>"
+                        alt="<?= get_bloginfo( 'name' ); ?>"
+                      />
+                    </picture>
+                  <?php endif; ?>                    
+                </div>
+
                 <div class="play__head">
                   <h2 class="title"><?= $title; ?></h2>
 

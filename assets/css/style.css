@@ -2223,6 +2223,10 @@ button.swiper-pagination-bullet {
   } */
 }
 
+.composition.play .composition__block {
+  background-color: #fff;
+}
+
 .composition.play .composition__inner {
   overflow: hidden;
   background-color: transparent;
@@ -9774,6 +9778,22 @@ body.color {
   margin-top: 40px;
 }
 
+.play__banner {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.play__banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .play__left {
   position: absolute;
   left: 10px;
@@ -9930,10 +9950,6 @@ body.color {
           transform: rotate(-90deg);
 }
 
-.play__slider {
-  padding-bottom: 10px;
-}
-
 .play__wrapper {
   margin-bottom: 80px;
 }
@@ -9950,6 +9966,8 @@ body.color {
   height: auto;
   padding-top: 77px;
   padding-bottom: 30px;
+  overflow: hidden;
+  border-radius: 0 0 25px 25px;
 }
 
 .play__head {
@@ -10163,8 +10181,9 @@ body.color {
 }
 
 .inside {
-  margin-top: 90px;
+  padding-top: 90px;
   margin-bottom: 60px;
+  background-color: #ffeaa2;
 }
 
 .inside__image {
@@ -10286,6 +10305,7 @@ body.color {
 
 .unpacking {
   margin-bottom: 170px;
+  background-color: #ffeaa2;
 }
 
 .unpacking__inner h2 {
@@ -10405,6 +10425,7 @@ body.color {
 
 .online {
   margin-bottom: 100px;
+  background-color: #ffeaa2;
 }
 
 .online .top__inner {
@@ -13669,8 +13690,12 @@ body.color {
     padding-top: 20px;
   }
 
+  .play__slide picture {
+    opacity: 0;
+  }
+
   .play__slide:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 
   .play .top__head h1 {
@@ -13700,9 +13725,26 @@ body.color {
   }
 
   .toys__list {
-    gap: 0;
-    grid-template-columns: repeat(2, 1fr);
+    /*    gap: 0; */
+    /*       grid-template-columns: repeat(2, 1fr); */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-bottom: 50px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    gap: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .toys__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toys__item {
+    min-width: 140px;
+    width: 140px;
   }
 
   .inside__list {
