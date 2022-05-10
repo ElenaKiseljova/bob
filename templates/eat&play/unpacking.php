@@ -33,7 +33,6 @@
                 ?>
                 <div class="video__vimeo">
                   <iframe
-                    src="https://www.youtube.com/embed/E0hnI4_egl8"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
