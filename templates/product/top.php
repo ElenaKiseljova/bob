@@ -32,24 +32,26 @@
   }
 ?>
 <section class="top <?= $class; ?>">
-  <div class="top__inner">
-    <h1 class="top__title title--big title <?= !empty($color_top) ? $color_top : ''; ?>">
-      <?= get_the_title(); ?>
-    </h1>
-    <div class="top__descr <?= !empty($color_top) ? $color_top : ''; ?>">
-      <?php the_content(); ?>
+  <div class="container">
+    <div class="top__inner">
+      <h1 class="top__title title--big title <?= !empty($color_top) ? $color_top : ''; ?>">
+        <?= get_the_title(); ?>
+      </h1>
+      <div class="top__descr <?= !empty($color_top) ? $color_top : ''; ?>">
+        <?php the_content(); ?>
+      </div>
+
+      <?php if ( $button && !empty($button) && is_array($button) && !is_wp_error( $button ) ) : ?>
+        <?php 
+          $title = $button['title'] && !empty($button['title']) ? $button['title'] : __( 'Знайди свій смак', 'bob' );
+
+          $link = $button['link'] && !empty($button['link']) ? $button['link'] : '#tabs';
+        ?>
+
+        <a href="<?= $link; ?>" class="btn"><?= $title; ?></a>
+      <?php endif; ?>
     </div>
-
-    <?php if ( $button && !empty($button) && is_array($button) && !is_wp_error( $button ) ) : ?>
-      <?php 
-        $title = $button['title'] && !empty($button['title']) ? $button['title'] : __( 'Знайди свій смак', 'bob' );
-
-        $link = $button['link'] && !empty($button['link']) ? $button['link'] : '#tabs';
-      ?>
-
-      <a href="<?= $link; ?>" class="btn"><?= $title; ?></a>
-    <?php endif; ?>
-  </div>
+  </div>  
 
   <?php if ( $class === 'rolls' ) : ?>
     <img

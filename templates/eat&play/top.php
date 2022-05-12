@@ -6,31 +6,33 @@
   $images = get_field( 'images' ) ?? [];
 ?>
 <section class="top play">
-  <div class="top__inner">
-    <div class="top__head top__head--dark">
-        <?php 
-          the_content(  );
-        ?>
-      <div class="play__snail">
-        <img src="<?= get_template_directory_uri(  ); ?>/assets/img/eat&play/snail.png" alt="<?= get_bloginfo( 'name' ); ?>" />
-        <div class="play__snail-text">
-          <p>
-            <?= $top_bob_text; ?>
-          </p>
+  <div class="container">
+    <div class="top__inner">
+      <div class="top__head top__head--dark">
+          <?php 
+            the_content(  );
+          ?>
+        <div class="play__snail">
+          <img src="<?= get_template_directory_uri(  ); ?>/assets/img/eat&play/snail.png" alt="<?= get_bloginfo( 'name' ); ?>" />
+          <div class="play__snail-text">
+            <p>
+              <?= $top_bob_text; ?>
+            </p>
+          </div>
         </div>
       </div>
+
+      <?php if ( $button && !empty($button) && is_array($button) && !is_wp_error( $button ) ) : ?>
+        <?php 
+          $title = $button['title'] && !empty($button['title']) ? $button['title'] : __( 'смакуй, замовляй', 'bob' );
+
+          $link = $button['link'] && !empty($button['link']) ? $button['link'] : '#tabs';
+        ?>
+
+        <a href="<?= $link; ?>" class="btn"><?= $title; ?></a>
+      <?php endif; ?>
     </div>
-
-    <?php if ( $button && !empty($button) && is_array($button) && !is_wp_error( $button ) ) : ?>
-      <?php 
-        $title = $button['title'] && !empty($button['title']) ? $button['title'] : __( 'смакуй, замовляй', 'bob' );
-
-        $link = $button['link'] && !empty($button['link']) ? $button['link'] : '#tabs';
-      ?>
-
-      <a href="<?= $link; ?>" class="btn"><?= $title; ?></a>
-    <?php endif; ?>
-  </div>
+  </div>  
 
   <?php if ( $images && !empty($images) && is_array($images) && !is_wp_error( $images ) ) : ?>
     <?php foreach ($images as $key => $image) : ?>

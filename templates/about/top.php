@@ -2,21 +2,24 @@
   $bob_text = get_field( 'bob_text' ) ?? '';
 ?>
 <section class="top about">
-  <div class="top__inner">
-    <div class="top__head">
-      <?php 
-        the_content(  );
-      ?>
-      <div class="about__snail">
-        <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-smile.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
-        <div class="about__snail-text">
-          <p>
-            <?= $bob_text; ?>
-          </p>
+  <div class="container">
+    <div class="top__inner">
+      <div class="top__head">
+        <?php 
+          the_content(  );
+        ?>
+        <div class="about__snail">
+          <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-smile.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
+          <div class="about__snail-text">
+            <p>
+              <?= $bob_text; ?>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
   <img
     class="icon about__image about__image--1"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear.svg"

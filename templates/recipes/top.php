@@ -4,20 +4,22 @@
   $gallery = get_field( 'gallery' ) ?? [];
 ?>
 <section class="top recipes">
-  <div class="top__inner">
-    <div class="top__head top__head--dark">
-      <?php 
-        the_content(  );
-      ?>
+  <div class="container">
+    <div class="top__inner">
+      <div class="top__head top__head--dark">
+        <?php 
+          the_content(  );
+        ?>
 
-      <div class="recipes__snail">
-        <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-cook.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
-        <div class="recipes__snail-text">
-          <p><?= $bob_text; ?></p>
+        <div class="recipes__snail">
+          <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-cook.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
+          <div class="recipes__snail-text">
+            <p><?= $bob_text; ?></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 
   <?php if ( $gallery && !empty($gallery) && is_array($gallery) && !is_wp_error( $gallery ) ) : ?>
     <?php foreach ($gallery as $key => $image) : ?>
