@@ -12,6 +12,7 @@
     '6' => '#344A9A',
     '7' => '#9D207B',
     '8' => '#FF6C01',
+    '9' => '#ffcf2e',
   ];
 ?>
 <?php if ( isset($index) && $archive && !empty($archive) && !is_wp_error( $archive )) : ?>
@@ -27,7 +28,7 @@
   <div class="product__block block-<?= $index; ?>">
     <section
       class="section-js product__item <?= ( (int) $index === 1) ? 'section-first active' : 'section'; ?> section-<?= $index; ?>"
-      data-scrollcolor="<?= !empty($background) ? $background : $colors[$index]; ?>"
+      data-scrollcolor="<?= !empty($background) ? $background : ($colors[$index] ?? '#ffffff'); ?>"
       >
       <div class="product__text">
         <h2>
@@ -50,7 +51,11 @@
       $product_template = get_page_template_slug(  );
       $product_template = ($product_template && !empty($product_template) && !is_wp_error( $product_template ) ) ? 'templates/products/templates/' . explode( '.php', get_page_template_slug(  ) )[0] : '';
     
-      get_template_part( $product_template );
+      $is_template = get_template_part( $product_template );
+
+      if ( $is_template === false ) {
+        get_template_part( 'templates/products/templates/default' );
+      }
     ?>
   </div>
 <?php endif; ?>

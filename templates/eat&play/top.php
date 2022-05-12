@@ -72,4 +72,14 @@
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear.svg"
     alt="<?= get_bloginfo( 'name' ); ?>"
   />
+  <img
+    class="icon play__image play__image--9"
+    src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/orange-big.svg"
+    alt="<?= get_bloginfo( 'name' ); ?>"
+  />
+  <img
+    class="icon play__image play__image--10"
+    src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/raspberries.svg"
+    alt="<?= get_bloginfo( 'name' ); ?>"
+  />
 </section>
