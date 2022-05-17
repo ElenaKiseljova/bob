@@ -50,7 +50,7 @@ function bob_scripts ()
     wp_enqueue_script('confetti-script', get_template_directory_uri() . '/assets/js/confetti.js', $deps = array('jquery'), $ver = null, $in_footer = true );
   }
 
-  if ( is_singular( 'products') ) {
+  if ( is_singular( 'products') || is_page_template( 'page-eat-and-play.php' ) ) {
     wp_enqueue_script('card-flip-script', get_template_directory_uri() . '/assets/js/card-flip.js', $deps = array(), $ver = null, $in_footer = true );
   }
 

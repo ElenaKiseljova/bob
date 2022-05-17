@@ -7,83 +7,122 @@
   $bob_image_text = get_sub_field( 'bob_image_text' ) ?? '';
 ?>
 <section class="composition play">
-  <div class="container">
-    <div class="composition__inner">
-      <?php if ( $slides && !empty($slides) && is_array($slides) && !is_wp_error( $slides ) ) : ?>
-        <div class="play__slider swiper">
-          <div class="play__wrapper swiper-wrapper">
-            <?php foreach ($slides as $key => $slide) : ?>
-              <?php 
-                $background = $slide['background'] ?? '';
-                $background_image = $slide['background_image'] ?? '';
+ <div class="composition__wrapper">
+    <div class="container">
+      <div class="composition__inner">
+        <?php if ( $slides && !empty($slides) && is_array($slides) && !is_wp_error( $slides ) ) : ?>
+          <div class="play__slider swiper">
+            <div class="play__wrapper swiper-wrapper">
+              <?php foreach ($slides as $key => $slide) : ?>
+                <?php 
+                  $background = $slide['background'] ?? '';
+                  $background_image = $slide['background_image'] ?? '';
 
-                $title = $slide['title'] ?? '';
-                $text = $slide['text'] ?? '';
+                  $title = $slide['title'] ?? '';
+                  $text = $slide['text'] ?? '';
 
-                $list = $slide['list'] ?? [];
+                  $list = $slide['list'] ?? [];
 
-                $button = $slide['button'] ?? [];
-              ?>
-              <div class="play__slide swiper-slide" <?= !empty($background) ? 'style="background-color: ' . $background . ';"' : ''; ?>>
-                <div class="play__banner">
+                  $button = $slide['button'] ?? [];
+                ?>
+                <div class="play__slide swiper-slide" <?= !empty($background) ? 'style="background-color: ' . $background . ';"' : ''; ?>>
                   <?php if ( !empty($background_image) ) : ?>
-                    <picture>
-                      <img
-                        src="<?= $background_image; ?>"
-                        alt="<?= get_bloginfo( 'name' ); ?>"
-                      />
-                    </picture>
-                  <?php endif; ?>                    
-                </div>
+                    <div class="play__banner">
+                      <picture>
+                        <img
+                          src="<?= $background_image; ?>"
+                          alt="<?= get_bloginfo( 'name' ); ?>"
+                        />
+                      </picture>      
+                    </div>                    
+                  <?php endif; ?>    
 
-                <div class="play__head">
-                  <h2 class="title"><?= $title; ?></h2>
+                  <div class="play__head">
+                    <h2 class="title"><?= $title; ?></h2>
 
-                  <?= $text; ?>
-                </div>
-
-                <?php if ( $list && !empty($list) && is_array($list) && !is_wp_error( $list ) ) : ?>
-                  <div class="play__toys toys">
-                    <ul class="toys__list">
-                      <?php foreach ($list as $key => $toy) : ?>
-                        <?php 
-                          $toy_title = $toy['title'] ?? '';
-                          $toy_description = $toy['description'] ?? '';
-                          $toy_image = $toy['image'] ?? '';
-                        ?>
-                        <li class="toys__item">
-                          <div class="toys__image">
-                            <img src="<?= $toy_image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
-                          </div>
-                          <h3><?= $toy_title; ?></h3>
-                          <p><?= $toy_description; ?></p>
-                        </li>
-                      <?php endforeach; ?>                    
-                    </ul>
+                    <?= $text; ?>
                   </div>
-                  <?php if ( $button && !empty($button) && isset($button['text']) && !empty($button['text']) && isset($button['link']) && !empty($button['link']) ) : ?>
-                    <a href="<?= $button['link']; ?>" class="play__link btn"><?= $button['text']; ?></a>
-                  <?php endif; ?>  
-                <?php endif; ?>                
-              </div>
-            <?php endforeach; ?>            
+
+                  <?php if ( $list && !empty($list) && is_array($list) && !is_wp_error( $list ) ) : ?>
+                    <div class="play__toys toys">
+                      <ul class="toys__list">
+                        <?php foreach ($list as $key => $toy) : ?>
+                          <?php 
+                            $toy_title = $toy['title'] ?? '';
+                            $toy_description = $toy['description'] ?? '';
+                            $toy_image = $toy['image'] ?? '';
+
+                            $toy_type = $toy['type'] ?? 'short';
+                          ?>
+                          <?php if ($toy_type === 'short') : ?>
+                            <li class="toys__item">
+                              <div class="toys__image">
+                                <img src="<?= $toy_image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
+                              </div>
+                              <h3><?= $toy_title; ?></h3>
+                              <p><?= $toy_description; ?></p>
+                            </li>
+                          <?php else : ?>
+                            <li class="toys__item toys__item--card">
+                              <div class="toys__wrapper">
+                                <div class="toys__front">
+                                  <div class="toys__image">
+                                    <img src="<?= $toy_image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
+                                  </div>
+                                  <h3><?= $toy_title; ?></h3>
+                                  <div class="toys__bottom">
+                                    <span class="toys__label"><?= __( 'Дивитися', 'bob' ); ?></span>
+                                    <button class="toys__btn">
+                                      <svg width="36" height="36">
+                                        <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#eye"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="toys__back">
+                                  <p>
+                                    <?= $toy_description; ?>
+                                  </p>
+                                </div>
+                              </div>
+                            </li>
+                          <?php endif; ?>                        
+                        <?php endforeach; ?>                    
+                      </ul>
+                    </div>
+                    <?php if ( $button && !empty($button) && isset($button['text']) && !empty($button['text']) && isset($button['link']) && !empty($button['link']) ) : ?>
+                      <a href="<?= $button['link']; ?>" class="play__link btn"><?= $button['text']; ?></a>
+                    <?php endif; ?>  
+                  <?php endif; ?>                
+                </div>
+              <?php endforeach; ?>            
+            </div>
+            <div class="play__btns">
+              <button class="play__btn play__btn--prev btn">
+                <svg width="12" height="8">
+                  <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#arrow-down-white"></use>
+                </svg>
+              </button>
+              <button class="play__btn play__btn--next btn">
+                <svg width="12" height="8">
+                  <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#arrow-down-white"></use>
+                </svg>
+              </button>
+            </div>         
           </div>
-          <div class="play__btns">
-            <button class="play__btn play__btn--prev btn">
-              <svg width="12" height="8">
-                <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#arrow-down-white"></use>
-              </svg>
-            </button>
-            <button class="play__btn play__btn--next btn">
-              <svg width="12" height="8">
-                <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#arrow-down-white"></use>
-              </svg>
-            </button>
-          </div>         
-        </div>
-      <?php endif; ?>      
+        <?php endif; ?>      
+      </div>
+    </div>
+    <div class="play__left">
+      <div class="play__left-text">
+        <p>
+          <?= $bob_text_left; ?>
+        </p>
+      </div>
+      <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-sings.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
     </div>
   </div>
+
   <div class="composition__block">
     <div class="play__center">
       <img src="<?= $image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
@@ -135,13 +174,5 @@
       src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/banana.svg"
       alt="<?= get_bloginfo( 'name' ); ?>"
     />
-  </div>
-  <div class="play__left">
-    <div class="play__left-text">
-      <p>
-        <?= $bob_text_left; ?>
-      </p>
-    </div>
-    <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-sings.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
-  </div>
+  </div>  
 </section>

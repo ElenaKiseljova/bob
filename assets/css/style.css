@@ -1560,7 +1560,7 @@ button.swiper-pagination-bullet {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   -webkit-transition: 0.25s ease;
   -o-transition: 0.25s ease;
   transition: 0.25s ease;
@@ -9889,7 +9889,7 @@ body.color {
 .play__left {
   position: absolute;
   left: 10px;
-  top: 55%;
+  bottom: 80px;
   z-index: 100;
 }
 
@@ -10054,12 +10054,11 @@ body.color {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 0 0 25px 25px;
+  border-radius: 25px;
   height: auto;
   padding-top: 77px;
   padding-bottom: 30px;
   overflow: hidden;
-  border-radius: 0 0 25px 25px;
 }
 
 .play__head {
@@ -10247,21 +10246,17 @@ body.color {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  -webkit-column-gap: 80px;
-     -moz-column-gap: 80px;
-          column-gap: 80px;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
   row-gap: 20px;
   justify-items: center;
   margin-bottom: 100px;
 }
 
 .toys__item {
-  max-width: 140px;
-}
-
-.toys__item img {
   width: 100%;
-  height: 100%;
+  position: relative;
 }
 
 .toys__item h3 {
@@ -10287,10 +10282,115 @@ body.color {
   opacity: 0.8;
 }
 
+.toys__item--card h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
+  text-align: center;
+  color: #043314;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
 .toys__image {
+  max-width: 140px;
   margin: 0 auto;
-  font-size: 0;
-  margin-bottom: 20px;
+}
+
+.toys__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.toys__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.toys__label {
+  margin-right: 10px;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #041733;
+  opacity: 0.7;
+}
+
+.toys__btn {
+  cursor: pointer;
+}
+
+.toys__btn svg {
+  fill: #febc11;
+}
+
+.toys__front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-decoration: none;
+}
+
+.toys__back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px 25px 0 25px;
+}
+
+.toys__wrapper {
+  width: 100%;
+  height: 250px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.toys__wrapper.active .toys__front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.toys__wrapper.active .toys__back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.toys__wrapper .toys__front,
+.toys__wrapper .toys__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 25px;
 }
 
 .inside {
@@ -12921,6 +13021,31 @@ body.color {
   }
 }
 
+@media (max-width: 880px) {
+  .toys__list {
+    /*    gap: 0; */
+    /*       grid-template-columns: repeat(2, 1fr); */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 50px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    gap: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .toys__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toys__item {
+    min-width: 260px;
+    width: 260px;
+  }
+}
+
 @media (max-width: 767px) {
   .title--big {
     font-size: 50px;
@@ -14005,29 +14130,6 @@ body.color {
 
   .play__snail--box .play__snail-text p {
     max-width: 100px;
-  }
-
-  .toys__list {
-    /*    gap: 0; */
-    /*       grid-template-columns: repeat(2, 1fr); */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 50px;
-    overflow-y: hidden;
-    overflow-x: auto;
-    gap: 15px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .toys__list::-webkit-scrollbar {
-    display: none;
-  }
-
-  .toys__item {
-    min-width: 140px;
-    width: 140px;
   }
 
   .inside__list {

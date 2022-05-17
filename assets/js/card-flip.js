@@ -1,1 +1,1 @@
-const cards=document.querySelectorAll(".content__wrapper");cards&&cards.forEach((c=>{c.addEventListener("click",(e=>{c.classList.toggle("active")}))}));
+const cards=document.querySelectorAll(".content__wrapper"),toys=document.querySelectorAll(".toys__wrapper");cards&&cards.forEach((e=>{e.addEventListener("click",(t=>{e.classList.toggle("active")}))})),toys&&toys.forEach((e=>{e.addEventListener("click",(t=>{e.classList.toggle("active")}))}));

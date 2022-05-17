@@ -1,1 +1,1 @@
-if(window.innerWidth>1023){new Swiper(".play__slider",{loop:!0,navigation:{nextEl:".play__btn--next",prevEl:".play__btn--prev"},speed:600,breakpoints:{0:{allowTouchMove:!0},1023:{allowTouchMove:!1}}})}
+if(window.innerWidth>1023){new Swiper(".play__slider",{loop:!0,navigation:{nextEl:".play__btn--next",prevEl:".play__btn--prev"},spaceBetween:30,autoHeight:!0,speed:600,breakpoints:{0:{allowTouchMove:!0},1023:{allowTouchMove:!1}}})}
