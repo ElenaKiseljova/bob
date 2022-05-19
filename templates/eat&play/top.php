@@ -24,12 +24,14 @@
 
       <?php if ( $button && !empty($button) && is_array($button) && !is_wp_error( $button ) ) : ?>
         <?php 
-          $title = $button['title'] && !empty($button['title']) ? $button['title'] : __( 'смакуй, замовляй', 'bob' );
+          $title = $button['title'] ?? '';
 
           $link = $button['link'] && !empty($button['link']) ? $button['link'] : '#tabs';
         ?>
-
-        <a href="<?= $link; ?>" class="btn"><?= $title; ?></a>
+        
+        <?php if (!empty($title)) : ?>
+          <a href="<?= $link; ?>" class="btn"><?= $title; ?></a>
+        <?php endif; ?>        
       <?php endif; ?>
     </div>
   </div>  
