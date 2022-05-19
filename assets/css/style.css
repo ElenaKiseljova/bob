@@ -13041,8 +13041,8 @@ body.color {
   }
 
   .toys__item {
-    min-width: 260px;
-    width: 260px;
+    min-width: 190px;
+    width: 100%;
   }
 }
 
