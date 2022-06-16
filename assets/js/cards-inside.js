@@ -1,1 +1,1 @@
-const insideList=document.querySelector(".inside__list"),insideBtns=insideList.querySelectorAll(".inside__btn");insideList&&insideBtns&&insideBtns.forEach((i=>{i.addEventListener("click",(()=>{i.parentNode.classList.toggle("active")}))}));
+const insideList=document.querySelector(".inside__list"),insideBtns=document.querySelectorAll(".inside__btn");insideList&&insideBtns&&insideBtns.forEach((e=>{e.addEventListener("click",(()=>{e.parentNode.classList.toggle("active")}))}));
