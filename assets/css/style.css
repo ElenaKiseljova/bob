@@ -189,7 +189,7 @@ body {
   left: 0px;
   top: 0px;
   width: 100%;
-  z-index: -1;
+  z-index: -100;
 }
 
 .container {
@@ -290,7 +290,7 @@ html[lang=de] .fruit-rolls__btn {
   padding: 0 15px;
 }
 
-html[lang=de] .play__snail-text {
+html[lang=de] .top__inner .play__snail-text {
   width: 250px;
   height: 153px;
 }
@@ -301,6 +301,11 @@ html[lang=de] .toys__wrapper {
 
 html[lang=de] .toys__back {
   padding: 20px 15px 0 15px;
+}
+
+html[lang=de] .fruit-rolls__title {
+  margin: 0 auto 30px auto;
+  max-width: 100%;
 }
 
 /* Libs */
@@ -2918,6 +2923,7 @@ button.swiper-pagination-bullet {
   right: 2%;
   top: 1153px;
   width: 83px;
+  z-index: -2;
 }
 
 .fruit-rolls__image--10 {
@@ -4268,6 +4274,11 @@ body.color {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.top.party {
+  position: relative;
+  z-index: 10;
 }
 
 .top.play {
@@ -8277,7 +8288,7 @@ body.color {
 .thanks__snail-top {
   position: absolute;
   left: 50%;
-  bottom: -190px;
+  bottom: -196px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -13089,6 +13100,10 @@ body.color {
     /* justify-content: stretch; */
   }
 
+  html[lang=de] .composition__list--column {
+    max-width: 270px;
+  }
+
   .btn--up {
     width: 30px;
     height: 30px;
@@ -14415,7 +14430,7 @@ body.color {
 }
 
 @media (max-width: 550px) {
-  html[lang=de] .play__snail-text {
+  html[lang=de] .top__inner .play__snail-text {
     top: -110px;
     left: 21px;
   }
