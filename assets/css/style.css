@@ -280,7 +280,7 @@ body {
   left: -8px;
 }
 
-html[lang=de] .top__inner {
+html[lang=de] .top.about .top__inner {
   margin-top: 350px;
 }
 
@@ -306,6 +306,10 @@ html[lang=de] .toys__back {
 html[lang=de] .fruit-rolls__title {
   margin: 0 auto 30px auto;
   max-width: 100%;
+}
+
+html[lang=de] .sweets__image--3 {
+  top: 300px;
 }
 
 /* Libs */
@@ -11427,6 +11431,15 @@ body.color {
 }
 
 @media (max-width: 1200px) {
+  html[lang=de] .sweets__image--3 {
+    top: 280px;
+    left: 90px;
+  }
+
+  html[lang=de] .sweets__image--1 {
+    top: 22px;
+  }
+
   .desserts__image--2 {
     right: 0%;
   }
@@ -11537,8 +11550,18 @@ body.color {
             transform: translateX(-50%);
   }
 
-  html[lang=de] .top__inner {
+  html[lang=de] .top.about .top__inner {
     margin-top: 0;
+  }
+
+  html[lang=de] .sweets__image--2 {
+    display: none;
+  }
+
+  html[lang=de] .sweets__image--3 {
+    top: 80px;
+    right: -50px;
+    left: auto;
   }
 
   .select {
@@ -13102,6 +13125,14 @@ body.color {
 
   html[lang=de] .composition__list--column {
     max-width: 270px;
+  }
+
+  html[lang=de] .sweets__image--1 {
+    width: 40px;
+  }
+
+  html[lang=de] .top a.btn {
+    margin: 0;
   }
 
   .btn--up {
@@ -14941,6 +14972,12 @@ body.color {
   }
 }
 
+@media (max-width: 424px) {
+  html[lang=de] .sweets__image--3 {
+    width: 100px;
+  }
+}
+
 @media (max-width: 375px) {
   .unpacking__list {
     width: 100%;
@@ -14960,6 +14997,18 @@ body.color {
 }
 
 @media (max-width: 374px) {
+  html[lang=de] .marmalade__image--2 {
+    width: 90px;
+  }
+
+  html[lang=de] .marmalade__image--7 {
+    display: none;
+  }
+
+  html[lang=de] .marmalade__image--4 {
+    right: -82px;
+  }
+
   .composition__snail {
     display: none;
   }
