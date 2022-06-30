@@ -312,6 +312,30 @@ html[lang=de] .sweets__image--3 {
   top: 300px;
 }
 
+html[lang=cs] .top.about .top__inner {
+  margin-top: 350px;
+}
+
+html[lang=cs] .about__snail-text {
+  width: 289px;
+  height: 165px;
+  top: -147px;
+}
+
+html[lang=cs] .fruit-rolls__btn {
+  width: auto;
+  min-width: 175px;
+  padding: 0 15px;
+}
+
+html[lang=cs] .top.stripes a.btn {
+  margin: 0;
+}
+
+html[lang=cs] .top.stripes + .composition .composition__title {
+  font-size: 53px;
+}
+
 /* Libs */
 
 /**
@@ -10857,6 +10881,30 @@ body.color {
 }
 
 @media (max-width: 1800px) {
+  html[lang=cs] .stripes__line--1 {
+    left: 0px;
+  }
+
+  html[lang=cs] .stripes__line--2 {
+    left: 102px;
+  }
+
+  html[lang=cs] .stripes__line--3 {
+    left: 210px;
+  }
+
+  html[lang=cs] .stripes__line--4 {
+    right: 210px;
+  }
+
+  html[lang=cs] .stripes__line--5 {
+    right: 56px;
+  }
+
+  html[lang=cs] .stripes__line--6 {
+    right: 0px;
+  }
+
   .product__package--1 {
     width: 490px;
   }
@@ -11156,6 +11204,45 @@ body.color {
 }
 
 @media (max-width: 1400px) {
+  html[lang=cs] .stripes__line--1 {
+    left: 0px;
+  }
+
+  html[lang=cs] .stripes__line--2 {
+    left: 102px;
+    top: 460px;
+    left: 250px;
+  }
+
+  html[lang=cs] .stripes__line--3 {
+    left: 210px;
+    top: 100px;
+    width: 60px;
+  }
+
+  html[lang=cs] .stripes__line--4 {
+    right: 210px;
+    top: 423px;
+  }
+
+  html[lang=cs] .stripes__line--5 {
+    width: 153px;
+    right: 56px;
+    top: 90px;
+  }
+
+  html[lang=cs] .stripes__line--6 {
+    right: 0px;
+  }
+
+  html[lang=cs] .stripes__fruit--6 {
+    right: 415px;
+  }
+
+  html[lang=cs] .stripes__fruit--5 {
+    display: none;
+  }
+
   .fruit-rolls__image--4 {
     left: 0;
   }
@@ -11562,6 +11649,18 @@ body.color {
     top: 80px;
     right: -50px;
     left: auto;
+  }
+
+  html[lang=cs] .top.about .top__inner {
+    margin-top: 0;
+  }
+
+  html[lang=cs] .stripes__fruit--1 {
+    top: 307px;
+  }
+
+  html[lang=cs] .stripes__fruit--7 {
+    display: none;
   }
 
   .select {
