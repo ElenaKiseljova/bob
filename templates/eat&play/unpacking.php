@@ -15,6 +15,7 @@
 
             $video_id = $item['video_id'] ?? '';
             $video_file = $item['video_file'] ?? '';
+            $video_banner = $item['video_banner'] ?? '';
 
             $src = '';
           ?>
@@ -46,7 +47,7 @@
               <?php endif; ?>
 
               <div class="video__img" <?= ($type !== 'file') ? 'data-src="' . $src . '"' : ''; ?>">
-                <img src="<?= get_template_directory_uri(  ); ?>/assets/img/eat&play/video/video-img.jpg" alt="<?= get_bloginfo( 'name' ); ?>" />
+                <img src="<?= $video_banner; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
                 <button class="video__btn">
                   <div class="video__overlay">
                     <svg width="16" height="17">
