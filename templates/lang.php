@@ -22,7 +22,7 @@
       ?>
       <ul class="lang__list" data-simplebar>
         <?php foreach ($langaages as $key => $langaage) : ?>
-          <li class="lang__item <?= $langaage['current_lang'] ? 'active' : ''; ?>">
+          <li class="lang__item <?= $langaage['current_lang'] ? 'active' : ''; ?>" data-lang-code="<?= $langaage['slug']; ?>">
             <a href="<?= $langaage['url']; ?>">
               <?= mb_strtoupper($langaage['name']); ?>
             </a>

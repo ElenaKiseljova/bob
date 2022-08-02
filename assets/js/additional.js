@@ -133,7 +133,105 @@
 
     if (wpcf7Elm) {
       //wpcf7submit
-      wpcf7Elm.addEventListener('wpcf7mailsent', (event) => {
+      wpcf7Elm.addEventListener('wpcf7mailsent', (evt) => {
+        const curLang = document.querySelector('.lang__item.active');
+        const formType = evt.target.querySelector('#form-type');
+
+        if (curLang && formType) {
+          const curLangCode = curLang.dataset.langCode.trim();
+          const formTypeText = formType.textContent.trim();
+
+          switch (curLangCode) {
+            case 'ua':
+              if (formTypeText === 'partners') {
+                gtag('event', 'SendPartnersRequestUA', {});
+
+                // window.dataLayer.push({ 'event': 'SendPartnersRequestUA' });
+              }
+
+              if (formTypeText === 'consumers') {
+                gtag('event', 'SendCustomersRequestUA', {});
+
+                // window.dataLayer.push({ 'event': 'SendCustomersRequestUA' });
+              }
+              break;
+
+            case 'de':
+              if (formTypeText === 'partners') {
+                gtag('event', 'SendPartnersRequestDE', {});
+
+                // window.dataLayer.push({ 'event': 'SendPartnersRequestDE' });
+              }
+
+              if (formTypeText === 'consumers') {
+                gtag('event', 'SendCustomersRequestDE', {});
+
+                // window.dataLayer.push({ 'event': 'SendCustomersRequestDE' });
+              }
+              break;
+
+            case 'cs':
+              if (formTypeText === 'partners') {
+                gtag('event', 'SendPartnersRequestCZ', {});
+
+                // window.dataLayer.push({ 'event': 'SendPartnersRequestCZ' });
+              }
+
+              if (formTypeText === 'consumers') {
+                gtag('event', 'SendCustomersRequestCZ', {});
+
+                // window.dataLayer.push({ 'event': 'SendCustomersRequestCZ' });
+              }
+              break;
+
+            case 'pl':
+              if (formTypeText === 'partners') {
+                gtag('event', 'SendPartnersRequestPL', {});
+
+                // window.dataLayer.push({ 'event': 'SendPartnersRequestPL' });
+              }
+
+              if (formTypeText === 'consumers') {
+                gtag('event', 'SendCustomersRequestPL', {});
+
+                // window.dataLayer.push({ 'event': 'SendCustomersRequestPL' });
+              }
+              break;
+
+            case 'en':
+              if (formTypeText === 'partners') {
+                gtag('event', 'SendPartnersRequestEN', {});
+
+                // window.dataLayer.push({ 'event': 'SendPartnersRequestEN' });
+              }
+
+              if (formTypeText === 'consumers') {
+                gtag('event', 'SendCustomersRequestEN', {});
+
+                // window.dataLayer.push({ 'event': 'SendCustomersRequestEN' });
+              }
+              break;
+
+            default:
+              if (formTypeText === 'partners') {
+                gtag('event', 'SendPartnersRequestUA', {});
+
+                // window.dataLayer.push({ 'event': 'SendPartnersRequestUA' });
+              }
+
+              if (formTypeText === 'consumers') {
+                gtag('event', 'SendCustomersRequestUA', {});
+
+                // window.dataLayer.push({ 'event': 'SendCustomersRequestUA' });
+              }
+
+              console.log('default', curLangCode, formTypeText);
+              break;
+          }
+
+          console.log(curLangCode, formTypeText);
+        }
+
         window.location.href = window.thanksPageUrl ?? '/';
       }, false);
     }
