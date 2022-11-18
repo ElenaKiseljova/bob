@@ -1,4 +1,10 @@
-<div class="header__lang lang">
+<?php 
+  $is_shelf_health = is_page_template( 'page-shelf-health.php' );
+  $shelf_health_lang_class = $is_shelf_health ? 'lang--hide' : '';
+?>
+
+<!-- lang--hide - модификатор, чтобы спрятать переключение языков -->
+<div class="header__lang lang <?= $shelf_health_lang_class; ?>">
   <?php if ( function_exists( 'pll_current_language' ) ) : ?>
     <button class="lang__btn">
       <span><?= pll_current_language() === 'uk' ? 'ua' : pll_current_language(); ?></span>

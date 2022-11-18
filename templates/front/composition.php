@@ -14,6 +14,7 @@
 
       <div class="composition__block">
         <?php 
+          // Global $list for that
           get_template_part( 'templates/advantages' );
         ?>
 

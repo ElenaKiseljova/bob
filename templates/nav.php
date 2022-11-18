@@ -1,9 +1,13 @@
 <?php
   global $menu_name, $menu_items;
+
+  $is_shelf_health = is_page_template( 'page-shelf-health.php' );
+  $shelf_health_nav_class = $is_shelf_health ? 'nav--new' : '';
 ?>
 
 <?php if ($menu_name && $menu_items && !empty($menu_items) && !is_wp_error( $menu_items )) : ?>    
-  <nav class="<?= $menu_name === 'header' ? 'header__nav' : 'footer__nav'; ?> nav">
+  <!-- nav--new - модификатор, чтобы поменять стили к элементам -->
+  <nav class="<?= ($menu_name === 'header' || $menu_name === 'header-shelf-healf') ? 'header__nav' : 'footer__nav'; ?> nav <?= $shelf_health_nav_class; ?>">
     <ul class="nav__list">
       <?php foreach ( (array) $menu_items as $key => $menu_item ) : ?>
         <?php 

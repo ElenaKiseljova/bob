@@ -71,6 +71,13 @@ function bob_scripts ()
     wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/js/accordion.js', $deps = array(), $ver = null, $in_footer = true );
   }
 
+  if (is_page_template( 'page-shelf-health.php' )) {
+    wp_enqueue_script('custom-scroll-lib-script', get_template_directory_uri() . '/assets/js/libs/custom-scroll/custom-scroll.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('custom-scroll-script', get_template_directory_uri() . '/assets/js/custom-scroll.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('anchors-script', get_template_directory_uri() . '/assets/js/anchors.js', $deps = array(), $ver = null, $in_footer = true );
+    wp_enqueue_script('modal-script', get_template_directory_uri() . '/assets/js/modal.js', $deps = array(), $ver = null, $in_footer = true );
+  }
+
   wp_enqueue_script('maskinput-script', get_template_directory_uri() . '/assets/js/libs/maskinput.js', $deps = array('jquery'), $ver = null, $in_footer = true );
 
   wp_enqueue_script('additional-script', get_template_directory_uri() . '/assets/js/additional.js', $deps = array('jquery'), $ver = null, $in_footer = true );
@@ -91,7 +98,9 @@ if (!function_exists('bob_after_setup_theme_function')) :
     ********  //Меню
     =============================================== */
     register_nav_menu( 'header', 'Хедер' );
+    register_nav_menu( 'header-shelf-healf', 'Хедер - Shelf Health' );
     register_nav_menu( 'footer', 'Футер' );
+    register_nav_menu( 'footer-shelf-healf', 'Футер - Shelf Health' );
     register_nav_menu( 'social', 'Социальные сети' );
     register_nav_menu( 'contacts', 'Контакты' );
     register_nav_menu( 'not_found', '404' );
@@ -227,7 +236,12 @@ function bob_acf_custom_toolbars( $toolbars )
   add_filter( 'wpcf7_form_class_attr', 'bob_filter_cf7_class' );
 
   function bob_filter_cf7_class( $class ){
-    $class .= ' partners__form form';
+    $is_shelf_health = is_page_template( 'page-shelf-health.php' );
+    if ($is_shelf_health) {
+      $class .= ' form form--new';
+    } else {
+      $class .= ' partners__form form';
+    }
 
     return $class;
   }
