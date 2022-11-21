@@ -102,6 +102,7 @@ if (!function_exists('bob_after_setup_theme_function')) :
     register_nav_menu( 'footer', 'Футер' );
     register_nav_menu( 'footer-shelf-healf', 'Футер - Shelf Health' );
     register_nav_menu( 'social', 'Социальные сети' );
+    register_nav_menu( 'social-shelf-healf', 'Социальные сети - Shelf Health' );
     register_nav_menu( 'contacts', 'Контакты' );
     register_nav_menu( 'not_found', '404' );
 

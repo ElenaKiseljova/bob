@@ -43,11 +43,15 @@
                   </svg>
                 </div>
 
-                <span><?= __( 'Відоси, фоточки і уся смачна інфа', 'bob' ); ?></span>
-            
+                <?php if ($is_shelf_health) : ?>
+                  <span><?= __( 'Videos, photos and all the tasty info', 'bob' ); ?></span>
+                <?php else : ?>
+                  <span><?= __( 'Відоси, фоточки і уся смачна інфа', 'bob' ); ?></span>
+                <?php endif; ?>       
+                  
                 <?php 
-                  get_template_part( 'templates/menu', 'social' );
-                ?>
+                    get_template_part( 'templates/menu', 'social' );
+                  ?>       
               </div>
 
               <img class="<?= $is_shelf_health ? 'hide' : ''; ?>" src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-footer.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
@@ -89,6 +93,25 @@
 
     <?php if ($is_shelf_health) : ?>
       <!-- landing-page END - класс для стилизации кастомного скролла -->
+      </div>
+
+      <div class="modal">
+        <div class="modal__body">
+          <div class="modal__overlay"></div>
+          <div class="modal__content">
+            <div class="modal__top">
+              <div class="modal__close"></div>
+              <button class="modal__close">
+                <svg class="modal__close-svg">
+                  <use xlink:href="<?= get_template_directory_uri(  ); ?>/assets/img/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="modal__main">
+              <!-- content -->
+            </div>
+          </div>
+        </div>
       </div>
     <?php endif; ?>
 

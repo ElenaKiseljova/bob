@@ -1,5 +1,8 @@
 <?php
-  $menu_name = 'social';
+  $is_shelf_health = is_page_template( 'page-shelf-health.php' );
+  $shelf_health_social_class = $is_shelf_health ? 'social--show' : '';
+
+  $menu_name = $is_shelf_health ? 'social-shelf-healf' : 'social';
   $locations = get_nav_menu_locations();
   
   if( $locations && isset( $locations[ $menu_name ] ) ){
@@ -7,9 +10,6 @@
     // получаем элементы меню
     $menu_items = wp_get_nav_menu_items( $locations[ $menu_name ] );
   }
-
-  $is_shelf_health = is_page_template( 'page-shelf-health.php' );
-  $shelf_health_social_class = $is_shelf_health ? 'social--show' : '';
 ?>
 
 <?php if ($menu_items && !empty($menu_items) && !is_wp_error( $menu_items )) : ?> 

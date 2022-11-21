@@ -38,6 +38,7 @@
       </script>
 
       <!-- Meta Pixel Code -->
+        <meta name="facebook-domain-verification" content="w2zlaoqeoxljwwtfljm7jdent0k2mz" />
         <script>
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -51,9 +52,9 @@
           fbq('track', 'PageView');
           
           <?php 
-            $facebook_event = get_field('facebook_event') ?? null;
-            if ($facebook_event && !empty($facebook_event) && !is_wp_error( $facebook_event )) {
-              echo $facebook_event;
+            $facebook_track = get_field('facebook_track') ?? null;
+            if ($facebook_track && !empty($facebook_track) && !is_wp_error( $facebook_track )) {
+              echo $facebook_track;
             } 
           ?>
         </script>
@@ -61,4 +62,8 @@
           src="https://www.facebook.com/tr?id=949131453144286&ev=PageView&noscript=1"
         /></noscript>
       <!-- End Meta Pixel Code -->
+
+      <script>
+        window.thanksPageUrl = '<?= bob_get_special_page( 'thanks', 'url' ) ?? get_bloginfo( 'url' ); ?>';
+      </script>
     </head>

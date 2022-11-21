@@ -2,13 +2,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bob Snail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-15 17:26+0000\n"
-"PO-Revision-Date: 2022-04-25 17:17+0000\n"
+"POT-Creation-Date: 2022-04-18 10:22+0000\n"
+"PO-Revision-Date: 2022-06-14 14:24+0000\n"
 "Last-Translator: \n"
-"Language-Team: Ukrainian\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
-"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,124 +37,126 @@ msgstr ""
 
 #: templates/product/tabs.php:139
 msgid "Інгредієнти:"
-msgstr ""
+msgstr "Ingredients:"
 
 #: templates/product/advantages.php:11
 msgid "А ти - розкручуєш, щоб насолода була до-о-овшою!"
-msgstr ""
+msgstr "Besides, you can unroll them to enjoy them for longer!"
 
 #: templates/product/composition-bob-top.php:12
 msgid "А ще їх можна розкручувати!"
 msgstr ""
+"And you can twist them!\n"
 
 #: 404.php:44
 msgid "Вибачай!"
-msgstr ""
+msgstr "Sorry!"
 
 #: templates/lang.php:17
 msgid "Вибір мови"
-msgstr ""
+msgstr "language preference"
 
 #: footer.php:38
 msgid "Відоси, фоточки і уся смачна інфа"
-msgstr ""
+msgstr "Follow for sweets"
 
 #. Name of the template
 msgid "Где купить?"
-msgstr ""
+msgstr "Buy now"
 
 #. Name of the template
 msgid "Главная"
-msgstr ""
+msgstr "Main"
 
 #. Name of the template
 msgid "Детское пюрэ"
-msgstr ""
+msgstr "Baby puree"
 
 #: templates/product/tabs.php:125
 msgid "Дивитися інгредієнти"
-msgstr ""
+msgstr "See ingredients"
 
 #: templates/product/top.php:38 templates/products/item.php:24
 msgid "Знайди свій смак"
-msgstr ""
+msgstr "Find your flavour"
 
 #. Name of the template
 msgid "Кокосовые десерты"
-msgstr ""
+msgstr "Coconut desserts"
 
 #. Name of the template
 msgid "Контакты"
-msgstr ""
+msgstr "Contacts"
 
 #: templates/product/top-bob.php:11
 msgid "Легко брати <br>з собою!"
 msgstr ""
+"It's easy to take with you!\n"
 
 #. Name of the template
 msgid "Натуральный мармелад"
-msgstr ""
+msgstr "Natural marmalade"
 
 #: templates/products/new.php:17
 msgid "Ой, що буде!"
-msgstr ""
+msgstr "Oh, what will happen!"
 
 #: templates/product/composition-bob-right.php:6
 msgid "Повільне запікання зберігає вітаміни"
-msgstr ""
+msgstr "Slow baking preserves vitamins"
 
 #. Name of the template
 msgid "Праздничный бокс"
-msgstr ""
+msgstr "Party box"
 
 #. Name of the template
 msgid "Про бренд"
-msgstr ""
+msgstr "About us"
 
 #. Name of the template
 msgid "Продукция"
-msgstr ""
+msgstr "Products"
 
 #. Name of the template
 msgid "Рецепты"
-msgstr ""
+msgstr "Recipes"
 
 #. Name of the template
 msgid "Сладости в шоколаде"
-msgstr ""
+msgstr "Sweets in chocolate"
 
 #. Name of the template
 msgid "Смузи"
-msgstr ""
+msgstr "Smoothies"
 
 #. Name of the template
 msgid "Спасибо!"
-msgstr ""
+msgstr "Thanks!"
 
 #: 404.php:23
 msgid "Сторінки не існує або <br />я переніс її на іншу адресу"
-msgstr ""
+msgstr "There's no such page here. Or did I put it somewhere else?"
 
 #. Name of the template
 msgid "Страйпсы"
-msgstr ""
+msgstr "Stripes"
 
 #. Name of the template
 msgid "Форма"
-msgstr ""
+msgstr "Form"
 
 #. Name of the template
 msgid "Фруктовые роллы"
-msgstr ""
+msgstr "Fruit rolls"
 
 #. Name of the template
 msgid "Шеф пюрэ"
-msgstr ""
+msgstr "Chef puree"
 
 #: templates/product/tabs.php:155
 msgid "де купити"
-msgstr ""
+msgstr "Buy now"
 
 #: 404.php:18
 msgid "ой бооо,<br />СТАЛАСЯ ХАЛЕПА!"
-msgstr ""
+msgstr "OOPS!"

@@ -1,7 +1,3 @@
-<script>
-  window.thanksPageUrl = '<?= bob_get_special_page( 'thanks', 'url' ) ?? get_bloginfo( 'url' ); ?>';
-</script>
-
 <section class="partners">
   <div class="container container__fluid">
     <div class="partners__inner">

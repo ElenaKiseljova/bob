@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Bob Snail\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-15 17:26+0000\n"
-"PO-Revision-Date: 2022-04-18 10:22+0000\n"
+"PO-Revision-Date: 2022-09-13 14:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -13,11 +13,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.1; wp-5.9.3\n"
+"X-Loco-Version: 2.6.1; wp-5.9.4\n"
 "X-Domain: bob"
+
+#. Name of the template
+msgid "404"
+msgstr ""
 
 #. Name of the theme
 msgid "Bob Snail"
+msgstr ""
+
+#. Name of the template
+msgid "Eat & Play"
 msgstr ""
 
 #. Author URI of the theme
@@ -32,111 +40,124 @@ msgstr ""
 msgid "Webnauts"
 msgstr ""
 
-#: templates/product/tabs.php:128
+#: templates/product/tabs.php:141
 msgid "Інгредієнти:"
-msgstr ""
+msgstr "składniki:"
 
-#: templates/product/advantages.php:9
+#: templates/product/advantages.php:11
 msgid "А ти - розкручуєш, щоб насолода була до-о-овшою!"
-msgstr ""
+msgstr "Możesz je też rozwinąć, żeby dłużej się nimi cieszyć."
 
-#: templates/product/composition-bob-top.php:11
+#: templates/product/composition-bob-top.php:12
 msgid "А ще їх можна розкручувати!"
-msgstr ""
+msgstr "I możesz je przekręcić!"
+
+#: 404.php:44
+msgid "Вибачай!"
+msgstr "UPS!"
 
 #: templates/lang.php:17
 msgid "Вибір мови"
-msgstr ""
+msgstr "Wybór języka"
 
 #: footer.php:38
 msgid "Відоси, фоточки і уся смачна інфа"
-msgstr ""
+msgstr "Tu znajdziesz więcej słodyczy"
+
+#. Name of the template
+msgid "Где купить?"
+msgstr "Kup teraz"
 
 #. Name of the template
 msgid "Главная"
-msgstr ""
+msgstr "Główna"
 
 #. Name of the template
 msgid "Детское пюрэ"
-msgstr ""
+msgstr "MUSY DLA NIEMOWLĄT"
 
-#: templates/product/tabs.php:114
+#: templates/eat&play/composition.php:74
+msgid "Дивитися"
+msgstr "Zegarek"
+
+#: templates/product/tabs.php:127
 msgid "Дивитися інгредієнти"
-msgstr ""
+msgstr "Uważaj na składniki"
 
-#: templates/product/top.php:28 templates/products/item.php:24
+#: templates/product/top.php:46 templates/products/item.php:25
 msgid "Знайди свій смак"
-msgstr ""
+msgstr "Wybierz swój smak"
 
 #. Name of the template
 msgid "Кокосовые десерты"
-msgstr ""
+msgstr "Desery kokosowe"
 
-#: templates/product/top-bob-left.php:11
+#. Name of the template
+msgid "Контакты"
+msgstr "Łączność"
+
+#: templates/product/top-bob.php:11
 msgid "Легко брати <br>з собою!"
-msgstr ""
+msgstr "Idealnie mieszczą się w kieszeni!"
 
 #. Name of the template
 msgid "Натуральный мармелад"
-msgstr ""
+msgstr "NATURALNA GALARETKA OWOCOWA"
 
-#: templates/products/new.php:17
-msgid "Ой, що буде!"
-msgstr ""
+#: templates/product/composition-bob-right.php:6
+msgid "Повільне запікання зберігає вітаміни"
+msgstr "Powolne pieczenie zachowuje witaminy"
 
 #. Name of the template
-msgid "Партнёрам"
-msgstr ""
+msgid "Праздничный бокс"
+msgstr "PARTY BOX"
 
-#: templates/product/composition-bob-right.php:5
-msgid "Повільне запікання зберігає вітаміни"
-msgstr ""
+#. Name of the template
+msgid "Про бренд"
+msgstr "O marce"
 
 #. Name of the template
 msgid "Продукция"
-msgstr ""
+msgstr "Produkty"
 
-#: templates/thanks.php:11
-msgid "Сенк ю!"
-msgstr ""
+#. Name of the template
+msgid "Рецепты"
+msgstr "Przepisy"
 
 #. Name of the template
 msgid "Сладости в шоколаде"
 msgstr ""
+"SMAKOŁYKI W\n"
+"CZEKOLADZIE"
 
 #. Name of the template
 msgid "Смузи"
-msgstr ""
+msgstr "SMOOTHIE"
 
 #. Name of the template
 msgid "Спасибо!"
-msgstr ""
+msgstr "Dziękuję Ci!"
+
+#: 404.php:23
+msgid "Сторінки не існує або <br />я переніс її на іншу адресу"
+msgstr "Nie ma takiej strony. Czyżbym coś pomieszał?"
 
 #. Name of the template
 msgid "Страйпсы"
-msgstr ""
+msgstr "PASKI"
+
+#. Name of the template
+msgid "Форма"
+msgstr "Formularz"
 
 #. Name of the template
 msgid "Фруктовые роллы"
-msgstr ""
+msgstr "ZAWIJASY OWOCOWE"
 
 #. Name of the template
 msgid "Шеф пюрэ"
-msgstr ""
+msgstr "MUSY SZEFA KUCHNI"
 
-#: templates/thanks.php:17
-msgid ""
-"Я уважно прочитаю <br>та невдовзі відповім. <br>Не забудь перевірити email!"
-msgstr ""
-
-#: templates/product/tabs.php:144
-msgid "де купити"
-msgstr ""
-
-#: templates/thanks.php:22
-msgid "повернутись на головну"
-msgstr ""
-
-#: templates/thanks.php:6
-msgid "юхууу, дякую <br>тобі за лист!"
-msgstr ""
+#: 404.php:18
+msgid "ой бооо,<br />СТАЛАСЯ ХАЛЕПА!"
+msgstr "UPS!"

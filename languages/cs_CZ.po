@@ -2,18 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bob Snail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-15 17:26+0000\n"
-"PO-Revision-Date: 2022-04-25 17:17+0000\n"
+"POT-Creation-Date: 2022-06-14 15:46+0000\n"
+"PO-Revision-Date: 2022-11-10 20:29+0000\n"
 "Last-Translator: \n"
-"Language-Team: Ukrainian\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
-"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"Language-Team: Czech\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.1; wp-5.9.3\n"
+"X-Loco-Version: 2.6.1; wp-5.9.5\n"
 "X-Domain: bob"
 
 #. Name of the template
@@ -22,6 +22,10 @@ msgstr ""
 
 #. Name of the theme
 msgid "Bob Snail"
+msgstr ""
+
+#. Name of the template
+msgid "Eat & Play"
 msgstr ""
 
 #. Author URI of the theme
@@ -36,21 +40,21 @@ msgstr ""
 msgid "Webnauts"
 msgstr ""
 
-#: templates/product/tabs.php:139
+#: templates/product/tabs.php:141
 msgid "Інгредієнти:"
-msgstr ""
+msgstr "Složení:"
 
 #: templates/product/advantages.php:11
 msgid "А ти - розкручуєш, щоб насолода була до-о-овшою!"
-msgstr ""
+msgstr "Roztoč je a užij si potěšení na maximum! "
 
 #: templates/product/composition-bob-top.php:12
 msgid "А ще їх можна розкручувати!"
-msgstr ""
+msgstr "A můžeš je roztočít!"
 
 #: 404.php:44
 msgid "Вибачай!"
-msgstr ""
+msgstr "Omlouvám se!"
 
 #: templates/lang.php:17
 msgid "Вибір мови"
@@ -58,7 +62,7 @@ msgstr ""
 
 #: footer.php:38
 msgid "Відоси, фоточки і уся смачна інфа"
-msgstr ""
+msgstr "Sleduj mě"
 
 #. Name of the template
 msgid "Где купить?"
@@ -72,13 +76,17 @@ msgstr ""
 msgid "Детское пюрэ"
 msgstr ""
 
-#: templates/product/tabs.php:125
-msgid "Дивитися інгредієнти"
-msgstr ""
+#: templates/eat&play/composition.php:74
+msgid "Дивитися"
+msgstr "Kdo jsem"
 
-#: templates/product/top.php:38 templates/products/item.php:24
+#: templates/product/tabs.php:127
+msgid "Дивитися інгредієнти"
+msgstr "Podívej se na složení."
+
+#: templates/product/top.php:46 templates/products/item.php:25
 msgid "Знайди свій смак"
-msgstr ""
+msgstr "Najdi svou příchuť"
 
 #. Name of the template
 msgid "Кокосовые десерты"
@@ -90,19 +98,15 @@ msgstr ""
 
 #: templates/product/top-bob.php:11
 msgid "Легко брати <br>з собою!"
-msgstr ""
+msgstr "Ideální na cesty"
 
 #. Name of the template
 msgid "Натуральный мармелад"
 msgstr ""
 
-#: templates/products/new.php:17
-msgid "Ой, що буде!"
-msgstr ""
-
 #: templates/product/composition-bob-right.php:6
 msgid "Повільне запікання зберігає вітаміни"
-msgstr ""
+msgstr "Pomalé pečení uchovává vitamíny."
 
 #. Name of the template
 msgid "Праздничный бокс"
@@ -130,11 +134,11 @@ msgstr ""
 
 #. Name of the template
 msgid "Спасибо!"
-msgstr ""
+msgstr "Děkuji"
 
 #: 404.php:23
 msgid "Сторінки не існує або <br />я переніс її на іншу адресу"
-msgstr ""
+msgstr "Tato stránka neexistuje nebo se přesunula na jinou adresu."
 
 #. Name of the template
 msgid "Страйпсы"
@@ -152,10 +156,6 @@ msgstr ""
 msgid "Шеф пюрэ"
 msgstr ""
 
-#: templates/product/tabs.php:155
-msgid "де купити"
-msgstr ""
-
 #: 404.php:18
 msgid "ой бооо,<br />СТАЛАСЯ ХАЛЕПА!"
-msgstr ""
+msgstr "oops, něco se pokazilo!"
