@@ -8736,6 +8736,10 @@ body.color {
   line-height: 20px;
 }
 
+.form--new .form__input.wpcf7-not-valid {
+  border: 1px solid #e62856;
+}
+
 .form--new .form__error {
   right: 0;
   bottom: -22px;
