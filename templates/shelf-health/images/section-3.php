@@ -21,6 +21,6 @@
 />
 <img
   class="icon unit__image unit__image--10"
-  src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/grapefruit.svg"
+  src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/piece-strawberry.svg"
   alt="img"
 />

@@ -4812,6 +4812,10 @@ body.color {
   padding: 3px 25px;
 }
 
+.top a.btn.btn--new {
+  padding: 12px 51px !important;
+}
+
 .top--new {
   position: relative;
   padding-top: 100px;
@@ -11620,8 +11624,8 @@ body.color {
 .unit__image--10 {
   top: 250px;
   right: 3%;
-  width: 217px;
-  height: 166px;
+  width: 250px;
+  height: 250px;
   -webkit-transform: rotate(-50deg);
       -ms-transform: rotate(-50deg);
           transform: rotate(-50deg);
@@ -16395,8 +16399,8 @@ body.color {
 
   .unit__image--10 {
     width: 122px;
-    height: 93px;
-    bottom: -30px;
+    height: 123px;
+    bottom: 0px;
     top: auto;
     left: 0;
   }
