@@ -71,22 +71,22 @@
         <img
           src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/piece-strawberry.svg"
           class="icon footer__fruit footer__fruit--1"
-          alt=""
+          alt="img"
         />
         <img
           src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-piece.svg"
           class="icon footer__fruit footer__fruit--2"
-          alt=""
+          alt="img"
         />
         <img
           src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/cherry.svg"
           class="icon footer__fruit footer__fruit--3"
-          alt=""
+          alt="img"
         />
         <img
-          src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/grapefruit.svg"
+          src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear-big.svg"
           class="icon footer__fruit footer__fruit--4"
-          alt=""
+          alt="img"
         />
       <?php endif; ?>
     </footer>

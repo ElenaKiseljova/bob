@@ -51,7 +51,7 @@
   />
   <img
     class="icon first-section__image first-section__image--4"
-    src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/grapefruit.svg"
+    src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/cherry.svg"
     alt=""
   />
 </section>

@@ -15,45 +15,6 @@
       <div class="unit__form">
         <?= $form; ?>
       </div>
-
-      <!-- <form class="form form--new">
-        <div class="form__block form__block--error">
-          <span class="form__label">Name or company name</span>
-          <input
-            class="form__input"
-            type="text"
-            placeholder="Name or company name"
-            required
-          />
-          <span class="form__error">Error message</span>
-        </div>
-        <div class="form__block">
-          <span class="form__label">Country</span>
-          <input
-            class="form__input"
-            type="text"
-            placeholder="Country"
-            required
-          />
-        </div>
-        <div class="form__block">
-          <span class="form__label">E-mail</span>
-          <input
-            class="form__input"
-            type="email"
-            placeholder="E-mail"
-            required
-          />
-        </div>
-        <div class="form__block form__block--dispensable">
-          <span class="form__label">Notes</span>
-          <textarea
-            class="form__input form__input--area"
-            placeholder="Notes"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn--new">JOIN NOW</button>
-      </form> -->
     </div>
   </div>
   <div class="unit__vector vector">
@@ -69,31 +30,31 @@
   <img
     class="icon unit__image unit__image--26"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/cherry.svg"
-    alt=""
+    alt="img"
   />
   <img
     class="icon unit__image unit__image--27"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/piece-strawberry.svg"
-    alt=""
+    alt="img"
   />
   <img
     class="icon unit__image unit__image--28"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-piece.svg"
-    alt=""
+    alt="img"
   />
   <img
     class="icon unit__image unit__image--29"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/persimmon.svg"
-    alt=""
+    alt="img"
   />
   <img
     class="icon unit__image unit__image--30"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/pear-big.svg"
-    alt=""
+    alt="img"
   />
   <img
     class="icon unit__image unit__image--31"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-footer.svg"
-    alt=""
+    alt="img"
   />
 </section>

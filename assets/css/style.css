@@ -11388,8 +11388,9 @@ body.color {
 
 .first-section__image--4 {
   right: 15%;
-  top: 150px;
-  width: 30px;
+  top: 120px;
+  width: 100px;
+  height: 100px;
 }
 
 .unit {
@@ -12065,11 +12066,10 @@ body.color {
 }
 
 .footer__fruit--4 {
-  bottom: -60px;
-  left: 58%;
+  bottom: -100px;
+  left: 57%;
   width: 169px;
-  height: 130px;
-  z-index: 11;
+  z-index: 10;
   -webkit-transform: scale(-1, 1);
       -ms-transform: scale(-1, 1);
           transform: scale(-1, 1);
