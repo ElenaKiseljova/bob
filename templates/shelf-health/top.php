@@ -44,11 +44,11 @@
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/apple-piece.svg"
     alt=""
   />
-  <img
+  <!-- <img
     class="icon first-section__image first-section__image--3"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/grapefruit.svg"
     alt=""
-  />
+  /> -->
   <img
     class="icon first-section__image first-section__image--4"
     src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/cherry.svg"
