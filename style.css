@@ -1,5 +1,5 @@
 /*
-  Theme Name: Bob Snail
+  Theme Name: Bob Snail (Version 1.1)
   Author: Webnauts
   Author URI: https://webnauts.pro/
   Description: Theme for Bob Snail site. With additional page "Shelf Health" (21.11.2022)
@@ -10,12 +10,12 @@
 @import url('assets/css/style.min.css');
 
 * {
-  overflow-wrap: normal!important;
+  overflow-wrap: normal !important;
 }
 
 .visually-hidden,
-input[type=checkbox].visually-hidden,
-input[type=radio].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -26,7 +26,7 @@ input[type=radio].visually-hidden {
   white-space: nowrap;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
-  clip-path: inset(100%)
+  clip-path: inset(100%);
 }
 
 .form__block br {
@@ -43,7 +43,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: -25px;
   left: 0;
-  
+
   color: #e62856;
 }
 
@@ -63,3 +63,4 @@ input[type=radio].visually-hidden {
 .grecaptcha-badge {
   display: none;
 }
+
