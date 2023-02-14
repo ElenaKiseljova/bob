@@ -10,7 +10,7 @@
         ?>
         <div class="about__snail">
           <img src="<?= get_template_directory_uri(  ); ?>/assets/img/icons/snail-smile.svg" alt="<?= get_bloginfo( 'name' ); ?>" />
-          <div class="about__snail-text">
+          <div class="about__snail-text" <?= $bob_text === '' ? 'style="visibility: hidden;"' : '' ?>>
             <p>
               <?= $bob_text; ?>
             </p>
