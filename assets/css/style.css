@@ -5059,7 +5059,7 @@ body.color {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .content__item {
