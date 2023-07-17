@@ -5065,6 +5065,7 @@ body.color {
 .content__item {
   margin: 0 auto;
   max-width: 270px;
+  width: 100%;
   -webkit-transition: 1s ease;
   -o-transition: 1s ease;
   transition: 1s ease;
