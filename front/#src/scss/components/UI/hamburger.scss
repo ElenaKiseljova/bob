@@ -1,0 +1,16 @@
+.hamburger {
+  display: none;
+  margin-right: 0;
+  margin-left: auto;
+  &__btn {
+    font-size: 0;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+
+    outline: none;
+  }
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}

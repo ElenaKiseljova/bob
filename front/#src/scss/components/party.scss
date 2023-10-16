@@ -1,0 +1,229 @@
+.party {
+  .top__title {
+    br {
+      display: none;
+    }
+  }
+  &__snail {
+    position: absolute;
+    right: 80px;
+    top: -130px;
+    img {
+      position: relative;
+      z-index: 10;
+      transform: rotate(-89deg) scale(-1, 1);
+    }
+    &-text {
+      position: absolute;
+      top: -50px;
+      right: 100px;
+      width: 163px;
+      height: 100px;
+      background: url(../img/icons/cloud-party.svg) no-repeat center
+        center/contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 112% */
+
+        text-align: center;
+
+        color: #043314;
+
+        transform: rotate(5.69deg);
+      }
+    }
+  }
+  .top__descr {
+    max-width: 460px;
+  }
+  &__image {
+    &--1 {
+      left: -18px;
+      top: 154px;
+      width: 232px;
+    }
+    &--2 {
+      z-index: -1;
+      left: 24px;
+      top: 270px;
+      width: 233px;
+    }
+    &--3 {
+      left: 48px;
+      top: 460px;
+      width: 200px;
+    }
+    &--4 {
+      left: 0px;
+      top: 375px;
+      width: 62px;
+    }
+    &--5 {
+      left: -90px;
+      top: 475px;
+      width: 136px;
+    }
+    &--6 {
+      left: 60px;
+      top: 644px;
+      width: 61px;
+    }
+    &--7 {
+      left: 274px;
+      top: 629px;
+      width: 81px;
+    }
+    &--8 {
+      top: 133px;
+      width: 81px;
+      right: 118px;
+    }
+    &--9 {
+      width: 105.62px;
+      height: 98.51px;
+      right: -10px;
+      top: 230px;
+    }
+    &--10 {
+      right: 100px;
+      top: 270px;
+      width: 146px;
+      transform: rotate(40deg);
+    }
+    &--11 {
+      width: 67px;
+      right: 0;
+    }
+    &--12 {
+      right: -80px;
+      top: 454px;
+      width: 198px;
+    }
+    &--13 {
+      width: 67px;
+      right: 70px;
+      top: 414px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .party {
+    .top__title {
+      br {
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .party {
+    .top__descr {
+      max-width: 300px;
+    }
+    &__image {
+      &--7 {
+        top: 690px;
+      }
+    }
+  }
+
+  .tabs {
+    .tabs__btn {
+      width: 180px;
+      padding: 5px 10px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .party {
+    &__snail {
+      right: 0;
+      top: -75px;
+      &-text {
+        top: -77px;
+        right: 25px;
+      }
+      img {
+        width: 90px;
+      }
+    }
+    &__image {
+      &--4,
+      &--5,
+      &--8 {
+        display: none;
+      }
+      &--7 {
+        top: 50px;
+        left: 0;
+        width: 50px;
+      }
+      &--1 {
+        top: 420px;
+        width: 159px;
+        left: -80px;
+      }
+      &--2 {
+        width: 185px;
+        left: -44px;
+        top: 492px;
+      }
+      &--3 {
+        top: 610px;
+        left: -20px;
+        width: 100px;
+      }
+      &--9 {
+        width: 50px;
+        top: 60px;
+        right: -10px;
+      }
+      &--10 {
+        top: 104px;
+        right: 60px;
+        width: 100px;
+      }
+      &--11 {
+        width: 37px;
+        right: auto;
+        left: 0;
+      }
+      &--12 {
+        top: 560px;
+        width: 130px;
+        right: -70px;
+      }
+      &--13 {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .party {
+    &__image {
+      &--1 {
+        top: auto;
+        bottom: 111px;
+      }
+      &--2 {
+        top: auto;
+        bottom: 76px;
+      }
+      &--3 {
+        top: auto;
+        bottom: 0;
+      }
+      &--6 {
+        display: none;
+      }
+    }
+  }
+}

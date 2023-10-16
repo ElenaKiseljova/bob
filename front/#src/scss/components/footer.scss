@@ -1,0 +1,240 @@
+.footer {
+  margin: 0 auto;
+
+  position: relative;
+  overflow: hidden;
+  max-width: 1800px;
+  // height: 350px;
+  background-color: transparent;
+  .hide {
+    display: none;
+  }
+  &--new {
+    .footer__right {
+      bottom: 55px;
+
+      height: fit-content;
+    }
+  }
+  &__fruit {
+    &--1 {
+      bottom: -100px;
+      left: 35%;
+      width: 200px;
+      height: 200px;
+      z-index: 11;
+      transform: rotate(30deg);
+    }
+    &--2 {
+      bottom: -150px;
+      left: 40%;
+      width: 300px;
+      height: 300px;
+      z-index: 10;
+      transform: scale(-1, 1);
+    }
+    &--3 {
+      bottom: -80px;
+      left: 48%;
+      width: 200px;
+      height: 200px;
+      z-index: 11;
+    }
+    &--4 {
+      bottom: -100px;
+      left: 57%;
+      width: 169px;
+
+      z-index: 10;
+      transform: scale(-1, 1);
+    }
+  }
+  &__background-mobile {
+    display: none;
+    position: absolute;
+    top: 90px;
+    z-index: -2;
+    left: 0;
+    height: 100%;
+  }
+  &__background {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    svg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (max-width: 767px) {
+        width: 130%;
+        height: auto;
+      }
+    }
+  }
+  &__inner {
+    // height: 350px;
+    display: flex;
+    // align-items: flex-end;
+    padding-top: 223px;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 202px;
+    svg {
+      fill: #043314;
+      width: 100%;
+      height: auto;
+    }
+    img {
+      width: 100%;
+    }
+    margin-bottom: 25px;
+  }
+  &__nav {
+    margin-bottom: 50px;
+  }
+  &__snail {
+    position: relative;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 140px;
+      transform: translateX(-50%);
+    }
+    &-text {
+      width: 251px;
+      height: 147px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        display: block;
+        text-align: center;
+        max-width: 130px;
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #043314;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__cloud {
+    position: absolute;
+    z-index: -1;
+  }
+  &__right {
+    position: absolute;
+    right: 20%;
+    z-index: 10;
+    bottom: -8px;
+    width: 251px;
+    height: 270px;
+  }
+}
+.footer__snail.white {
+  .footer__snail-text span {
+    color: #fff;
+  }
+  .social__item {
+    svg {
+      fill: #fff;
+    }
+  }
+}
+.footer.white {
+  .footer__logo {
+    svg {
+      fill: #fff;
+    }
+  }
+  .footer__nav {
+    .nav__link {
+      color: #fff;
+    }
+  }
+}
+@media (max-width: 1800px) {
+  .footer {
+    background-size: 120%;
+  }
+}
+@media (max-width: 1023px) {
+  .footer {
+    &__right {
+      right: 3%;
+    }
+    .nav__list {
+      max-width: 500px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    &--new {
+      .footer__cloud {
+        svg {
+          fill: #fdda64;
+        }
+      }
+      .nav {
+        &__item {
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+        }
+      }
+      .footer__background svg {
+        fill: #fcbe22;
+      }
+      .hide {
+        display: block;
+      }
+    }
+    &__fruit {
+      display: none;
+    }
+    &__background {
+      &-mobile {
+        display: block;
+      }
+      svg {
+        fill: #a3cf44;
+      }
+    }
+
+    &__right {
+      right: 50%;
+      top: -8px;
+      transform: translateX(50%);
+    }
+    &__inner {
+      justify-content: center;
+      position: relative;
+      top: 8px;
+      padding-top: 250px;
+    }
+    &__nav {
+      .nav__list {
+        align-items: center;
+        flex-direction: column;
+      }
+      .nav__item {
+        margin: 0;
+      }
+      .nav__item + .nav__item {
+        margin-top: 36px;
+      }
+    }
+  }
+}

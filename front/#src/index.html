@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('html/head.html', {title: 'Выбір країни'})
+  </head>
+  <body>
+    <!-- Heder -->
+    <div class="page">
+      @@include('html/header.html', {class: '', white: ''})
+      @@include('html/hero.html')
+
+      <picture class="fruit-left">
+        <source
+          srcset="img/fruit-group/left-group-mob.svg"
+          media="(max-width: 1023px)"
+        />
+        <img src="img/fruit-group/left-group.svg" alt="left-group" />
+      </picture>
+      <img class="fruit-right" src="img/fruit-group/right-group.svg" alt="" />
+      <img class="snail" src="img/icons/snail-big.svg" alt="" />
+      <img class="banana" src="img/icons/banana.svg" width="44" height="44" />
+    </div>
+    <script src="js/libs/custom-select.js"></script>
+    <script src="js/libs/custom-scroll/custom-scroll.js"></script>
+    <script src="js/custom-scroll.js"></script>
+
+    <script src="js/calculate-height.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/background-fill.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/custom-select.js"></script>
+  </body>
+</html>

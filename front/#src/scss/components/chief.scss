@@ -1,0 +1,160 @@
+.chief {
+  &__snail {
+    position: absolute;
+    top: -145px;
+
+    img {
+      position: relative;
+      z-index: 10;
+    }
+    &-text {
+      position: absolute;
+      top: -30px;
+      left: 70px;
+      width: 231px;
+      height: 128px;
+      background: url(../img/icons/cloud-chief.svg) no-repeat center center /
+        contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 112% */
+
+        text-align: center;
+
+        color: #043314;
+
+        transform: rotate(-5.59deg);
+      }
+    }
+    @media (max-width: 767px) {
+      left: 100px;
+      top: -122px;
+      img {
+        width: 83px;
+      }
+      &-text {
+        top: -94px;
+        left: -25px;
+      }
+    }
+  }
+  &__image {
+    &--1 {
+      width: 305px;
+      top: 114px;
+      left: 0;
+    }
+    &--2 {
+      width: 319px;
+      top: 319px;
+      right: -50px;
+    }
+    &--3 {
+      top: 110px;
+      width: 350px;
+      right: 50px;
+      z-index: 1;
+      transform: rotate(18.63deg);
+    }
+    &--4 {
+      left: 10px;
+      top: 100px;
+      width: 109px;
+    }
+    &--5 {
+      left: 0;
+      top: 340px;
+      width: 127px;
+    }
+    &--6 {
+      left: 60px;
+      top: 480px;
+      width: 81px;
+    }
+    &--7 {
+      right: 0;
+      top: 245px;
+      width: 84px;
+    }
+    &--8 {
+      right: 220px;
+      top: 515px;
+      width: 48px;
+    }
+    &--9 {
+      right: 0;
+      top: 580px;
+      width: 73px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .chief {
+    &__image {
+      &--2 {
+        width: 270px;
+        top: 280px;
+        right: -50px;
+      }
+      &--3 {
+        right: 25px;
+        width: 270px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .chief {
+    &__image {
+      &--1 {
+        top: 20px;
+        left: -50px;
+        width: 183px;
+      }
+      &--2 {
+        display: none;
+      }
+      &--3 {
+        top: auto;
+        right: -60px;
+        bottom: 0;
+        z-index: -1;
+        width: 220px;
+      }
+      &--4 {
+        width: 66px;
+        top: 508px;
+      }
+      &--5 {
+        width: 70px;
+        left: 0;
+        top: 700px;
+      }
+      &--6 {
+        left: 0;
+        top: 630px;
+
+        width: 45px;
+      }
+      &--7 {
+        top: 70px;
+        width: 50px;
+      }
+      &--8 {
+        top: 120px;
+        right: 60px;
+        width: 30px;
+      }
+      &--9 {
+        display: none;
+      }
+    }
+  }
+}

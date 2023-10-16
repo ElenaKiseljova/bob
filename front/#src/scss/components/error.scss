@@ -1,0 +1,122 @@
+.error {
+  overflow: hidden;
+  display: block;
+  padding-top: 100px;
+  &__links {
+    .links__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+  &__snail {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    img {
+      display: block;
+      position: relative;
+      z-index: 10;
+    }
+    &-text {
+      position: absolute;
+      top: -15px;
+      left: 95px;
+      width: 116px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url(../img/icons/cloud-orange-big.svg) no-repeat center
+        center/contain;
+      transform: rotate(20deg);
+      p {
+        transform: rotate(-10deg);
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        /* or 131% */
+        text-align: center;
+        color: #043314;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .error {
+    .links__list {
+      flex-wrap: wrap;
+    }
+    .links__item {
+      margin: 0 auto;
+      flex: 1 1 30%;
+
+      &.links__item:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-bottom: 20px;
+    }
+    .links__item a.links__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .error {
+    padding-top: 30px;
+    &__links {
+      margin-bottom: 150px;
+    }
+    .links__item {
+      margin: unset;
+      margin-bottom: 20px;
+    }
+    .error__snail {
+      &-text {
+        width: 94px;
+        left: 74px;
+      }
+      img {
+        width: 230px;
+      }
+    }
+    .top__head {
+      margin-bottom: 35px;
+    }
+    .top__head {
+      h1 {
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 55px;
+        /* or 100% */
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        + p {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .error {
+    .top__head {
+      h1 {
+        font-size: 50px;
+      }
+    }
+  }
+}

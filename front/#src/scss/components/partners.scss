@@ -1,0 +1,43 @@
+.partners {
+  padding-top: 156px;
+  &__inner {
+  }
+  &__text {
+    margin-bottom: 60px;
+    p {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 29px;
+      /* or 116% */
+
+      text-align: center;
+
+      color: #043314;
+    }
+    p + p {
+      margin-top: 30px;
+    }
+  }
+  &__form {
+    margin: 60px auto 0 auto;
+    max-width: 524px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .partners {
+    &__form {
+      margin-top: 30px;
+    }
+    padding-top: 92px;
+    &__text {
+      margin-bottom: 48px;
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+}

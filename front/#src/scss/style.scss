@@ -1,0 +1,63 @@
+@import "reset.scss";
+@import "fonts.scss";
+@import "vars.scss";
+@import "mixins.scss";
+@import "base.scss";
+
+/* Libs */
+@import "libs/swiper.scss";
+
+/* UI */
+@import "components/UI/select.scss";
+@import "components/UI/btn.scss";
+@import "components/UI/hamburger.scss";
+@import "components/UI/modal.scss";
+
+@import "libs/custom-scrollbar.scss";
+
+/* Blocks */
+@import "components/header.scss";
+@import "components/nav.scss";
+@import "components/hero.scss";
+@import "components/mobile-menu.scss";
+@import "components/social.scss";
+@import "components/slider.scss";
+@import "components/composition.scss";
+@import "components/fruit-rolls.scss";
+
+@import "components/product.scss";
+
+@import "components/hero-section.scss";
+@import "components/tabs.scss";
+@import "components/content.scss";
+@import "components/animation.scss";
+@import "components/lang.scss";
+@import "components/stripes.scss";
+@import "components/sweets.scss";
+@import "components/marmalade.scss";
+@import "components/partners.scss";
+@import "components/form.scss";
+@import "components/thanks.scss";
+@import "components/smoothies.scss";
+@import "components/desserts.scss";
+@import "components/baby.scss";
+@import "components/chief.scss";
+@import "components/party.scss";
+@import "components/about.scss";
+@import "components/order.scss";
+@import "components/contacts.scss";
+@import "components/links.scss";
+@import "components/error.scss";
+@import "components/recipes.scss";
+@import "components/accordion.scss";
+@import "components/play.scss";
+@import "components/toys.scss";
+@import "components/inside.scss";
+@import "components/unpacking.scss";
+@import "components/video.scss";
+@import "components/online.scss";
+@import "components/vector.scss";
+@import "components/first-section.scss";
+@import "components/unit.scss";
+
+@import "components/footer.scss";

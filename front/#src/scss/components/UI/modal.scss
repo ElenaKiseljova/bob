@@ -1,0 +1,146 @@
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10000;
+  overflow: hidden;
+  box-sizing: border-box;
+  pointer-events: none;
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    min-height: 100%;
+  }
+
+  &__content {
+    overflow: hidden;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+
+    box-shadow: 0 4px 57px rgb(0 0 0 / 8%);
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    position: relative;
+  }
+
+  &__main {
+    flex: 1;
+    padding: 80px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+    span {
+      color: #f15b5c;
+    }
+    a {
+      text-decoration: none;
+      font-family: inherit;
+      color: #f15b5c;
+      line-height: 1;
+      background-image: linear-gradient(to right, rgba(#f15b5c, 1) 100%);
+      background-repeat: repeat-x;
+      background-position: 0 100%;
+      background-size: 100% 1px;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+
+    &-svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &.modal--open {
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: all;
+
+    .modal__overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal__content {
+      opacity: 1;
+      visibility: visible;
+      animation: open 0.3s ease forwards;
+    }
+  }
+
+  &.modal--close {
+    .simplebar-track {
+      opacity: 0;
+    }
+
+    .modal__content {
+      animation: close 0.3s ease forwards;
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: scale3d(1.1, 1.1, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale3d(0.9, 0.9, 1);
+  }
+}

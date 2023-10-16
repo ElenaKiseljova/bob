@@ -1,0 +1,157 @@
+.baby {
+  &__snail {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    img {
+      position: relative;
+      z-index: 10;
+      transform: rotate(-90deg);
+    }
+    &-text {
+      width: 280px;
+      height: 164px;
+      position: absolute;
+      bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 80px;
+      background: url("../img/icons/cloud-violet.svg") no-repeat center center/
+        contain;
+      p {
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 112% */
+
+        text-align: center;
+
+        color: #ffffff;
+
+        transform: rotate(-5.59deg);
+      }
+    }
+  }
+  &__image {
+    &--1 {
+      width: 305px;
+      top: 236px;
+      left: 0;
+    }
+    &--2 {
+      right: 0;
+      top: 193px;
+      width: 239px;
+    }
+    &--3 {
+      left: 10px;
+      top: 207px;
+      width: 109px;
+    }
+    &--4 {
+      left: 0px;
+      top: 480px;
+      width: 127px;
+    }
+    &--5 {
+      left: 60px;
+      top: 610px;
+      width: 81px;
+    }
+    &--6 {
+      right: 0;
+      top: 121px;
+      width: 96px;
+    }
+    &--7 {
+      right: 150px;
+      top: 140px;
+      width: 48px;
+    }
+    &--8 {
+      right: -15px;
+      top: 450px;
+      width: 73px;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .baby {
+    .top__descr {
+      max-width: 300px;
+    }
+  }
+
+  .tabs {
+    .tabs__btn {
+      width: 180px;
+      padding: 5px 10px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .baby {
+    &__snail {
+      bottom: 0;
+      img {
+        width: 74px;
+        right: -2px;
+      }
+      &-text {
+        right: 0;
+        top: auto;
+        bottom: 32px;
+        width: 258px;
+      }
+    }
+    &__image {
+      &--1 {
+        top: 20px;
+        left: -50px;
+        width: 183px;
+      }
+      &--2 {
+        display: none;
+      }
+      &--3 {
+        width: 66px;
+        top: 560px;
+      }
+      &--4 {
+        width: 70px;
+        left: 60px;
+        top: 650px;
+        display: none;
+      }
+      &--5 {
+        width: 45px;
+        left: 0px;
+        top: 700px;
+      }
+      &--6 {
+        top: 70px;
+        width: 50px;
+      }
+      &--7 {
+        top: 120px;
+        right: 60px;
+        width: 30px;
+      }
+      &--8 {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 374px) {
+  .baby {
+    &__image {
+      &--4 {
+        top: 703px;
+      }
+    }
+  }
+}

@@ -1,0 +1,240 @@
+.form {
+  &__error {
+    position: absolute;
+    bottom: -25px;
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    /* or 112% */
+
+    color: #e62856;
+  }
+  &__submit {
+    margin-left: auto;
+  }
+  &__select {
+    &.select_show {
+      .select__toggle::after {
+        transform-origin: center center;
+        transform: translateY(-50%) rotateX(180deg);
+      }
+    }
+    #select-4 {
+      .select__toggle {
+        padding-right: 60px;
+      }
+    }
+    &--mobile {
+      min-width: 151px;
+      width: 151px;
+      margin-right: 17px;
+    }
+    max-width: 100%;
+    width: 100%;
+    .select__dropdown {
+      position: absolute !important;
+      overflow-x: hidden;
+      top: 57px;
+    }
+
+    .select__toggle {
+      text-align: left;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      font-size: 20px;
+      padding-left: 28px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(../img/icons/arrow-line-down.svg) no-repeat center;
+      }
+    }
+    .select__option {
+      font-size: 20px;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  &__block {
+    &--error {
+      .form__input {
+        border: 1px solid red;
+      }
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 50px;
+    }
+    &::before {
+      content: "*";
+      display: block;
+      font-size: 25px;
+      position: absolute;
+      top: 0;
+      left: -20px;
+    }
+    &--dispensable {
+      &::before {
+        content: none;
+      }
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    font-family: "BebasNeuePro", sans-serif;
+    display: block;
+    background-color: #e62856;
+    width: 200px;
+    height: 53px;
+    /* identical to box height, or 167% */
+
+    text-align: center;
+
+    color: #ffffff;
+
+    margin: 0 auto;
+  }
+  &__input {
+    &--area {
+      resize: none;
+      min-height: 207px;
+    }
+    border-radius: 10px;
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    padding: 13px 28px;
+    box-sizing: border-box;
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #043314;
+    outline: none;
+    &::placeholder {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+
+      color: #043314;
+      opacity: 0.5;
+      width: 100%;
+    }
+  }
+  &__label {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &--new {
+    .btn {
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .form {
+      max-width: 400px;
+      &__input {
+        padding: 10px 8px;
+        border: 1px solid #8dc63f;
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        &::placeholder {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+        }
+        &.wpcf7-not-valid {
+          border: 1px solid #e62856;
+        }
+      }
+      &__error {
+        right: 0;
+
+        bottom: -22px;
+      }
+      &__block {
+        margin-bottom: 24px;
+        display: block;
+        &.form__block--error {
+          .form__input {
+            border-color: red;
+          }
+        }
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+}
+.form__block .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  right: 0 !important;
+  left: auto !important;
+  bottom: -22px !important;
+}
+
+@media (max-width: 1023px) {
+  .form {
+    &__select {
+      z-index: unset;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    &__submit {
+      margin: 0 auto;
+    }
+    &--new {
+      .btn {
+        margin: 0 auto;
+      }
+    }
+    &__input {
+      padding: 13px 18px;
+    }
+    &__select {
+      max-width: 100%;
+
+      .select__toggle {
+        display: block;
+        white-space: nowrap; /* Текст не переносится */
+        overflow: hidden; /* Обрезаем всё за пределами блока */
+        text-overflow: ellipsis;
+        padding-left: 18px;
+        padding-right: 18px;
+        &::after {
+          right: 13px;
+        }
+      }
+    }
+    &__block {
+      &::before {
+        content: none;
+      }
+    }
+    &__select--mobile {
+      min-width: 100px;
+    }
+  }
+}

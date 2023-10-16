@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('html/head.html', {title: '404'})
+  </head>
+
+  <body style="background-color: #f173ac">
+    <!-- Heder -->
+    <header class="header white header--unfixed">
+      <div class="container">
+        <div class="header__inner">
+          <a href="/main.html" class="header__logo">
+            <svg width="140" height="40">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="header__overlay">
+            <div class="header__wrapper">
+              <nav class="header__nav nav none">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="products.html" class="nav__link">Продукція</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Про бренд</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Kонтакти</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="header__lang lang none">
+                <button class="lang__btn">
+                  <span>Укр</span>
+                  <svg width="15" height="8">
+                    <use xlink:href="img/sprite.svg#arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="lang__wrapper">
+                  <button class="lang__close">
+                    <svg width="45" height="45">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                  <h2 class="lang__head">Вибір мови</h2>
+                  <ul class="lang__list" data-simplebar="init">
+                    <div class="simplebar-wrapper" style="margin: -20px 0px">
+                      <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                      </div>
+                      <div class="simplebar-mask">
+                        <div
+                          class="simplebar-offset"
+                          style="right: 0px; bottom: 0px"
+                        >
+                          <div
+                            class="simplebar-content-wrapper"
+                            tabindex="0"
+                            role="region"
+                            aria-label="scrollable content"
+                            style="height: 100%; overflow: hidden"
+                          >
+                            <div
+                              class="simplebar-content"
+                              style="padding: 20px 0px"
+                            >
+                              <li class="lang__item active">
+                                <a href="/">Українська</a>
+                              </li>
+                              <li class="lang__item">
+                                <a href="/">polski</a>
+                              </li>
+                              <li class="lang__item">
+                                <a href="/">Ceština</a>
+                              </li>
+                              <li class="lang__item">
+                                <a href="/">ROmana</a>
+                              </li>
+                              <li class="lang__item">
+                                <a href="/">БЕЛАРУСКАЯ</a>
+                              </li>
+                              <li class="lang__item">
+                                <a href="/">ENGLISH</a>
+                              </li>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="simplebar-placeholder"
+                        style="width: auto; height: 335px"
+                      ></div>
+                    </div>
+                    <div
+                      class="simplebar-track simplebar-horizontal"
+                      style="visibility: hidden"
+                    >
+                      <div
+                        class="simplebar-scrollbar"
+                        style="width: 0px; display: none"
+                      ></div>
+                    </div>
+                    <div
+                      class="simplebar-track simplebar-vertical"
+                      style="visibility: hidden"
+                    >
+                      <div
+                        class="simplebar-scrollbar"
+                        style="
+                          height: 0px;
+                          transform: translate3d(0px, 0px, 0px);
+                          display: none;
+                        "
+                      ></div>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <div class="social">
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a href="#">
+                      <svg width="27" height="27" aria-label="instagram">
+                        <use xlink:href="img/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#">
+                      <svg width="27" height="27" aria-label="facebook">
+                        <use xlink:href="img/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button class="header__close header__close--nav">
+                <svg width="45" height="45">
+                  <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="header__hamburger hamburger none">
+            <button class="hamburger__btn">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#hamburger"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    @@include('html/hero-section-404.html')
+
+    <script src="js/calculate-height.js"></script>
+
+    <script src="js/custom-select.js"></script>
+  </body>
+</html>

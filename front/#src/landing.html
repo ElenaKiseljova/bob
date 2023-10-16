@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('html/head.html', {title: 'Bob Snail landing'})
+  </head>
+  <!-- landing-page - класс для стилизации скролла -->
+  <body class="custom-scrollbar">
+    <!-- header--unfixed - модификатор, чтобы убрать фиксированное менюб -->
+    <!-- header--new - модификатор, чтобы изменить отступы -->
+    <div class="landing-page">
+      <header class="header header--new">
+        <!-- header__container - так как в макете нет определенного контейнера, делаю кастомный -->
+
+        <div class="container">
+          <div class="header__inner">
+            <a href="#home" class="header__logo">
+              <svg width="132" height="31">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="header__overlay">
+              <div class="header__wrapper">
+                <!-- nav--new - модификатор, чтобы поменять стили к элементам -->
+                <nav class="header__nav nav nav--new">
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#facts" class="nav__link">FACTS</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#contacts" class="nav__link">CONTACTs</a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- lang--hide - модификатор, чтобы спрятать переключение языков -->
+                <div class="header__lang lang lang--hide">
+                  <button class="lang__btn">
+                    <span>Укр</span>
+                    <svg width="15" height="8">
+                      <use xlink:href="img/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </button>
+                  <div class="lang__wrapper">
+                    <button class="lang__close">
+                      <svg width="45" height="45">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                    <h2 class="lang__head">Вибір мови</h2>
+                    <ul class="lang__list" data-simplebar>
+                      <li class="lang__item active">
+                        <a href="/">Українська</a>
+                      </li>
+                      <li class="lang__item">
+                        <a href="/">polski</a>
+                      </li>
+                      <li class="lang__item">
+                        <a href="/">Ceština</a>
+                      </li>
+                      <li class="lang__item">
+                        <a href="/">ROmana</a>
+                      </li>
+                      <li class="lang__item">
+                        <a href="/">БЕЛАРУСКАЯ</a>
+                      </li>
+                      <li class="lang__item">
+                        <a href="/">ENGLISH</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- social--show - модификатор, чтобы показать соцсети -->
+                <div class="social social--show">
+                  <ul class="social__list">
+                    <li class="social__item">
+                      <a href="#">
+                        <svg width="27" height="27" aria-label="instagram">
+                          <use xlink:href="img/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#">
+                        <svg width="27" height="27" aria-label="facebook">
+                          <use xlink:href="img/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <button class="header__close header__close--nav">
+                  <svg width="45" height="45">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="header__hamburger hamburger">
+              <button class="hamburger__btn">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#hamburger"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="wrapper">
+        <!-- top--new - модификатор, чтобы изменить отступы и стили  -->
+        <section class="top top--new first-section" id="home">
+          <div class="container container--new">
+            <div class="top__inner">
+              <div class="top__head top__head--dark">
+                <h1>GET SHELF HEALTH FOR YOUR STORES</h1>
+                <p>The global healthy snacks market size is going to rise by more than 30%</p>
+              </div>
+              <a href="" class="btn btn--new">JOIN NOW</a>
+            </div>
+          </div>
+          <div class="top__vector vector">
+            <svg class="vector__background vector__background--1">
+              <use xlink:href="img/vectors/index.svg#main-vector"></use>
+            </svg>
+            <svg class="vector__background vector__background--circle">
+              <use xlink:href="img/vectors/index.svg#vector-white-hero"></use>
+            </svg>
+          </div>
+          <img
+            class="icon first-section__image first-section__image--1"
+            src="img/icons/snail-smart.svg"
+            alt=""
+          />
+          <img
+            class="icon first-section__image first-section__image--2"
+            src="img/icons/apple-piece.svg"
+            alt=""
+          />
+          <img
+            class="icon first-section__image first-section__image--4"
+            src="img/icons/cherry.svg"
+            alt=""
+          />
+        </section>
+        <!-- Описал новые классы, так как основные не подходят по размеру шрифта -->
+        <section class="unit unit--1" id="facts">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head">
+                <h2>Children are not eating enough fruit and vegetables</h2>
+                <p>Bob Snail consists of 100% fruit and vegetables</p>
+                <button class="unit__btn" data-section="1">LEARN MORE</button>
+                <div class="content-popup">
+                  <p>
+                    Only 6-24% of European
+                    <span style="color: #f15b5c"
+                      >children
+                      <a href="#" style="color: #f15b5c"> follow WHO recommendations</a></span
+                    >
+                    and get enough fruit and vegetables daily. The average vegetable intake
+                    <a href="#" style="color: #f15b5c">is only about</a> 86 g per day, and the
+                    average fruit intake — 141 g.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--2">
+              <use xlink:href="img/vectors/index.svg#main-vector"></use>
+            </svg>
+          </div>
+          <img class="icon unit__image unit__image--1" src="img/icons/snail-footer.svg" alt="" />
+          <img class="icon unit__image unit__image--2" src="img/icons/apple-piece.svg" alt="" />
+          <img class="icon unit__image unit__image--3" src="img/icons/pear-big.svg" alt="" />
+          <img class="icon unit__image unit__image--4" src="img/icons/persimmon.svg" alt="" />
+        </section>
+        <section class="unit unit--2">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head">
+                <h2>
+                  That’s why they don’t get enough dietary fiber, which is essential for digestive
+                  health
+                </h2>
+                <p>Bob Snail products are the source of dietary fiber</p>
+                <button class="unit__btn" data-section="2">LEARN MORE</button>
+                <div class="content-popup">
+                  <p>text2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--3">
+              <use xlink:href="img/vectors/index.svg#cloud-vector"></use>
+            </svg>
+          </div>
+          <img class="icon unit__image unit__image--5" src="img/icons/grass.svg" alt="" />
+          <img class="icon unit__image unit__image--6" src="img/icons/grass.svg" alt="" />
+        </section>
+        <section class="unit unit--3">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head">
+                <h2>Instead children consume too much added sugars</h2>
+                <p>Bob Snail products are the source of dietary fiber</p>
+                <button class="unit__btn">LEARN MORE</button>
+                <div class="content-popup">
+                  <p>text3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--4">
+              <use xlink:href="img/vectors/index.svg#main-vector"></use>
+            </svg>
+          </div>
+
+          <img class="icon unit__image unit__image--7" src="img/icons/snail-looks-up.svg" alt="" />
+          <img class="icon unit__image unit__image--8" src="img/icons/pear-piece.svg" alt="" />
+          <img class="icon unit__image unit__image--9" src="img/icons/grass.svg" alt="" />
+          <img
+            class="icon unit__image unit__image--10"
+            src="img/icons/piece-strawberry.svg"
+            alt=""
+          />
+        </section>
+        <section class="unit unit--4">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head">
+                <h2>
+                  Low fruit and vegetables consumption with too much added sugars can cause children
+                  chronic diseases and obese.
+                </h2>
+                <p>100% fruits and vegetables, natural source of fiber, no added sugars</p>
+                <button class="unit__btn">LEARN MORE</button>
+              </div>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--5">
+              <use xlink:href="img/vectors/index.svg#cloud-vector"></use>
+            </svg>
+          </div>
+          <img class="icon unit__image unit__image--11" src="img/icons/strawberry-2.svg" alt="" />
+          <img class="icon unit__image unit__image--12" src="img/icons/persimmon.svg" alt="" />
+          <img class="icon unit__image unit__image--13" src="img/icons/persimmon-2.svg" alt="" />
+          <img class="icon unit__image unit__image--14" src="img/icons/apple-piece.svg" alt="" />
+        </section>
+        <section class="unit unit--5">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head">
+                <h2>Food and beverages high in sugar get more restrictions and pay higher taxes</h2>
+                <p>
+                  Bob Snail has no added sugars, saturated fat, and low in sodium. Fruit and veggies
+                  only.
+                </p>
+                <button class="unit__btn">LEARN MORE</button>
+              </div>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--6">
+              <use xlink:href="img/vectors/index.svg#main-vector"></use>
+            </svg>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--7">
+              <use xlink:href="img/vectors/index.svg#cloud-vector"></use>
+            </svg>
+          </div>
+          <img class="icon unit__image unit__image--15" src="img/icons/cherry.svg" alt="" />
+          <img class="icon unit__image unit__image--16" src="img/icons/just-snail.svg" alt="" />
+          <img class="icon unit__image unit__image--17" src="img/icons/grass.svg" alt="" />
+          <img class="icon unit__image unit__image--18" src="img/icons/grass.svg" alt="" />
+          <img class="icon unit__image unit__image--19" src="img/icons/grass.svg" alt="" />
+        </section>
+        <section class="unit unit--white unit--6">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head">
+                <h2>Consumers are aware of product high in sugar</h2>
+                <p>No added sugar and no artificial additives</p>
+                <button class="unit__btn">LEARN MORE</button>
+              </div>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--8">
+              <use xlink:href="img/vectors/index.svg#main-vector"></use>
+            </svg>
+          </div>
+          <img class="icon unit__image unit__image--20" src="img/icons/persimmon-2.svg" alt="" />
+          <img class="icon unit__image unit__image--21" src="img/icons/pear-big.svg" alt="" />
+          <img class="icon unit__image unit__image--22" src="img/icons/grass.svg" alt="" />
+          <img class="icon unit__image unit__image--23" src="img/icons/apple-piece.svg" alt="" />
+        </section>
+        <section class="unit unit--7">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head unit__head--big">
+                <h3>Healthy snacks market is projected to reach</h3>
+                <h2>
+                  <span style="color: #f15b5c">$152.5</span> billion by
+                  <span style="color: #8dc63f">2030</span>
+                </h2>
+
+                <button class="unit__btn">LEARN MORE</button>
+              </div>
+              <div class="unit__graph">
+                <img src="img/icons/graph.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--9">
+              <use xlink:href="img/vectors/index.svg#cloud-vector"></use>
+            </svg>
+          </div>
+          <img class="icon unit__image unit__image--24" src="img/icons/persimmon.svg" alt="" />
+          <img class="icon unit__image unit__image--25" src="img/icons/strawberry-2.svg" alt="" />
+        </section>
+        <section class="unit unit--8" id="contacts">
+          <div class="container">
+            <div class="unit__inner">
+              <div class="unit__head">
+                <h2 class="unit__title unit__title--medium">GET SHELF HEALTH FOR YOUR STORES</h2>
+              </div>
+              <form class="unit__form form form--new">
+                <!-- form__block--error - если появилась ошибка -->
+                <div class="form__block form__block--error">
+                  <label class="form__label" for="company-name">Name or company name</label>
+                  <input
+                    class="form__input"
+                    id="company-name"
+                    type="text"
+                    placeholder="Name or company name"
+                    required
+                  />
+                  <span class="wpcf7-not-valid-tip form__error">Error message</span>
+                </div>
+                <div class="form__block">
+                  <label class="form__label" for="country">Country</label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    placeholder="Country"
+                    id="country"
+                    required
+                  />
+                </div>
+                <div class="form__block">
+                  <label class="form__label" for="email">E-mail</label>
+                  <input
+                    class="form__input"
+                    type="email"
+                    id="email"
+                    placeholder="E-mail"
+                    required
+                  />
+                </div>
+                <div class="form__block form__block--dispensable">
+                  <label class="form__label" for="notes">Notes</label>
+
+                  <textarea
+                    class="form__input form__input--area"
+                    placeholder="Notes"
+                    id="notes"
+                  ></textarea>
+                </div>
+                <div class="form__submit">
+                  <button type="submit" class="btn btn--new">JOIN NOW</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--10">
+              <use xlink:href="img/vectors/index.svg#main-vector"></use>
+            </svg>
+          </div>
+          <div class="unit__vector vector">
+            <svg class="vector__background vector__background--11">
+              <use xlink:href="img/vectors/index.svg#cloud-vector"></use>
+            </svg>
+          </div>
+          <img class="icon unit__image unit__image--26" src="img/icons/cherry.svg" alt="" />
+          <img
+            class="icon unit__image unit__image--27"
+            src="img/icons/piece-strawberry.svg"
+            alt=""
+          />
+          <img class="icon unit__image unit__image--28" src="img/icons/apple-piece.svg" alt="" />
+          <img class="icon unit__image unit__image--29" src="img/icons/persimmon.svg" alt="" />
+          <img class="icon unit__image unit__image--30" src="img/icons/pear-big.svg" alt="" />
+          <img class="icon unit__image unit__image--31" src="img/icons/snail-footer.svg" alt="" />
+        </section>
+      </div>
+      <!-- footer--new - модификатор, для нового футера -->
+      <footer class="footer footer--new black">
+        <div class="footer__background">
+          <svg width="1800" height="1059" viewBox="0 0 1800 1059" fill="#FCBE22">
+            <use xlink:href="img/sprite.svg#footer-bg"></use>
+          </svg>
+        </div>
+        <svg class="footer__background-mobile" width="100%" fill="#fff">
+          <rect width="100%" height="100%" />
+        </svg>
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__left">
+              <a href="#" class="footer__logo">
+                <svg width="132" height="31">
+                  <use xlink:href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <nav class="footer__nav nav nav--new">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#facts" class="nav__link">FACTS</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#contacts" class="nav__link">CONTACTs</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__right">
+              <div class="footer__snail black">
+                <div class="footer__snail-text">
+                  <div class="footer__cloud">
+                    <svg width="100%" height="100%" fill="#fff">
+                      <use xlink:href="img/sprite.svg#footer-cloud"></use>
+                    </svg>
+                  </div>
+                  <span>Відоси, фоточки і уся смачна інфа</span>
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a href="#" aria-label="instagram">
+                          <svg width="27" height="27">
+                            <use xlink:href="img/sprite.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" aria-label="facebook">
+                          <svg width="27" height="27">
+                            <use xlink:href="img/sprite.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <img src="img/icons/snail-footer.svg" class="hide" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="img/icons/piece-strawberry.svg"
+          class="icon footer__fruit footer__fruit--1"
+          alt=""
+        />
+        <img src="img/icons/apple-piece.svg" class="icon footer__fruit footer__fruit--2" alt="" />
+        <img src="img/icons/cherry.svg" class="icon footer__fruit footer__fruit--3" alt="" />
+        <img src="img/icons/pear-big.svg" class="icon footer__fruit footer__fruit--4" alt="" />
+      </footer>
+      <!-- Пример модалок -->
+    </div>
+
+    <div class="modal" data-modal="1">
+      <div class="modal__body">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <div class="modal__top">
+            <div class="modal__close"></div>
+            <button class="modal__close">
+              <svg class="modal__close-svg">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal__main">
+            <!-- content -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/calculate-height.js"></script>
+    <script src="js/libs/custom-select.js"></script>
+    <script src="js/libs/custom-scroll/custom-scroll.js"></script>
+    <script src="js/custom-scroll.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/custom-select.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/anchors.js"></script>
+  </body>
+</html>

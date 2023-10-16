@@ -1,0 +1,25 @@
+.social {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item {
+    font-size: 0;
+    transition: 0.25s ease;
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    svg {
+      fill: #043314;
+    }
+  }
+  &__item + &__item {
+    margin-left: 14px;
+  }
+  &--show {
+    display: block !important;
+  }
+}

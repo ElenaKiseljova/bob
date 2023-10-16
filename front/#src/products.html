@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('html/head.html', {title: 'Продукція'})
+  </head>
+  <body class="color">
+    <div class="mainwrapper" data-mcs-theme="white">
+      <!-- Header -->
+      @@include('html/header.html', {class: 'white'})
+      @@include('html/sections-product.html')
+      @@include('html/footer.html',{class: '', colorBg: '#fff',
+      colorCloud:'#FDDA64',colorCloudText: ''})
+    </div>
+    <script src="js/libs/gsap/gsap.js"></script>
+    <script src="js/libs/gsap/ScrollTrigger.js"></script>
+    <script src="js/libs/locomotive-scroll/locomotive-scroll.js"></script>
+    <script src="js/libs/JQuery/jquery.js"></script>
+    <script src="js/libs/custom-scroll/custom-scroll.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/change-color.js"></script>
+    <script src="js/calculate-height.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/btn-up.js"></script>
+    <script src="js/header.js"></script>
+  </body>
+</html>

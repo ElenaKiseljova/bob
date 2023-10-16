@@ -1,0 +1,151 @@
+.contacts {
+  padding-top: 150px;
+  &__inner {
+    margin-bottom: 100px;
+  }
+  &__snail-top {
+    position: absolute;
+    bottom: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: 1023px) {
+      bottom: -108px;
+    }
+    img {
+      width: 95px;
+      position: relative;
+      z-index: 10;
+      transform: rotate(180deg);
+    }
+  }
+  &__snail-text {
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: max-content;
+    padding: 35px;
+    background: url(../img/icons/cloud-white.svg) no-repeat center center/contain;
+
+    p {
+      width: 100%;
+      max-width: 100px;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      /* or 131% */
+
+      text-align: center;
+
+      color: #043314;
+
+      transform: rotate(3.73deg);
+    }
+  }
+  &__bottom {
+    p {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+      /* or 130% */
+
+      text-align: center;
+
+      color: #043314;
+      + p {
+        margin-top: 30px;
+      }
+      margin-bottom: 30px;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    a.btn {
+      margin: 0;
+      min-width: 175px;
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+    }
+  }
+  &__fruit {
+    &--1 {
+      left: 60px;
+      top: 190px;
+      width: 101px;
+    }
+    &--2 {
+      right: -50px;
+      top: 335px;
+      width: 184px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .contacts {
+    &__fruit {
+      &--1 {
+        left: -20px;
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .contacts {
+    .top__head {
+      h1 {
+        br {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .contacts {
+    &__fruit {
+      &--1 {
+        left: -10px;
+        top: 255px;
+        width: 70px;
+      }
+      &--2 {
+        right: -50px;
+        top: 580px;
+        width: 100px;
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  .contacts {
+    &__inner {
+      margin-bottom: 60px;
+    }
+    &__btns {
+      display: flex;
+      justify-content: center;
+      a.btn {
+        min-width: 155px;
+      }
+    }
+  }
+}
+@media (max-width: 374px) {
+  .contacts {
+    &__btns {
+      a.btn {
+        padding: 3px 15px;
+        min-width: 145px;
+      }
+    }
+  }
+}

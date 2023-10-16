@@ -1,0 +1,146 @@
+.accordion {
+  padding: 0 30px;
+  margin-bottom: 100px;
+  &__list {
+  }
+  &__item {
+    border-bottom: 1.5px solid #043314;
+
+    &.active {
+      .accordion__btn {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+  &__top {
+    padding: 46px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    h3 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 45px;
+      /* identical to box height, or 90% */
+
+      text-transform: uppercase;
+
+      color: #043314;
+    }
+    span {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      /* or 115% */
+
+      color: #043314;
+    }
+  }
+  &__btn {
+    transition: 0.25s ease;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #e62856;
+    border-radius: 50%;
+    margin-left: 50px;
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+  }
+  &__bottom {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    h4 {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 29px;
+      /* or 92% */
+
+      color: #043314;
+      margin-bottom: 35px;
+    }
+    ul {
+      max-width: 800px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      margin-bottom: 35px;
+      li {
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        /* or 125% */
+
+        color: #043314;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 450px;
+    margin-bottom: 35px;
+    p {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      /* or 125% */
+
+      color: #043314;
+      + p {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .accordion {
+    &__block {
+      display: block;
+    }
+    &__wrapper {
+      flex-direction: column;
+      h3 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .accordion {
+    margin-bottom: 50px;
+    padding: 0 10px;
+    &__top {
+      padding: 20px 0;
+    }
+  }
+  .accordion__text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .accordion__bottom {
+    ul {
+      display: block;
+    }
+  }
+}

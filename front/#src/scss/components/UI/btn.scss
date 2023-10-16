@@ -1,0 +1,60 @@
+.btn {
+  background: #e62856;
+  border-radius: 39.4558px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &--up {
+    cursor: pointer;
+    svg {
+      transform: rotate(180deg);
+    }
+    position: absolute;
+    bottom: 32px;
+    right: 16px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 1440px) {
+      right: 10%;
+    }
+    @media (max-width: 1023px) {
+      transform: translateX(150px);
+      position: fixed;
+      transition: 0.25s ease;
+      &.active {
+        transform: translateX(0);
+      }
+    }
+    @media (max-width: 767px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &--new {
+    cursor: pointer;
+    font-family: inherit;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22 !important;
+    text-align: center;
+    height: auto;
+    letter-spacing: 0.05em;
+    padding: 12px 42px !important;
+  }
+}

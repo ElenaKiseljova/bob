@@ -1,0 +1,149 @@
+.smoothies {
+  &__snail {
+    position: absolute;
+    top: -108px;
+    left: 15px;
+    &-text {
+      min-width: 231px;
+      position: absolute;
+      top: -80px;
+      left: 40px;
+      height: 126px;
+      z-index: -1;
+      background: url(../img/icons/cloud-orange-big.svg) no-repeat center
+        center/contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(-3.64deg);
+      p {
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 112% */
+
+        text-align: center;
+
+        color: #043314;
+      }
+    }
+  }
+  &__image {
+    &--1 {
+      width: 443px;
+      left: -100px;
+      top: 175px;
+    }
+    &--2 {
+      width: 313px;
+      right: -45px;
+      top: 204px;
+    }
+    &--3 {
+      left: 100px;
+      top: 200px;
+      width: 40px;
+    }
+    &--4 {
+      left: -30px;
+      top: 400px;
+      width: 76px;
+    }
+    &--5 {
+      left: 70px;
+      top: 500px;
+      width: 70px;
+    }
+    &--6 {
+      left: -70px;
+      top: 525px;
+      width: 130px;
+    }
+    &--7 {
+      right: 0px;
+      top: 105px;
+      width: 130px;
+    }
+    &--8 {
+      right: 0px;
+      top: 382px;
+      width: 57px;
+    }
+    &--9 {
+      transform: rotate(70deg);
+      right: 80px;
+      top: 462px;
+      width: 90px;
+    }
+    &--10 {
+      right: 0;
+      top: 620px;
+      width: 79px;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .smoothies {
+    .top__descr {
+      max-width: 340px;
+    }
+    .tabs {
+      .tabs__btn {
+        width: 180px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .smoothies {
+    &__image {
+      &--1 {
+        top: 80px;
+        left: -100px;
+        width: 240px;
+        transform: rotate(46.13deg);
+      }
+      &--2 {
+        width: 199px;
+        top: auto;
+        right: -69px;
+        bottom: 111px;
+      }
+      &--3 {
+        left: 60px;
+        top: 80px;
+        width: 20px;
+      }
+      &--4,
+      &--6,
+      &--8,
+      &--9 {
+        display: none;
+      }
+      &--5 {
+        width: 50px;
+        left: 0;
+      }
+
+      &--7 {
+        width: 50px;
+        right: 0;
+        top: 450px;
+      }
+
+      &--10 {
+        width: 50px;
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
+}
+@media (max-width: 374px) {
+  .top__descr p {
+    padding: 0 10px;
+  }
+}

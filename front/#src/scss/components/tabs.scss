@@ -1,0 +1,129 @@
+.tabs {
+  &__btns {
+    height: 55px;
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+    border: 5px solid #e62856;
+    background-color: transparent;
+    border-radius: 30px;
+    margin: 0 auto 50px auto;
+    position: relative;
+  }
+  &__btn {
+    height: 100%;
+    width: 220px;
+    padding: 5px 27px;
+    cursor: pointer;
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #000000;
+    transition: color 0.25s ease;
+    &.active {
+      pointer-events: none;
+      color: #fff;
+      height: 55px;
+      overflow: hidden;
+      border-radius: 29px;
+      font-weight: 600;
+      background-color: #e62856;
+      position: relative;
+    }
+    &:first-child {
+      position: relative;
+      left: -1px;
+    }
+    &:last-child {
+      position: relative;
+      right: -1px;
+    }
+  }
+  &__number {
+    font-size: 26px;
+    font-family: "BebasNeuePro", sans-serif;
+  }
+
+  &__content {
+    padding: 0 15px;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__link {
+    display: block;
+    width: fit-content;
+    width: 150px;
+    line-height: 51px;
+    height: 51px;
+    margin: 0 auto;
+  }
+  &__select {
+    display: none;
+
+    .select__toggle {
+      padding: 15px 30px;
+      margin-bottom: 40px;
+      background-color: #e62856;
+      border-radius: 50px;
+      span {
+        color: #fff;
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+
+        transition: color 0.25s ease;
+      }
+
+      b {
+        font-size: 25px;
+        font-family: "BebasNeuePro", sans-serif;
+      }
+      &::after {
+        background-image: url(../img/icons/arrow-down-white.svg);
+      }
+    }
+  }
+  .select__dropdown {
+    background-color: #e62856;
+    top: 55px;
+  }
+  .select__option_selected {
+    background-color: #e62856;
+  }
+  .select__option {
+    &:hover {
+      background-color: #b81f45;
+    }
+    span {
+      color: #fff;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      transition: color 0.25s ease;
+    }
+
+    b {
+      font-size: 25px;
+      font-family: "BebasNeuePro", sans-serif;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .tabs__select {
+    display: block;
+  }
+  .select {
+    max-width: 245px;
+  }
+}

@@ -1,0 +1,140 @@
+.content {
+  margin-bottom: 50px;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 270px);
+    justify-content: center;
+
+    gap: 20px;
+  }
+  &__item {
+    margin: 0 auto;
+    max-width: 270px;
+    width: 100%;
+    transition: 1s ease;
+    position: relative;
+  }
+  &__wrapper {
+    height: 385px;
+    perspective: 1000px;
+    cursor: pointer;
+    .content__link,
+    .content__ingredients {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transition: 0.5s;
+      backface-visibility: hidden;
+      border-radius: 25px;
+    }
+    &.active {
+      .content__link {
+        transform: rotateY(180deg);
+      }
+      .content__ingredients {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+  &__ingredients {
+    transform: rotateY(180deg);
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 42.5px 25px 0 25px;
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 27px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #043314;
+    }
+    p {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+
+      color: #043314;
+    }
+  }
+  &__link {
+    backface-visibility: hidden;
+    background-color: #fff;
+    text-decoration: none;
+  }
+  &__image {
+    max-width: 275px;
+    margin: 0 auto;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__label {
+    margin-right: 10px;
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #041733;
+    opacity: 0.7;
+  }
+  &__btn {
+    cursor: pointer;
+    svg {
+      fill: #febc11;
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    color: #043314;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+  }
+  &__descr {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    text-align: center;
+    line-height: 1.25;
+    color: #043314;
+    opacity: 0.7;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    &__descr {
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .content {
+    &__item {
+      max-width: 350px;
+    }
+  }
+}

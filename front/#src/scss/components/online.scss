@@ -1,0 +1,37 @@
+.online {
+  margin-bottom: 100px;
+  background-color: #ffeaa2;
+  .top__inner {
+    display: block;
+    @media (max-width: 767px) {
+      margin-top: 50px;
+    }
+  }
+
+  .top__head {
+    h2 {
+      color: #043314;
+      font-size: 80px;
+      line-height: 1;
+      font-weight: 400;
+      text-transform: uppercase;
+      background-position: center center;
+      border-color: transparent;
+      border-style: solid;
+      text-align: center;
+      @media (max-width: 1023px) {
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 55px;
+      }
+    }
+  }
+  .order__text {
+    margin-bottom: 47px;
+  }
+  @media (max-width: 767px) {
+    .order__list {
+      padding-top: 0;
+    }
+  }
+}
