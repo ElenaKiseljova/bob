@@ -1,1 +1,26 @@
-const tabs=document.querySelectorAll(".tabs__btn");if(tabs.length>0){const t=document.querySelector(".select__options"),e=document.querySelector(".tabs"),n=document.querySelectorAll(".tabs__content");function hideTabContent(){n.forEach((t=>{t.style.display="none"})),tabs.forEach((t=>{t.classList.remove("active")}))}function showTabContent(t=0){n[t].style.display="block",tabs[t].classList.add("active")}hideTabContent(),showTabContent(),e.addEventListener("click",(t=>{const e=t.target;e.closest(".tabs__btn")&&tabs.forEach(((t,n)=>{e.closest(".tabs__btn")==t&&(hideTabContent(),showTabContent(n))}))})),t&&t.addEventListener("click",(t=>{const e=t.target.closest("li");e&&n.forEach(((t,n)=>{e.dataset.tab==t.dataset.content&&(hideTabContent(),showTabContent(n))}))}))}
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelectorAll('.tabs__btn').length > 0) {
+    const t = document.querySelectorAll('.select__option'),
+      e = document.querySelectorAll('.tabs__btn'),
+      c = document.querySelectorAll('.tabs__content'),
+      a = (t) => [].find.call(c, (e) => e.dataset.content === t),
+      n = (t) => {
+        const e = a(t);
+        e &&
+          (c.forEach((t) => t.classList.remove('active')),
+          e.classList.add('active'));
+      };
+    t.forEach((t) => {
+      t.addEventListener('click', () => {
+        n(t.dataset.tab);
+      });
+    }),
+      e.forEach((t) => {
+        t.addEventListener('click', () => {
+          e.forEach((t) => t.classList.remove('active')),
+            t.classList.add('active'),
+            n(t.dataset.tab);
+        });
+      });
+  }
+});
