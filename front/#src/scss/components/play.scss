@@ -35,7 +35,7 @@
       align-items: center;
       justify-content: center;
       p {
-        font-family: "Circe";
+        font-family: 'Circe';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -52,27 +52,61 @@
   }
   &__snail {
     position: absolute;
-    top: -80px;
+    top: -85px;
     left: 20%;
 
     img {
       position: relative;
       z-index: 10;
-      width: 113px;
+      height: 113px;
     }
     &-text {
       position: absolute;
       top: -85px;
-      left: 55px;
-      width: 200.74px;
-      height: 120px;
-      background: url(../img/icons/cloud-eat.svg) no-repeat center center /
-        contain;
+      left: 25px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
+      width: max-content;
+      height: max-content;
+
+      min-width: 201px;
+      max-width: 250px;
+
+      min-height: 120px;
+
+      padding: 15px 30px;
+
+      &::before {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        z-index: 1;
+
+        display: block;
+
+        width: 100%;
+
+        padding-bottom: calc((120 / 201) * 100%);
+
+        background: url(../img/icons/cloud-eat.svg) no-repeat center center /
+          contain;
+
+        transform: translate(-50%, -50%);
+
+        content: '';
+      }
+
       p {
-        font-family: "Circe";
+        position: relative;
+
+        z-index: 2;
+
+        font-family: 'Circe';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -154,7 +188,7 @@
     }
     p {
       padding: 0 10px;
-      font-family: "Circe";
+      font-family: 'Circe';
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
@@ -206,6 +240,8 @@
       top: 260px;
     }
     &--7 {
+      display: none;
+
       width: 200px;
       right: 180px;
       top: 450px;
@@ -315,7 +351,7 @@
       display: block;
     }
     &__snail {
-      top: -88px;
+      top: -96px;
       left: 20px;
       &--box {
         top: 140px;
@@ -413,7 +449,7 @@
       font-size: 70px;
     }
     &__snail {
-      top: -90px;
+      top: -96px;
       left: 20px;
       &--box {
         img {

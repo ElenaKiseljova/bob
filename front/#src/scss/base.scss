@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "BebasNeuePro", sans-serif;
+  font-family: 'BebasNeuePro', sans-serif;
   transition: 0.15s ease;
   height: 100%;
   overflow-x: hidden !important;
@@ -182,7 +182,7 @@ body {
   }
 }
 
-html[lang="de"] {
+html[lang='de'] {
   .top.about .top__inner {
     margin-top: 350px;
     @media (max-width: 1023px) {
@@ -194,14 +194,14 @@ html[lang="de"] {
     min-width: 175px;
     padding: 0 15px;
   }
-  .top__inner .play__snail-text {
-    width: 250px;
-    height: 153px;
-    @media (max-width: 550px) {
-      top: -110px;
-      left: 21px;
-    }
-  }
+  // .top__inner .play__snail-text {
+  //   width: 250px;
+  //   height: 153px;
+  //   @media (max-width: 550px) {
+  //     top: -110px;
+  //     left: 21px;
+  //   }
+  // }
   .toys__wrapper {
     height: 270px;
   }
@@ -266,7 +266,7 @@ html[lang="de"] {
     }
   }
 }
-html[lang="cs"] {
+html[lang='cs'] {
   .slider__snail-text {
     p {
       padding: 0 15px;
