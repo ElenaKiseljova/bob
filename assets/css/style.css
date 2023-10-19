@@ -336,11 +336,6 @@ html[lang=de] .fruit-rolls__btn {
   padding: 0 15px;
 }
 
-html[lang=de] .top__inner .play__snail-text {
-  width: 250px;
-  height: 153px;
-}
-
 html[lang=de] .toys__wrapper {
   height: 270px;
 }
@@ -10494,23 +10489,20 @@ body.color {
 
 .play__snail {
   position: absolute;
-  top: -80px;
+  top: -85px;
   left: 20%;
 }
 
 .play__snail img {
   position: relative;
   z-index: 10;
-  width: 113px;
+  height: 113px;
 }
 
 .play__snail-text {
   position: absolute;
   top: -85px;
-  left: 55px;
-  width: 200.74px;
-  height: 120px;
-  background: url(../img/icons/cloud-eat.svg) no-repeat center center/contain;
+  left: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10520,9 +10512,36 @@ body.color {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-width: 201px;
+  max-width: 250px;
+  min-height: 120px;
+  padding: 15px 30px;
+}
+
+.play__snail-text::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding-bottom: 59.7014925373%;
+  background: url(../img/icons/cloud-eat.svg) no-repeat center center/contain;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
 }
 
 .play__snail-text p {
+  position: relative;
+  z-index: 2;
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -10540,6 +10559,10 @@ body.color {
   z-index: 1;
   top: 140px;
   left: 120px;
+}
+
+.play__snail--box::before {
+  display: none;
 }
 
 .play__snail--box img {
@@ -10692,6 +10715,7 @@ body.color {
 }
 
 .play__image--7 {
+  display: none;
   width: 200px;
   right: 180px;
   top: 450px;
@@ -14688,7 +14712,7 @@ body.color {
   }
 
   .play__snail {
-    top: -88px;
+    top: -96px;
     left: 20px;
   }
 
@@ -16028,7 +16052,7 @@ body.color {
   }
 
   .play__snail {
-    top: -90px;
+    top: -96px;
     left: 20px;
   }
 
@@ -16726,11 +16750,6 @@ body.color {
 }
 
 @media (max-width: 550px) {
-  html[lang=de] .top__inner .play__snail-text {
-    top: -110px;
-    left: 21px;
-  }
-
   html[lang=cs] .contacts__btns {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

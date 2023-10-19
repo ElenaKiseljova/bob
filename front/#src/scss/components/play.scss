@@ -124,6 +124,11 @@
       z-index: 1;
       top: 140px;
       left: 120px;
+
+      &::before {
+        display: none;
+      }
+
       img {
         transform: rotate(49.73deg);
       }
