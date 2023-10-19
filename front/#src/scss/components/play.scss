@@ -125,10 +125,6 @@
       top: 140px;
       left: 120px;
 
-      &::before {
-        display: none;
-      }
-
       img {
         transform: rotate(49.73deg);
       }
@@ -139,6 +135,10 @@
         height: 100px;
         background: url(../img/icons/cloud-orange-big.svg) no-repeat center
           center / contain;
+
+        &::before {
+          display: none;
+        }
       }
     }
   }

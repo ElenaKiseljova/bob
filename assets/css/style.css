@@ -10561,10 +10561,6 @@ body.color {
   left: 120px;
 }
 
-.play__snail--box::before {
-  display: none;
-}
-
 .play__snail--box img {
   -webkit-transform: rotate(49.73deg);
       -ms-transform: rotate(49.73deg);
@@ -10577,6 +10573,10 @@ body.color {
   width: 150px;
   height: 100px;
   background: url(../img/icons/cloud-orange-big.svg) no-repeat center center/contain;
+}
+
+.play__snail--box .play__snail-text::before {
+  display: none;
 }
 
 .play__btns {
