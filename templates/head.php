@@ -28,7 +28,7 @@ $cur_lang_code = function_exists('pll_current_language') ? (pll_current_language
       j.src =
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NT8GNXM');
+    })(window, document, 'script', 'dataLayer', 'GTM-W9NT4THP');
   </script>
 
   <script>
@@ -39,7 +39,7 @@ $cur_lang_code = function_exists('pll_current_language') ? (pll_current_language
     }
     gtag('js', new Date());
 
-    gtag('config', 'GTM-NT8GNXM');
+    gtag('config', 'GTM-W9NT4THP');
   </script>
   <!-- End Google Tag Manager -->
 
