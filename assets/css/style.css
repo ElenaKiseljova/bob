@@ -4601,7 +4601,7 @@ body.color {
 }
 
 .product__fruits--10 {
-  top: 1280px;
+  top: 1200px;
   width: 220px;
   right: 380px;
 }
@@ -5146,7 +5146,8 @@ body.color {
 }
 
 .content__image {
-  max-width: 275px;
+  max-width: 100%;
+  height: 211px;
   margin: 0 auto;
 }
 
@@ -5154,8 +5155,8 @@ body.color {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .content__bottom {
