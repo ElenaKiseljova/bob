@@ -43,6 +43,20 @@ $cur_lang_code = function_exists('pll_current_language') ? (pll_current_language
   </script>
   <!-- End Google Tag Manager -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NKQFMP7KZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7NKQFMP7KZ');
+  </script>
+  <!-- End Google tag (gtag.js) -->
+
   <!-- Hotjar Tracking Code for https://www.bob-snail.com/ -->
   <script>
     (function(h, o, t, j, a, r) {
