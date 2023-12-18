@@ -1,11 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
-  el: document.querySelector(".product__wrapper"),
+  el: document.querySelector('.product__wrapper'),
   smooth: false,
 });
 
-ScrollTrigger.scrollerProxy(".product__wrapper", {
+ScrollTrigger.scrollerProxy('.product__wrapper', {
   scrollTop(value) {
     return arguments.length
       ? locoScroll.scrollTo(value, 0, 0)
@@ -19,9 +19,9 @@ ScrollTrigger.scrollerProxy(".product__wrapper", {
       height: window.innerHeight,
     };
   },
-  pinType: document.querySelector(".product__wrapper").style.transform
-    ? "transform"
-    : "fixed",
+  pinType: document.querySelector('.product__wrapper').style.transform
+    ? 'transform'
+    : 'fixed',
 });
 
 /*gsap.to("body", {
@@ -125,34 +125,34 @@ gsap.to("body", {
   },
 }); */
 
-const blocks = document.querySelectorAll(".product__block");
+const blocks = document.querySelectorAll('.product__block');
 if (blocks) {
   blocks.forEach((item) => {
-    console.log(item);
-    gsap.to("body", {
-      "--color": item.querySelector(".product__item").dataset.scrollcolor,
+    // console.log(item);
+    gsap.to('body', {
+      '--color': item.querySelector('.product__item').dataset.scrollcolor,
       immediateRender: false,
       scrollTrigger: {
         trigger: item,
-        scroller: ".product__wrapper",
+        scroller: '.product__wrapper',
         scrub: true,
-        start: "top center",
-        end: "+=100%",
+        start: 'top center',
+        end: '+=100%',
       },
     });
   });
 }
-gsap.to("body", {
-  "--color": "#FFEB95",
+gsap.to('body', {
+  '--color': '#FFEB95',
   immediateRender: false,
   scrollTrigger: {
-    trigger: ".product__new",
-    scroller: ".product__wrapper",
+    trigger: '.product__new',
+    scroller: '.product__wrapper',
     scrub: true,
-    start: "top center",
-    end: "+=100%",
+    start: 'top center',
+    end: '+=100%',
   },
 });
-locoScroll.on("scroll", ScrollTrigger.update);
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+locoScroll.on('scroll', ScrollTrigger.update);
+ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 ScrollTrigger.refresh();
