@@ -116,4 +116,6 @@ $cur_lang_code = function_exists('pll_current_language') ? (pll_current_language
   <?php if ($cur_lang_code === 'en') : ?>
     <script async src="https://www.influ2.com/tracker?clid=ed27295a-0496-41fa-82e6-ba243bae1173"></script>
   <?php endif; ?>
+
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="498d713a-2a6a-42f8-89f2-6ec62d1b41ab" data-blockingmode="auto" type="text/javascript"></script>
 </head>
