@@ -1928,6 +1928,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   right: 0;
   top: 0;
+  color: white;
 }
 
 .header .social {
@@ -8049,6 +8050,11 @@ body.color {
   right: 14px;
 }
 
+.lang__close svg {
+  stroke: #fff;
+  fill: none;
+}
+
 .lang__head {
   display: none;
   text-align: center;
@@ -8095,6 +8101,7 @@ body.color {
   -o-transition: 0.25s ease;
   transition: 0.25s ease;
   margin-right: 10px;
+  color: inherit !important;
 }
 
 .lang__wrapper {

@@ -8,11 +8,16 @@
     position: absolute;
     top: 10px;
     right: 14px;
+
+    svg {
+      stroke: #fff;
+      fill: none;
+    }
   }
   &__head {
     display: none;
     text-align: center;
-    font-family: "Circe";
+    font-family: 'Circe';
     font-weight: 400;
     font-size: 25px;
     color: #043314;
@@ -44,6 +49,7 @@
     span {
       transition: 0.25s ease;
       margin-right: 10px;
+      color: inherit !important;
     }
   }
   &__wrapper {
