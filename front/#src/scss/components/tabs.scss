@@ -1,10 +1,12 @@
 .tabs {
   &__btns {
-    height: 55px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
 
     width: fit-content;
+
+    min-height: 55px;
+
     border: 5px solid #e62856;
     background-color: transparent;
     border-radius: 30px;
@@ -12,11 +14,18 @@
     position: relative;
   }
   &__btn {
-    height: 100%;
-    width: 220px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    min-width: 220px;
+
     padding: 5px 27px;
     cursor: pointer;
-    font-family: "Circe";
+    font-family: 'Circe';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -27,7 +36,7 @@
     &.active {
       pointer-events: none;
       color: #fff;
-      height: 55px;
+
       overflow: hidden;
       border-radius: 29px;
       font-weight: 600;
@@ -45,7 +54,7 @@
   }
   &__number {
     font-size: 26px;
-    font-family: "BebasNeuePro", sans-serif;
+    font-family: 'BebasNeuePro', sans-serif;
   }
 
   &__content {
@@ -55,6 +64,31 @@
       display: block;
     }
   }
+
+  &__head {
+    h2 {
+      padding: 0 10px;
+      margin-bottom: 40px;
+    }
+    p {
+      padding: 0 10px;
+      font-family: 'Circe';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      /* or 140% */
+
+      text-align: center;
+
+      color: #043314;
+      + p {
+        padding-top: 20px;
+      }
+    }
+    margin-bottom: 70px;
+  }
+
   &__link {
     display: block;
     width: fit-content;
@@ -73,7 +107,7 @@
       border-radius: 50px;
       span {
         color: #fff;
-        font-family: "Circe";
+        font-family: 'Circe';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -84,7 +118,7 @@
 
       b {
         font-size: 25px;
-        font-family: "BebasNeuePro", sans-serif;
+        font-family: 'BebasNeuePro', sans-serif;
       }
       &::after {
         background-image: url(../img/icons/arrow-down-white.svg);
@@ -104,7 +138,7 @@
     }
     span {
       color: #fff;
-      font-family: "Circe";
+      font-family: 'Circe';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -115,7 +149,7 @@
 
     b {
       font-size: 25px;
-      font-family: "BebasNeuePro", sans-serif;
+      font-family: 'BebasNeuePro', sans-serif;
     }
   }
 }

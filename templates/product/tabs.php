@@ -16,7 +16,7 @@ $shops_page_url = bob_get_special_page('shops', 'url') ?? get_permalink();
 $selected = '';
 ?>
 <div class="tabs" id="tabs">
-  <?php if ($class === 'stripes' || $class === 'sweets') : ?>
+  <?php if ($class === 'stripes' ?? $class === 'sweets') : ?>
     <img class="icon composition__fruit composition__fruit--right" src="<?= get_template_directory_uri(); ?>/assets/img/icons/grass.svg" alt="<?= get_bloginfo('name'); ?>" />
   <?php elseif ($class === 'marmalade') : ?>
     <img class="icon composition__fruit composition__fruit--left" src="<?= get_template_directory_uri(); ?>/assets/img/icons/banana.svg" alt="<?= get_bloginfo('name'); ?>" />
@@ -75,6 +75,19 @@ $selected = '';
         $products = $item['products'] ?? [];
         ?>
         <div class="tabs__content content <?= $key === 0 ? 'active' : ''; ?>" data-content="<?= $key + 1; ?>">
+          <?php if ($item['title'] || $item['description']) : ?>
+            <div class="tabs__head">
+              <?php if ($item['title']) : ?>
+                <h2 class="title"><?= $item['title']; ?></h2>
+              <?php endif; ?>
+
+              <?php if ($item['description']) : ?>
+                <p><?= $item['description']; ?></p>
+              <?php endif; ?>
+            </div>
+          <?php endif; ?>
+
+
           <?php if ($products && !empty($products) && is_array($products) && !is_wp_error($products)) : ?>
             <ul class="content__list">
               <?php foreach ($products as $key => $product) : ?>
