@@ -29,11 +29,7 @@ if (have_rows('content')) :
 
     // Case: inside layout.
     elseif (get_row_layout() == 'inside') :
-      get_template_part('templates/choco-crush/inside');
-
-    // Case: unpacking layout.
-    elseif (get_row_layout() == 'unpacking') :
-      get_template_part('templates/choco-crush/unpacking');
+      get_template_part('templates/inside');
 
     endif;
 

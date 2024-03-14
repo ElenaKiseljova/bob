@@ -1981,7 +1981,6 @@ button.swiper-pagination-bullet {
 }
 
 .header.white.active .header__lang svg {
-  stroke: #043314;
   fill: none;
   opacity: 0.8;
   stroke-width: 2;
@@ -5140,7 +5139,7 @@ body.color {
 
 .tabs .select__dropdown {
   background-color: #e62856;
-  top: 55px;
+  top: 100%;
 }
 
 .tabs .select__option_selected {
@@ -5263,7 +5262,7 @@ body.color {
 .content__link {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background-color: #fff;
+  background-color: inherit;
   text-decoration: none;
 }
 
@@ -8139,7 +8138,6 @@ body.color {
   -o-transition: 0.25s ease;
   transition: 0.25s ease;
   margin-right: 10px;
-  color: inherit !important;
 }
 
 .lang__wrapper {
@@ -11622,11 +11620,11 @@ body.color {
   opacity: 0;
 }
 
-.inside__item.active .inside__image.inside__image--back {
+.inside__item.active:has(.inside__image.inside__image--back) .inside__image.inside__image--back {
   opacity: 1;
 }
 
-.inside__item.active .inside__image.inside__image--front {
+.inside__item.active:has(.inside__image.inside__image--back) .inside__image.inside__image--front {
   opacity: 0;
 }
 
@@ -14676,7 +14674,8 @@ body.color {
             animation: stripes-fly-6-mob 14.1s linear forwards;
   }
 
-  .header__lang span {
+  .header__lang span,
+  .header.white .header__lang span {
     color: #000;
   }
 
@@ -18399,11 +18398,11 @@ body.color {
     opacity: 1;
   }
 
-  .inside__item:hover .inside__image.inside__image--back {
+  .inside__item:hover:has(.inside__image.inside__image--back) .inside__image.inside__image--back {
     opacity: 1;
   }
 
-  .inside__item:hover .inside__image.inside__image--front {
+  .inside__item:hover:has(.inside__image.inside__image--back) .inside__image.inside__image--front {
     opacity: 0;
   }
 }

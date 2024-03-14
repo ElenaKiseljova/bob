@@ -31,7 +31,7 @@ function bob_scripts()
     wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/js/libs/swiper.js', $deps = array(), $ver = null, $in_footer = true);
   }
 
-  if (is_front_page() || is_page_template('page-eat-and-play.php') || is_page_template('page-choco-crush.php')) {
+  if (is_front_page() || is_page_template('page-eat-and-play.php') || is_page_template('single-products-choco-crush.php')) {
     wp_enqueue_script('cards-inside-script', get_template_directory_uri() . '/assets/js/cards-inside.js', $deps = array(), $ver = null, $in_footer = true);
   }
 
@@ -53,7 +53,7 @@ function bob_scripts()
     wp_enqueue_script('confetti-script', get_template_directory_uri() . '/assets/js/confetti.js', $deps = array('jquery'), $ver = null, $in_footer = true);
   }
 
-  if (is_singular('products') || is_page_template('page-eat-and-play.php')  || is_page_template('page-choco-crush.php')) {
+  if (is_singular('products') || is_page_template('page-eat-and-play.php')  || is_page_template('single-products-choco-crush.php')) {
     wp_enqueue_script('card-flip-script', get_template_directory_uri() . '/assets/js/card-flip.js', $deps = array(), $ver = null, $in_footer = true);
   }
 

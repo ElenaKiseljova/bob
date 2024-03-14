@@ -54,7 +54,7 @@
     p {
       transition: opacity 0.25s ease;
       opacity: 0;
-      font-family: "Circe";
+      font-family: 'Circe';
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
@@ -95,12 +95,15 @@
   opacity: 0;
 }
 .inside__item.active {
-  .inside__image.inside__image--back {
-    opacity: 1;
+  &:has(.inside__image.inside__image--back) {
+    .inside__image.inside__image--back {
+      opacity: 1;
+    }
+    .inside__image.inside__image--front {
+      opacity: 0;
+    }
   }
-  .inside__image.inside__image--front {
-    opacity: 0;
-  }
+
   p {
     opacity: 1;
   }
@@ -112,11 +115,13 @@
 }
 @media (hover: hover) {
   .inside__item:hover {
-    .inside__image.inside__image--back {
-      opacity: 1;
-    }
-    .inside__image.inside__image--front {
-      opacity: 0;
+    &:has(.inside__image.inside__image--back) {
+      .inside__image.inside__image--back {
+        opacity: 1;
+      }
+      .inside__image.inside__image--front {
+        opacity: 0;
+      }
     }
   }
 }
