@@ -31,6 +31,10 @@ if (is_page_template('single-products-fruit-rolls.php')) {
   $image = get_field('image') ?? '';
 } else if (is_page_template('single-products-party-box.php')) {
   $class = 'party';
+} else if (is_page_template('single-products-fruit-snack.php')) {
+  $class = 'fruit-snack';
+
+  $image = get_field('image') ?? '';
 }
 ?>
 <section class="top <?= $class; ?>">
@@ -155,6 +159,18 @@ if (is_page_template('single-products-fruit-rolls.php')) {
     <img class="icon chief__image chief__image--7" src="<?= get_template_directory_uri(); ?>/assets/img/icons/apple-original.svg" alt="<?= get_bloginfo('name'); ?>" />
     <img class="icon chief__image chief__image--8" src="<?= get_template_directory_uri(); ?>/assets/img/icons/pear.svg" alt="<?= get_bloginfo('name'); ?>" />
     <img class="icon chief__image chief__image--9" src="<?= get_template_directory_uri(); ?>/assets/img/icons/mango.svg" alt="<?= get_bloginfo('name'); ?>" />
+  <?php elseif ($class === 'fruit-snack') : ?>
+
+    <?php if (!empty($image)) : ?>
+      <img class="icon fruit-snack__image fruit-snack__image--3" src="<?= $image; ?>" alt="<?= get_bloginfo('name'); ?>" />
+    <?php endif; ?>
+
+    <img class="icon fruit-snack__image fruit-snack__image--4" src="<?= get_template_directory_uri(); ?>/assets/img/icons/lime.svg" alt="<?= get_bloginfo('name'); ?>" />
+    <img class="icon fruit-snack__image fruit-snack__image--5" src="<?= get_template_directory_uri(); ?>/assets/img/icons/orange-2.svg" alt="<?= get_bloginfo('name'); ?>" />
+    <img class="icon fruit-snack__image fruit-snack__image--6" src="<?= get_template_directory_uri(); ?>/assets/img/icons/banana.svg" alt="<?= get_bloginfo('name'); ?>" />
+    <img class="icon fruit-snack__image fruit-snack__image--7" src="<?= get_template_directory_uri(); ?>/assets/img/icons/apple-original.svg" alt="<?= get_bloginfo('name'); ?>" />
+    <img class="icon fruit-snack__image fruit-snack__image--8" src="<?= get_template_directory_uri(); ?>/assets/img/icons/pear.svg" alt="<?= get_bloginfo('name'); ?>" />
+    <img class="icon fruit-snack__image fruit-snack__image--9" src="<?= get_template_directory_uri(); ?>/assets/img/icons/mango.svg" alt="<?= get_bloginfo('name'); ?>" />
   <?php elseif ($class === 'party') : ?>
     <div id="confetti"></div>
 
