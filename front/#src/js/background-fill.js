@@ -5,13 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.composition > .composition__block'
   );
 
-  if (window.scrollY > 500) {
-    document.body.style.backgroundColor = '#fff';
-  } else {
-    document.body.style.backgroundColor = document.body.dataset.color;
-  }
-
-  window.addEventListener('scroll', () => {
+  const checkScrollPosition = () => {
     if (window.scrollY > 500) {
       document.body.style.backgroundColor = '#fff';
     } else {
@@ -23,5 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundColor = inside.dataset.color;
       }
     }
+  };
+
+  checkScrollPosition();
+
+  window.addEventListener('scroll', () => {
+    checkScrollPosition();
   });
 });

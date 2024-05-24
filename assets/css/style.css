@@ -4692,6 +4692,20 @@ body.color {
   display: none;
 }
 
+.product-choco-crush .product__fruits--9 {
+  display: none !important;
+}
+
+.product-choco-crush .product__fruits--2 {
+  top: 690px;
+  left: 470px;
+}
+
+.product-choco-crush .product__fruits--6 {
+  top: 584px;
+  right: 440px;
+}
+
 .top {
   min-height: 770px;
   width: 100%;
@@ -11086,8 +11100,8 @@ body.color {
 
 .choco-crush__snail--box {
   z-index: 1;
-  top: 40px;
-  left: 50px;
+  top: 75px;
+  left: 294px;
   translate: 0 -100%;
   rotate: 309deg;
 }
@@ -11306,7 +11320,7 @@ body.color {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 400px;
+  max-width: 800px;
   translate: 0 50%;
 }
 
@@ -12658,6 +12672,9 @@ body.color {
   z-index: -2;
   left: 0;
   height: 100%;
+  -webkit-transform: 0 10px;
+      -ms-transform: 0 10px;
+          transform: 0 10px;
 }
 
 .footer__background {
@@ -12745,6 +12762,7 @@ body.color {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  translate: 0 2px;
 }
 
 .footer__snail-text span {
@@ -12937,6 +12955,12 @@ body.color {
 
   .footer {
     background-size: 120%;
+  }
+}
+
+@media (max-width: 1717px) {
+  .product-choco-crush .product__fruits--2 {
+    left: 66px;
   }
 }
 
@@ -13647,6 +13671,14 @@ body.color {
 
   .product__more--2 {
     left: 0;
+  }
+
+  .product-choco-crush .product__fruits--2 {
+    left: 35px;
+  }
+
+  .product-choco-crush .product__fruits--6 {
+    right: 303px;
   }
 
   .top__image--1 {
@@ -14564,6 +14596,10 @@ body.color {
     -webkit-transform: rotate(-9.847deg);
         -ms-transform: rotate(-9.847deg);
             transform: rotate(-9.847deg);
+  }
+
+  .product-choco-crush .product__fruits--2 {
+    left: 21px;
   }
 
   .top.play {
@@ -16898,8 +16934,8 @@ body.color {
   }
 
   .choco-crush__snail--box {
-    top: 37px;
-    left: 30px;
+    top: 42px;
+    left: 119px;
     translate: 0 -100%;
     rotate: 305deg;
   }
@@ -18119,7 +18155,7 @@ body.color {
   }
 
   .choco-crush__center {
-    max-width: 200px;
+    max-width: 312px;
   }
 
   .choco-crush__fruit--1 {
@@ -18355,10 +18391,6 @@ body.color {
   }
 
   .play__snail--box {
-    left: 90px;
-  }
-
-  .choco-crush__snail--box {
     left: 90px;
   }
 }

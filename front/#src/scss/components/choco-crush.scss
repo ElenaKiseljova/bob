@@ -125,8 +125,8 @@
     }
     &--box {
       z-index: 1;
-      top: 40px;
-      left: 50px;
+      top: 75px;
+      left: 294px;
       translate: 0 -100%;
       rotate: 309deg;
 
@@ -299,7 +299,7 @@
     text-align: center;
     position: relative;
     width: fit-content;
-    max-width: 400px;
+    max-width: 800px;
 
     translate: 0 50%;
     > img {
@@ -473,8 +473,8 @@
         img {
           width: 60px;
         }
-        top: 37px;
-        left: 30px;
+        top: 42px;
+        left: 119px;
         translate: 0 -100%;
         rotate: 305deg;
         .choco-crush__snail-text {
@@ -493,7 +493,7 @@
 @media (max-width: 550px) {
   .choco-crush {
     &__center {
-      max-width: 200px;
+      max-width: 312px;
     }
 
     &__fruit {
@@ -542,15 +542,6 @@
       }
       &--8 {
         width: 50px;
-      }
-    }
-  }
-}
-@media (max-width: 374px) {
-  .choco-crush {
-    &__snail {
-      &--box {
-        left: 90px;
       }
     }
   }

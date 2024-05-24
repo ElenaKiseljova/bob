@@ -1,0 +1,38 @@
+.product-choco-crush {
+  .product__fruits--9 {
+    display: none !important;
+  }
+
+  .product__fruits--2 {
+    top: 690px;
+    left: 470px;
+  }
+
+  .product__fruits--6 {
+    top: 584px;
+    right: 440px;
+  }
+
+  @media (max-width: 1717px) {
+    .product__fruits--2 {
+      left: 66px;
+    }
+  }
+
+  @media (max-width: 1220px) {
+    .product__fruits--2 {
+      left: 35px;
+    }
+
+    .product__fruits--6 {
+      right: 303px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .product__fruits--2 {
+      left: 21px;
+    }
+  }
+}
+
