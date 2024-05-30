@@ -4532,6 +4532,9 @@ body.color {
   left: 30%;
 }
 
+.product__default--1,
+.product__fruit-snack--1,
+.product__choco-crush--1,
 .product__play--1 {
   width: 600px;
   left: -100px;
@@ -4541,6 +4544,9 @@ body.color {
           transform: rotate(-15.22deg);
 }
 
+.product__default--2,
+.product__fruit-snack--2,
+.product__choco-crush--2,
 .product__play--2 {
   width: 600px;
   right: -50px;
@@ -13644,10 +13650,16 @@ body.color {
 @media (max-width: 1220px) {
   /* страйпси */
 
+  .product__default--1,
+  .product__fruit-snack--1,
+  .product__choco-crush--1,
   .product__play--1 {
     width: 400px;
   }
 
+  .product__default--2,
+  .product__fruit-snack--2,
+  .product__choco-crush--2,
   .product__play--2 {
     width: 400px;
     top: 500px;
@@ -14431,11 +14443,17 @@ body.color {
 
   /* страйпси */
 
+  .product__default--1,
+  .product__fruit-snack--1,
+  .product__choco-crush--1,
   .product__play--1 {
     width: 250px;
     left: -50px;
   }
 
+  .product__default--2,
+  .product__fruit-snack--2,
+  .product__choco-crush--2,
   .product__play--2 {
     width: 250px;
     top: 400px;
@@ -16110,11 +16128,17 @@ body.color {
     top: 750px;
   }
 
+  .product__default--2,
+  .product__fruit-snack--2,
+  .product__choco-crush--2,
   .product__play--2 {
     top: 350px;
     width: 200px;
   }
 
+  .product__default--1,
+  .product__fruit-snack--1,
+  .product__choco-crush--1,
   .product__play--1 {
     width: 200px;
   }

@@ -6,7 +6,7 @@ $cur_lang_code = function_exists('pll_current_language') ? (pll_current_language
 
 <?php if ($images && !empty($images) && is_array($images) && !is_wp_error($images)) : ?>
   <?php foreach ($images as $key => $image) : ?>
-    <img class="icon product__play product__play--<?= $key + 1; ?>" src="<?= $image['image']; ?>" alt="<?= strip_tags(get_the_title()); ?>" />
+    <img class="icon product__choco-crush product__choco-crush--<?= $key + 1; ?>" src="<?= $image['image']; ?>" alt="<?= strip_tags(get_the_title()); ?>" />
 
     <?php if ($key === 1) break; ?>
   <?php endforeach; ?>
