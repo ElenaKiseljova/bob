@@ -333,7 +333,6 @@ html[lang=de] .top.about .top__inner {
 html[lang=de] .fruit-rolls__btn {
   width: auto;
   min-width: 175px;
-  padding: 0 15px;
 }
 
 html[lang=de] .toys__wrapper {
@@ -10048,11 +10047,17 @@ body.color {
 }
 
 .order__logo {
+  height: 100%;
   max-width: 170px;
 }
 
 .order__logo img {
   width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .order__text {
@@ -10079,7 +10084,9 @@ body.color {
 }
 
 .order__tabs .tabs__btns {
-  max-width: 290px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   width: 100%;
 }
 
