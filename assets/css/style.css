@@ -3897,6 +3897,11 @@ body.color {
           flex-direction: column;
 }
 
+.product__new.empty {
+  height: 220px;
+  min-height: auto;
+}
+
 .product__new .product__content {
   max-width: 790px;
   position: relative;
