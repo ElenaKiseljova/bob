@@ -1,12 +1,12 @@
-<?php 
-  $title = get_sub_field( 'title' ) ?? '';
+<?php
+$title = get_sub_field('title') ?? '';
 
-  $description = get_sub_field( 'description' ) ?? '';
+$description = get_sub_field('description') ?? '';
 
-  $list = get_sub_field( 'list' ) ?? [];
+$list = get_sub_field('list') ?? [];
 ?>
 
-<section class="online order" id="tabs">
+<section class="online order" id="tabs" style="background-color: var(--footer-top-background, #FFEAA2);">
   <div class="container">
     <div class="top__inner">
       <div class="top__head top__head--dark">
@@ -16,21 +16,21 @@
         <p><?= $description; ?></p>
       </div>
 
-      <?php if ( $list && !empty($list) && is_array($list) && !is_wp_error( $list ) ) : ?>
+      <?php if ($list && !empty($list) && is_array($list) && !is_wp_error($list)) : ?>
         <ul class="order__list">
           <?php foreach ($list as $key => $item) : ?>
-            <?php 
-              $image = $item['image'] ?? '';
-              $link = $item['link'] ?? '';
+            <?php
+            $image = $item['image'] ?? '';
+            $link = $item['link'] ?? '';
             ?>
             <li class="order__item">
               <a class="order__logo" href="<?= $link; ?>">
-                <img src="<?= $image; ?>" alt="<?= get_bloginfo( 'name' ); ?>" />
+                <img src="<?= $image; ?>" alt="<?= get_bloginfo('name'); ?>" />
               </a>
             </li>
-          <?php endforeach; ?>        
+          <?php endforeach; ?>
         </ul>
-      <?php endif; ?>      
+      <?php endif; ?>
     </div>
   </div>
 </section>

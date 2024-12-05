@@ -1,7 +1,7 @@
 <?php
 $list = get_sub_field('list');
 ?>
-<section class="inside" data-color="#FFEAA2">
+<section class="inside" data-color="var(--footer-top-background, #FFEAA2)" style="background-color: var(--footer-top-background, #FFEAA2);">
   <div class="container">
     <div class="inside__inner">
       <?php if ($list && !empty($list) && is_array($list) && !is_wp_error($list)) : ?>
