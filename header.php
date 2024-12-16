@@ -10,7 +10,7 @@ $custom_scrollbar_body_class = $is_shelf_health ? 'custom-scrollbar' : '';
 get_template_part('templates/head');
 ?>
 
-<body class="<?= $custom_scrollbar_body_class; ?>" style="background-color: <?= $color_background; ?>" data-color="<?= $color_background; ?>">
+<body class="<?= $custom_scrollbar_body_class; ?>" style="background-color: <?= $color_background; ?>" data-color="<?= $color_background; ?>" data-color-bottom="<?= $color_background_footer_top; ?>">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9NT4THP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
