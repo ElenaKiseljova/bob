@@ -1,22 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const inside = document.querySelector('.inside');
-
+ 
   const composition = document.querySelector(
     '.composition > .composition__block'
   );
 
   const checkScrollPosition = () => {
     if (window.scrollY > 500) {
-      document.body.style.backgroundColor = '#fff';
+      if (composition && window.screenY > composition.getBoundingClientRect().top && document.body.dataset.colorBottom) {
+        // Если фон "волны" в футере задан (data-color-bottom) и отличается от фона первого экрана (data-color) и пользователь проскролил composition секцию
+        document.body.style.backgroundColor = document.body.dataset.colorBottom;
+      } else {
+        // Если пользователь проскролил ниже первого экрана - переключаем фон страницы на белый
+        document.body.style.backgroundColor = '#fff';
+      }
+      
     } else {
+      // Если пользователь находится в пределах первого экрана - переключаем фон страницы на дефолтный цвет этой страницы (data-color)
       document.body.style.backgroundColor = document.body.dataset.color;
     }
 
-    if (inside && composition) {
-      if (window.screenY > composition.getBoundingClientRect().top) {
-        document.body.style.backgroundColor = inside.dataset.color;
-      }
-    }
+    
   };
 
   checkScrollPosition();

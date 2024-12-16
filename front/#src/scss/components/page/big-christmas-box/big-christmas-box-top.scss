@@ -1,0 +1,276 @@
+.big-christmas-box-top {
+  @media (max-width: 1023px) {
+    min-height: 785px;
+  }
+
+  .top__inner {
+    margin-top: 246px;
+
+    @media (max-width: 1023px) {
+      margin-top: 110px;
+    }
+  }
+
+  .top__head {
+    z-index: 11;
+
+    width: 100%;
+
+    h1,
+    h2 {
+      br {
+        display: unset;
+      }
+
+      & + p {
+        max-width: 501px;
+
+        margin-top: 32px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media (max-width: 767px) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  &__snail {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%, calc(-100% + 25px));
+
+    img {
+      width: 74px;
+      height: 95px;
+
+      object-position: center;
+      object-fit: contain;
+    }
+
+    @media (max-width: 1023px) {
+      transform: translate(-50%, calc(-100% + 16px));
+    }
+
+    @media (max-width: 767px) {
+      img {
+        width: 64px;
+        height: 82px;
+      }
+
+      transform: translate(-50%, calc(-100% + 12px));
+    }
+
+    &-text {
+      position: absolute;
+
+      top: -110px;
+      left: 53px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: max-content;
+      height: max-content;
+
+      min-width: 201px;
+      max-width: 250px;
+
+      min-height: 120px;
+
+      padding: 15px 30px;
+
+      &::before {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        z-index: 1;
+
+        display: block;
+
+        width: 100%;
+
+        padding-bottom: calc((120 / 201) * 100%);
+
+        background: url(../img/icons/cloud-eat.svg) no-repeat center center /
+          contain;
+
+        transform: translate(-50%, -50%);
+
+        content: "";
+      }
+
+      @media (max-width: 767px) {
+        top: -132px;
+        left: 3px;
+
+        min-width: 122px;
+      }
+
+      p {
+        position: relative;
+
+        z-index: 2;
+
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 112% */
+
+        text-align: center;
+
+        color: #043314;
+
+        transform: rotate(-14.26deg);
+      }
+    }
+  }
+
+  &__image {
+    &--1,
+    &--2 {
+      height: auto;
+
+      object-position: center;
+      object-fit: contain;
+    }
+
+    &--1 {
+      top: calc(249 / 737 * 100%);
+      left: calc(-1 / 1280 * 100%);
+
+      width: calc(306 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        top: 92px;
+        left: -1px;
+
+        width: 148px;
+      }
+    }
+
+    &--2 {
+      top: calc(249 / 737 * 100%);
+      right: calc(-8 / 1280 * 100%);
+
+      width: calc(320 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        top: 514px;
+        right: -20px;
+
+        width: 191.41px;
+
+        transform: rotate(6.19deg);
+      }
+    }
+
+    &--3 {
+      top: calc(170 / 737 * 100%);
+      left: calc(334 / 1280 * 100%);
+
+      width: calc(83 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        top: 303px;
+        left: -22px;
+
+        width: 66px;
+      }
+    }
+
+    &--4 {
+      top: calc(154 / 737 * 100%);
+      left: calc(38 / 1280 * 100%);
+
+      width: calc(56 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        top: 572px;
+        left: 79px;
+
+        width: 56px;
+      }
+    }
+
+    &--5 {
+      top: calc(411 / 737 * 100%);
+      left: calc(-34 / 1280 * 100%);
+
+      width: calc(90 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        top: 57px;
+        left: 9px;
+
+        width: 45px;
+      }
+    }
+
+    &--6 {
+      top: calc(222 / 737 * 100%);
+      right: calc(22 / 1280 * 100%);
+
+      width: calc(50 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        top: 595px;
+        left: 50px;
+
+        width: 22px;
+      }
+    }
+
+    &--7 {
+      top: calc(131 / 737 * 100%);
+      right: calc(241 / 1280 * 100%);
+
+      width: calc(60 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        top: 562px;
+        right: auto;
+        left: 145px;
+
+        width: 60px;
+      }
+    }
+
+    &--8 {
+      top: calc(717 / 737 * 100%);
+      right: calc(163 / 1280 * 100%);
+
+      width: calc(86 / 1280 * 100%);
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    &--9 {
+      display: none;
+
+      @media (max-width: 1023px) {
+        top: 294px;
+        right: auto;
+        right: -30px;
+
+        display: block;
+
+        width: 58px;
+
+        transform: rotate(-34.77deg);
+      }
+    }
+  }
+}
