@@ -67,9 +67,14 @@
 /* Pages */
 @import "components/page/advent-calendar/advent-calendar-top.scss";
 @import "components/page/advent-calendar/advent-calendar-composition.scss";
+@import "components/page/advent-calendar/advent-calendar-pack.scss";
+
 @import "components/page/big-christmas-box/big-christmas-box-top.scss";
 @import "components/page/big-christmas-box/big-christmas-box-composition.scss";
+@import "components/page/big-christmas-box/big-christmas-box-pack.scss";
+
 @import "components/page/small-christmas-box/small-christmas-box-top.scss";
 @import "components/page/small-christmas-box/small-christmas-box-composition.scss";
+@import "components/page/small-christmas-box/small-christmas-box-pack.scss";
 
 @import "components/footer.scss";

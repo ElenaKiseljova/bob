@@ -132,6 +132,11 @@
         color: #043314;
 
         transform: rotate(-14.26deg);
+
+        @media (max-width: 767px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
     }
   }
