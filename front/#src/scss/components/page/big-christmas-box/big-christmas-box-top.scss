@@ -156,6 +156,8 @@
 
       width: calc(306 / 1280 * 100%);
 
+      max-width: 306px;
+
       @media (max-width: 1023px) {
         top: 92px;
         left: -1px;
@@ -169,6 +171,8 @@
       right: calc(-8 / 1280 * 100%);
 
       width: calc(320 / 1280 * 100%);
+
+      max-width: 320px;
 
       @media (max-width: 1023px) {
         top: 514px;
@@ -252,8 +256,8 @@
     }
 
     &--8 {
-      top: calc(717 / 737 * 100%);
-      right: calc(163 / 1280 * 100%);
+      top: calc(657 / 737 * 100%);
+      right: calc(263 / 1280 * 100%);
 
       width: calc(86 / 1280 * 100%);
 
