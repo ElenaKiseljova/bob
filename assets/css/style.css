@@ -4716,6 +4716,48 @@ body.color {
   right: 440px;
 }
 
+.product-advent-calendar .product__fruits--9 {
+  display: none !important;
+}
+
+.product-advent-calendar .product__fruits--2 {
+  top: 690px;
+  left: 470px;
+}
+
+.product-advent-calendar .product__fruits--6 {
+  top: 584px;
+  right: 440px;
+}
+
+.product-big-christmas-box .product__fruits--9 {
+  display: none !important;
+}
+
+.product-big-christmas-box .product__fruits--2 {
+  top: 690px;
+  left: 470px;
+}
+
+.product-big-christmas-box .product__fruits--6 {
+  top: 584px;
+  right: 440px;
+}
+
+.product-small-christmas-box .product__fruits--9 {
+  display: none !important;
+}
+
+.product-small-christmas-box .product__fruits--2 {
+  top: 690px;
+  left: 470px;
+}
+
+.product-small-christmas-box .product__fruits--6 {
+  top: 584px;
+  right: 440px;
+}
+
 .top {
   min-height: 770px;
   width: 100%;
@@ -6544,6 +6586,9 @@ body.color {
 .recipes__image--8,
 .recipes__image--10,
 .play__image--3,
+.advent-calendar-top__image--3,
+.big-christmas-box-top__image--3,
+.small-christmas-box-top__image--3,
 .choco-crush__image--3,
 .first-section__image--2,
 .unit__image--4,
@@ -6605,6 +6650,9 @@ body.color {
 .recipes__image--9,
 .recipes__image--11,
 .play__image--5,
+.advent-calendar-top__image--5,
+.big-christmas-box-top__image--5,
+.small-christmas-box-top__image--5,
 .choco-crush__image--5,
 .first-section__image--3,
 .unit__image--3,
@@ -6646,6 +6694,9 @@ body.color {
 .recipes__image--6,
 .recipes__image--12,
 .play__image--8,
+.advent-calendar-top__image--7,
+.big-christmas-box-top__image--7,
+.small-christmas-box-top__image--7,
 .choco-crush__image--8,
 .first-section__image--4,
 .unit__image--2,
@@ -10009,18 +10060,21 @@ body.color {
 .order__list {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
   row-gap: 40px;
-  width: 100%;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   padding-top: 40px;
 }
 
 .order__item {
-  width: 250px;
-  height: 100px;
-  border-radius: 5.06px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10030,6 +10084,10 @@ body.color {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 250px;
+  height: 100px;
+  max-width: 100%;
+  border-radius: 5.06px;
 }
 
 .order__btn {
@@ -12724,6 +12782,1238 @@ body.color {
   border-color: #fff;
 }
 
+/* Pages */
+
+.advent-calendar-top .top__inner {
+  margin-top: 246px;
+}
+
+.advent-calendar-top .top__head {
+  z-index: 11;
+  width: 100%;
+}
+
+.advent-calendar-top .top__head h1 br,
+.advent-calendar-top .top__head h2 br {
+  display: unset;
+}
+
+.advent-calendar-top .top__head h1 + p,
+.advent-calendar-top .top__head h2 + p {
+  max-width: 501px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.advent-calendar-top__snail {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-100% + 25px));
+      -ms-transform: translate(-50%, calc(-100% + 25px));
+          transform: translate(-50%, calc(-100% + 25px));
+}
+
+.advent-calendar-top__snail img {
+  width: 74px;
+  height: 95px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.advent-calendar-top__snail-text {
+  position: absolute;
+  top: -110px;
+  left: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-width: 201px;
+  max-width: 250px;
+  min-height: 120px;
+  padding: 15px 30px;
+}
+
+.advent-calendar-top__snail-text::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding-bottom: 59.7014925373%;
+  background: url(../img/icons/cloud-eat.svg) no-repeat center center/contain;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+}
+
+.advent-calendar-top__snail-text p {
+  position: relative;
+  z-index: 2;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-14.26deg);
+      -ms-transform: rotate(-14.26deg);
+          transform: rotate(-14.26deg);
+}
+
+.advent-calendar-top__image--1,
+.advent-calendar-top__image--2 {
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.advent-calendar-top__image--1 {
+  top: 33.7856173677%;
+  left: 1.953125%;
+  width: 26.328125%;
+  max-width: 337px;
+}
+
+.advent-calendar-top__image--2 {
+  top: 46.8113975577%;
+  right: 0;
+  width: 25.625%;
+  max-width: 328px;
+}
+
+.advent-calendar-top__image--3 {
+  top: 14.789687924%;
+  left: -4.140625%;
+  width: 9.375%;
+}
+
+.advent-calendar-top__image--4 {
+  top: 21.1668928087%;
+  left: 18.90625%;
+  width: 4.375%;
+}
+
+.advent-calendar-top__image--5 {
+  top: 76.7978290366%;
+  left: 14.0625%;
+  width: 7.03125%;
+}
+
+.advent-calendar-top__image--6 {
+  top: 19.6743554953%;
+  right: 1.953125%;
+  width: 3.90625%;
+}
+
+.advent-calendar-top__image--7 {
+  top: 30.6648575305%;
+  right: 9.765625%;
+  width: 6.796875%;
+}
+
+.advent-calendar-composition {
+  --section-width: 1280;
+}
+
+.advent-calendar-composition .composition__inner {
+  padding-bottom: 0;
+}
+
+.advent-calendar-composition__head {
+  margin-bottom: 70px;
+}
+
+.advent-calendar-composition__head h2 {
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.advent-calendar-composition__head p {
+  padding: 0 10px;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+  text-align: center;
+  color: #043314;
+}
+
+.advent-calendar-composition__head p + p {
+  padding-top: 20px;
+}
+
+.advent-calendar-composition__tabs .content__list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.advent-calendar-composition__tabs .content__item {
+  max-width: 100%;
+}
+
+.advent-calendar-composition__tabs .content__image {
+  position: relative;
+  height: auto;
+  max-width: 223px;
+  margin-bottom: 24px;
+}
+
+.advent-calendar-composition__tabs .content__image::before {
+  display: block;
+  padding-bottom: 109.865470852%;
+  content: "";
+}
+
+.advent-calendar-composition__tabs .content__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.advent-calendar-composition__tabs .content__descr * + * {
+  margin-top: 16px;
+}
+
+.advent-calendar-composition__fruit--1 {
+  top: -20px;
+  right: calc(163 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.advent-calendar-composition__fruit--2 {
+  top: 156px;
+  left: calc(150 / var(--section-width) * 100%);
+  width: calc(60 / var(--section-width) * 100%);
+}
+
+.advent-calendar-composition__fruit--3 {
+  bottom: 17px;
+  right: calc(82 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.advent-calendar-pack {
+  --section-width: 1280;
+  --section-height: 700;
+  --pack-width: 558;
+  display: block;
+  width: 100%;
+  min-height: calc(var(--section-height) * 1px);
+  max-width: unset;
+  margin: -80px 0 0;
+  padding-top: 80px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.advent-calendar-pack__wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.advent-calendar-pack__center {
+  position: relative;
+  width: calc(var(--pack-width) / var(--section-width) * 100%);
+  max-width: calc(var(--pack-width) * 1px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.advent-calendar-pack__pack {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 100%;
+}
+
+.advent-calendar-pack__snail {
+  position: absolute;
+  top: -13.9664804469%;
+  left: calc(221 / var(--pack-width) * 100%);
+  z-index: 11;
+  width: calc(98 / var(--pack-width) * 100%);
+}
+
+.advent-calendar-pack__snail img {
+  width: 100%;
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.advent-calendar-pack__snail-text {
+  position: absolute;
+  top: -67%;
+  left: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 100px;
+  min-width: 201px;
+  max-width: 250px;
+  min-height: 120px;
+  padding: 15px 30px;
+  background: url(../img/icons/cloud-orange-big.svg) no-repeat center center/contain;
+}
+
+.advent-calendar-pack__snail-text p {
+  position: relative;
+  z-index: 2;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-14.26deg);
+      -ms-transform: rotate(-14.26deg);
+          transform: rotate(-14.26deg);
+}
+
+.advent-calendar-pack__fruit--1 {
+  top: calc(233 / var(--section-height) * 100%);
+  left: calc(20 / var(--section-width) * 100%);
+  width: calc(60 / var(--section-width) * 100%);
+}
+
+.advent-calendar-pack__fruit--2 {
+  top: calc(298 / var(--section-height) * 100%);
+  left: calc(115 / var(--section-width) * 100%);
+  width: calc(70 / var(--section-width) * 100%);
+}
+
+.advent-calendar-pack__fruit--3 {
+  top: calc(343 / var(--section-height) * 100%);
+  left: calc(-40 / var(--section-width) * 100%);
+  width: calc(180 / var(--section-width) * 100%);
+}
+
+.advent-calendar-pack__fruit--4 {
+  top: calc(210 / var(--section-height) * 100%);
+  right: calc(2 / var(--section-width) * 100%);
+  width: calc(105 / var(--section-width) * 100%);
+}
+
+.advent-calendar-pack__fruit--5 {
+  top: calc(390 / var(--section-height) * 100%);
+  right: calc(-45 / var(--section-width) * 100%);
+  width: calc(104 / var(--section-width) * 100%);
+}
+
+.advent-calendar-pack__fruit--6 {
+  top: calc(490 / var(--section-height) * 100%);
+  right: calc(35 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.advent-calendar-pack__fruit--7 {
+  display: none;
+}
+
+.big-christmas-box-top .top__inner {
+  margin-top: 246px;
+}
+
+.big-christmas-box-top .top__head {
+  z-index: 11;
+  width: 100%;
+}
+
+.big-christmas-box-top .top__head h1 br,
+.big-christmas-box-top .top__head h2 br {
+  display: unset;
+}
+
+.big-christmas-box-top .top__head h1 + p,
+.big-christmas-box-top .top__head h2 + p {
+  max-width: 501px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.big-christmas-box-top__snail {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-100% + 25px));
+      -ms-transform: translate(-50%, calc(-100% + 25px));
+          transform: translate(-50%, calc(-100% + 25px));
+}
+
+.big-christmas-box-top__snail img {
+  width: 74px;
+  height: 95px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.big-christmas-box-top__snail-text {
+  position: absolute;
+  top: -110px;
+  left: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-width: 201px;
+  max-width: 250px;
+  min-height: 120px;
+  padding: 15px 30px;
+}
+
+.big-christmas-box-top__snail-text::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding-bottom: 59.7014925373%;
+  background: url(../img/icons/cloud-eat.svg) no-repeat center center/contain;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+}
+
+.big-christmas-box-top__snail-text p {
+  position: relative;
+  z-index: 2;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-14.26deg);
+      -ms-transform: rotate(-14.26deg);
+          transform: rotate(-14.26deg);
+}
+
+.big-christmas-box-top__image--1,
+.big-christmas-box-top__image--2 {
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.big-christmas-box-top__image--1 {
+  top: 33.7856173677%;
+  left: -0.078125%;
+  width: 23.90625%;
+  max-width: 306px;
+}
+
+.big-christmas-box-top__image--2 {
+  top: 33.7856173677%;
+  right: -0.625%;
+  width: 25%;
+  max-width: 320px;
+}
+
+.big-christmas-box-top__image--3 {
+  top: 23.0664857531%;
+  left: 26.09375%;
+  width: 6.484375%;
+}
+
+.big-christmas-box-top__image--4 {
+  top: 20.8955223881%;
+  left: 2.96875%;
+  width: 4.375%;
+}
+
+.big-christmas-box-top__image--5 {
+  top: 55.7666214383%;
+  left: -2.65625%;
+  width: 7.03125%;
+}
+
+.big-christmas-box-top__image--6 {
+  top: 30.1221166893%;
+  right: 1.71875%;
+  width: 3.90625%;
+}
+
+.big-christmas-box-top__image--7 {
+  top: 17.7747625509%;
+  right: 18.828125%;
+  width: 4.6875%;
+}
+
+.big-christmas-box-top__image--8 {
+  top: 89.145183175%;
+  right: 20.546875%;
+  width: 6.71875%;
+}
+
+.big-christmas-box-top__image--9 {
+  display: none;
+}
+
+.big-christmas-box-composition {
+  --section-width: 1280;
+}
+
+.big-christmas-box-composition .composition__inner {
+  padding-bottom: 0;
+}
+
+.big-christmas-box-composition__head {
+  margin-bottom: 70px;
+}
+
+.big-christmas-box-composition__head h2 {
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.big-christmas-box-composition__head p {
+  padding: 0 10px;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+  text-align: center;
+  color: #043314;
+}
+
+.big-christmas-box-composition__head p + p {
+  padding-top: 20px;
+}
+
+.big-christmas-box-composition__tabs .tabs__btn {
+  font-family: "BebasNeuePro", sans-serif;
+  font-size: 25px;
+  line-height: 41.7px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.big-christmas-box-composition__tabs .content__list {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 54px;
+}
+
+.big-christmas-box-composition__tabs .content__item {
+  max-width: 100%;
+}
+
+.big-christmas-box-composition__tabs .content__image {
+  position: relative;
+  height: auto;
+  max-width: 302px;
+  margin-bottom: 24px;
+}
+
+.big-christmas-box-composition__tabs .content__image::before {
+  display: block;
+  padding-bottom: 80.1324503311%;
+  content: "";
+}
+
+.big-christmas-box-composition__tabs .content__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.big-christmas-box-composition__tabs .content__descr * + * {
+  margin-top: 16px;
+}
+
+.big-christmas-box-pack {
+  --section-width: 1280;
+  --section-height: 700;
+  --pack-width: 444;
+  display: block;
+  width: 100%;
+  min-height: calc(var(--section-height) * 1px);
+  max-width: unset;
+  margin: -80px 0 0;
+  padding-top: 80px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.big-christmas-box-pack__wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.big-christmas-box-pack__left {
+  position: absolute;
+  top: calc(153.36 / var(--section-height) * 100%);
+  left: calc(-60.87 / var(--section-width) * 100%);
+  z-index: 100;
+  width: calc(178.44 / var(--section-width) * 100%);
+}
+
+.big-christmas-box-pack__left img {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+}
+
+.big-christmas-box-pack__left-text {
+  position: absolute;
+  top: 55%;
+  left: 54%;
+  z-index: 11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 198px;
+  height: 135px;
+  background: url(../img/icons/cloud-eat.svg) no-repeat center/contain;
+}
+
+.big-christmas-box-pack__left-text p {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-16.61deg);
+      -ms-transform: rotate(-16.61deg);
+          transform: rotate(-16.61deg);
+}
+
+.big-christmas-box-pack__center {
+  position: relative;
+  width: calc(var(--pack-width) / var(--section-width) * 100%);
+  max-width: calc(var(--pack-width) * 1px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.big-christmas-box-pack__pack {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 100%;
+}
+
+.big-christmas-box-pack__snail {
+  position: absolute;
+  top: -5.8659217877%;
+  left: calc(160 / var(--pack-width) * 100%);
+  z-index: 11;
+  width: calc(98 / var(--pack-width) * 100%);
+}
+
+.big-christmas-box-pack__snail img {
+  width: 100%;
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.big-christmas-box-pack__snail-text {
+  position: absolute;
+  top: -67%;
+  left: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 100px;
+  min-width: 201px;
+  max-width: 250px;
+  min-height: 120px;
+  padding: 15px 30px;
+  background: url(../img/icons/cloud-orange-big.svg) no-repeat center center/contain;
+}
+
+.big-christmas-box-pack__snail-text p {
+  position: relative;
+  z-index: 2;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-14.26deg);
+      -ms-transform: rotate(-14.26deg);
+          transform: rotate(-14.26deg);
+}
+
+.big-christmas-box-pack__fruit--1 {
+  top: calc(154 / var(--section-height) * 100%);
+  left: calc(185 / var(--section-width) * 100%);
+  width: calc(60 / var(--section-width) * 100%);
+}
+
+.big-christmas-box-pack__fruit--2 {
+  top: calc(410 / var(--section-height) * 100%);
+  left: calc(137 / var(--section-width) * 100%);
+  width: calc(80 / var(--section-width) * 100%);
+}
+
+.big-christmas-box-pack__fruit--3 {
+  top: calc(494 / var(--section-height) * 100%);
+  left: calc(20 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.big-christmas-box-pack__fruit--4 {
+  top: calc(289 / var(--section-height) * 100%);
+  right: calc(189 / var(--section-width) * 100%);
+  width: calc(70 / var(--section-width) * 100%);
+}
+
+.big-christmas-box-pack__fruit--5 {
+  top: calc(282 / var(--section-height) * 100%);
+  right: calc(-61.15 / var(--section-width) * 100%);
+  width: calc(151.15 / var(--section-width) * 100%);
+}
+
+.big-christmas-box-pack__fruit--6 {
+  top: calc(420 / var(--section-height) * 100%);
+  right: calc(43 / var(--section-width) * 100%);
+  width: calc(180 / var(--section-width) * 100%);
+}
+
+.big-christmas-box-pack__fruit--7 {
+  display: none;
+}
+
+.small-christmas-box-top .top__inner {
+  margin-top: 246px;
+}
+
+.small-christmas-box-top .top__head {
+  z-index: 11;
+  width: 100%;
+}
+
+.small-christmas-box-top .top__head h1 br,
+.small-christmas-box-top .top__head h2 br {
+  display: unset;
+}
+
+.small-christmas-box-top .top__head h1 + p,
+.small-christmas-box-top .top__head h2 + p {
+  max-width: 374px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.small-christmas-box-top__snail {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-100% + 25px));
+      -ms-transform: translate(-50%, calc(-100% + 25px));
+          transform: translate(-50%, calc(-100% + 25px));
+}
+
+.small-christmas-box-top__snail img {
+  width: 74px;
+  height: 95px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.small-christmas-box-top__snail-text {
+  position: absolute;
+  top: -110px;
+  left: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-width: 201px;
+  max-width: 250px;
+  min-height: 120px;
+  padding: 15px 30px;
+}
+
+.small-christmas-box-top__snail-text::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding-bottom: 59.7014925373%;
+  background: url(../img/icons/cloud-eat.svg) no-repeat center center/contain;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+}
+
+.small-christmas-box-top__snail-text p {
+  position: relative;
+  z-index: 2;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-14.26deg);
+      -ms-transform: rotate(-14.26deg);
+          transform: rotate(-14.26deg);
+}
+
+.small-christmas-box-top__image--1,
+.small-christmas-box-top__image--2 {
+  height: auto;
+  max-width: 381px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.small-christmas-box-top__image--1 {
+  top: 31.6146540027%;
+  left: -2.5%;
+  width: 29.765625%;
+}
+
+.small-christmas-box-top__image--2 {
+  top: 31.6146540027%;
+  right: -3.125%;
+  width: 29.765625%;
+}
+
+.small-christmas-box-top__image--3 {
+  top: 14.789687924%;
+  left: -4.140625%;
+  width: 9.375%;
+}
+
+.small-christmas-box-top__image--4 {
+  top: 21.1668928087%;
+  left: 18.90625%;
+  width: 4.375%;
+}
+
+.small-christmas-box-top__image--5 {
+  top: 76.7978290366%;
+  left: 14.0625%;
+  width: 7.03125%;
+}
+
+.small-christmas-box-top__image--6 {
+  top: 19.6743554953%;
+  right: 1.953125%;
+  width: 3.90625%;
+}
+
+.small-christmas-box-top__image--7 {
+  top: 30.6648575305%;
+  right: 9.765625%;
+  width: 6.796875%;
+}
+
+.small-christmas-box-top__image--8 {
+  top: 78.5617367707%;
+  right: 14.21875%;
+  width: 6.71875%;
+}
+
+.small-christmas-box-top__image--9 {
+  display: none;
+}
+
+.small-christmas-box-composition {
+  --section-width: 1280;
+}
+
+.small-christmas-box-composition .composition__inner {
+  padding-bottom: 0;
+}
+
+.small-christmas-box-composition__head {
+  margin-bottom: 70px;
+}
+
+.small-christmas-box-composition__head h2 {
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.small-christmas-box-composition__head p {
+  padding: 0 10px;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+  text-align: center;
+  color: #043314;
+}
+
+.small-christmas-box-composition__head p + p {
+  padding-top: 20px;
+}
+
+.small-christmas-box-composition__tabs .tabs__btn {
+  font-family: "BebasNeuePro", sans-serif;
+  font-size: 25px;
+  line-height: 41.7px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.small-christmas-box-composition__tabs .content__list {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 54px;
+}
+
+.small-christmas-box-composition__tabs .content__item {
+  position: relative;
+  max-width: 100%;
+}
+
+.small-christmas-box-composition__tabs .content__item:last-child:nth-child(odd),
+.small-christmas-box-composition__tabs .content__item--horizontal {
+  grid-column: 1/3;
+}
+
+.small-christmas-box-composition__tabs .content__link--horizontal {
+  display: grid;
+  grid-template-columns: 37.0149253731% 1fr;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+  width: 100%;
+  max-width: 670px;
+  margin: 0 auto;
+}
+
+.small-christmas-box-composition__tabs .content__link--horizontal .content__title {
+  text-align: left;
+}
+
+.small-christmas-box-composition__tabs .content__image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 302px;
+  margin-bottom: 24px;
+}
+
+.small-christmas-box-composition__tabs .content__image::before {
+  display: block;
+  padding-bottom: 80.1324503311%;
+  content: "";
+}
+
+.small-christmas-box-composition__tabs .content__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.small-christmas-box-composition__tabs .content__descr * + * {
+  margin-top: 16px;
+}
+
+.small-christmas-box-composition__fruit--1 {
+  top: 156px;
+  left: calc(150 / var(--section-width) * 100%);
+  width: calc(60 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-composition__fruit--2 {
+  bottom: 17px;
+  right: calc(82 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-composition__fruit--3 {
+  bottom: 0;
+  left: 0;
+  width: calc(84 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-composition__fruit--4 {
+  top: 0;
+  right: 0;
+  width: calc(90 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack {
+  --section-width: 1280;
+  --section-height: 700;
+  --pack-width: 503;
+  display: block;
+  width: 100%;
+  min-height: calc(var(--section-height) * 1px);
+  max-width: unset;
+  margin: -80px 0 0;
+  padding-top: 80px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.small-christmas-box-pack__wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.small-christmas-box-pack__left {
+  position: absolute;
+  top: calc(153.36 / var(--section-height) * 100%);
+  left: calc(-60.87 / var(--section-width) * 100%);
+  z-index: 100;
+  width: calc(178.44 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack__left img {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+}
+
+.small-christmas-box-pack__left-text {
+  position: absolute;
+  top: 55%;
+  left: 54%;
+  z-index: 11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 198px;
+  height: 135px;
+  background: url(../img/icons/cloud-eat.svg) no-repeat center/contain;
+}
+
+.small-christmas-box-pack__left-text p {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-16.61deg);
+      -ms-transform: rotate(-16.61deg);
+          transform: rotate(-16.61deg);
+}
+
+.small-christmas-box-pack__center {
+  position: relative;
+  width: calc(var(--pack-width) / var(--section-width) * 100%);
+  max-width: calc(var(--pack-width) * 1px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.small-christmas-box-pack__pack {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 100%;
+}
+
+.small-christmas-box-pack__snail {
+  position: absolute;
+  top: -18.9944134078%;
+  left: calc(171 / var(--pack-width) * 100%);
+  z-index: 11;
+  width: calc(98 / var(--pack-width) * 100%);
+}
+
+.small-christmas-box-pack__snail img {
+  width: 100%;
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.small-christmas-box-pack__snail-text {
+  position: absolute;
+  top: -67%;
+  left: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 100px;
+  min-width: 201px;
+  max-width: 250px;
+  min-height: 120px;
+  padding: 15px 30px;
+  background: url(../img/icons/cloud-orange-big.svg) no-repeat center center/contain;
+}
+
+.small-christmas-box-pack__snail-text p {
+  position: relative;
+  z-index: 2;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 112% */
+  text-align: center;
+  color: #043314;
+  -webkit-transform: rotate(-14.26deg);
+      -ms-transform: rotate(-14.26deg);
+          transform: rotate(-14.26deg);
+}
+
+.small-christmas-box-pack__fruit--1 {
+  top: calc(110 / var(--section-height) * 100%);
+  left: calc(171 / var(--section-width) * 100%);
+  width: calc(146 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack__fruit--2 {
+  top: calc(325 / var(--section-height) * 100%);
+  left: calc(223 / var(--section-width) * 100%);
+  width: calc(70 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack__fruit--3 {
+  top: calc(461 / var(--section-height) * 100%);
+  left: calc(101 / var(--section-width) * 100%);
+  width: calc(86.64 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack__fruit--4 {
+  top: calc(218 / var(--section-height) * 100%);
+  right: calc(115 / var(--section-width) * 100%);
+  width: calc(105 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack__fruit--5 {
+  top: calc(295 / var(--section-height) * 100%);
+  right: calc(-45 / var(--section-width) * 100%);
+  width: calc(104 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack__fruit--6 {
+  top: calc(500 / var(--section-height) * 100%);
+  right: calc(103 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.small-christmas-box-pack__fruit--7 {
+  display: none;
+}
+
 .footer {
   margin: 0 auto;
   position: relative;
@@ -13078,6 +14368,18 @@ body.color {
 
 @media (max-width: 1717px) {
   .product-choco-crush .product__fruits--2 {
+    left: 66px;
+  }
+
+  .product-advent-calendar .product__fruits--2 {
+    left: 66px;
+  }
+
+  .product-big-christmas-box .product__fruits--2 {
+    left: 66px;
+  }
+
+  .product-small-christmas-box .product__fruits--2 {
     left: 66px;
   }
 }
@@ -13805,6 +15107,30 @@ body.color {
     right: 303px;
   }
 
+  .product-advent-calendar .product__fruits--2 {
+    left: 35px;
+  }
+
+  .product-advent-calendar .product__fruits--6 {
+    right: 303px;
+  }
+
+  .product-big-christmas-box .product__fruits--2 {
+    left: 35px;
+  }
+
+  .product-big-christmas-box .product__fruits--6 {
+    right: 303px;
+  }
+
+  .product-small-christmas-box .product__fruits--2 {
+    left: 35px;
+  }
+
+  .product-small-christmas-box .product__fruits--6 {
+    right: 303px;
+  }
+
   .top__image--1 {
     left: 0;
   }
@@ -13881,11 +15207,12 @@ body.color {
   }
 
   .order__list {
+    grid-template-columns: repeat(2, minmax(250px, -webkit-max-content));
+    grid-template-columns: repeat(2, minmax(250px, max-content));
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .contacts__fruit--1 {
@@ -14740,6 +16067,18 @@ body.color {
   }
 
   .product-choco-crush .product__fruits--2 {
+    left: 21px;
+  }
+
+  .product-advent-calendar .product__fruits--2 {
+    left: 21px;
+  }
+
+  .product-big-christmas-box .product__fruits--2 {
+    left: 21px;
+  }
+
+  .product-small-christmas-box .product__fruits--2 {
     left: 21px;
   }
 
@@ -15809,6 +17148,415 @@ body.color {
   .unit__image--30 {
     right: 150px;
     width: 150px;
+  }
+
+  .advent-calendar-top {
+    min-height: 785px;
+  }
+
+  .advent-calendar-top .top__inner {
+    margin-top: 110px;
+  }
+
+  .advent-calendar-top__snail {
+    -webkit-transform: translate(-50%, calc(-100% + 16px));
+        -ms-transform: translate(-50%, calc(-100% + 16px));
+            transform: translate(-50%, calc(-100% + 16px));
+  }
+
+  .advent-calendar-top__image--1 {
+    top: 138px;
+    left: -11px;
+    width: 158px;
+  }
+
+  .advent-calendar-top__image--2 {
+    top: 533px;
+    right: -45px;
+    width: 222px;
+  }
+
+  .advent-calendar-top__image--3 {
+    top: 303px;
+    left: -22px;
+    width: 66px;
+  }
+
+  .advent-calendar-top__image--4 {
+    top: 640px;
+    left: 90px;
+    width: 56px;
+  }
+
+  .advent-calendar-top__image--5 {
+    top: 80px;
+    left: 36px;
+    width: 45px;
+  }
+
+  .advent-calendar-top__image--6 {
+    top: 595px;
+    right: auto;
+    left: 46px;
+    width: 22px;
+  }
+
+  .advent-calendar-top__image--7 {
+    top: 294px;
+    right: -35px;
+    width: 59px;
+  }
+
+  .advent-calendar-composition__tabs .content__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advent-calendar-composition__tabs .content__item:last-child:nth-child(3n) {
+    grid-column: 1/3;
+  }
+
+  .advent-calendar-composition__fruit--1 {
+    display: none;
+  }
+
+  .advent-calendar-composition__fruit--2 {
+    display: none;
+  }
+
+  .advent-calendar-composition__fruit--3 {
+    display: none;
+  }
+
+  .advent-calendar-pack__center {
+    width: 100%;
+  }
+
+  .advent-calendar-pack__fruit--1 {
+    top: 105px;
+    left: 37px;
+    width: 31px;
+  }
+
+  .advent-calendar-pack__fruit--2 {
+    top: 183px;
+    left: 68px;
+    width: 30.22px;
+  }
+
+  .advent-calendar-pack__fruit--3 {
+    top: 169px;
+    left: -49px;
+    width: 102px;
+  }
+
+  .advent-calendar-pack__fruit--4 {
+    top: 162px;
+    right: -6px;
+    width: 28px;
+  }
+
+  .advent-calendar-pack__fruit--5 {
+    top: 253px;
+    right: -32px;
+    width: 61px;
+  }
+
+  .advent-calendar-pack__fruit--6 {
+    top: 508px;
+    right: 7.67px;
+    width: 48.33px;
+  }
+
+  .advent-calendar-pack__fruit--7 {
+    top: 513px;
+    left: -9px;
+    display: block;
+    width: 42px;
+  }
+
+  .big-christmas-box-top {
+    min-height: 785px;
+  }
+
+  .big-christmas-box-top .top__inner {
+    margin-top: 110px;
+  }
+
+  .big-christmas-box-top__snail {
+    -webkit-transform: translate(-50%, calc(-100% + 16px));
+        -ms-transform: translate(-50%, calc(-100% + 16px));
+            transform: translate(-50%, calc(-100% + 16px));
+  }
+
+  .big-christmas-box-top__image--1 {
+    top: 92px;
+    left: -1px;
+    width: 148px;
+  }
+
+  .big-christmas-box-top__image--2 {
+    top: 514px;
+    right: -20px;
+    width: 191.41px;
+    -webkit-transform: rotate(6.19deg);
+        -ms-transform: rotate(6.19deg);
+            transform: rotate(6.19deg);
+  }
+
+  .big-christmas-box-top__image--3 {
+    top: 303px;
+    left: -22px;
+    width: 66px;
+  }
+
+  .big-christmas-box-top__image--4 {
+    top: 572px;
+    left: 79px;
+    width: 56px;
+  }
+
+  .big-christmas-box-top__image--5 {
+    top: 57px;
+    left: 9px;
+    width: 45px;
+  }
+
+  .big-christmas-box-top__image--6 {
+    top: 595px;
+    left: 50px;
+    width: 22px;
+  }
+
+  .big-christmas-box-top__image--7 {
+    top: 562px;
+    right: auto;
+    left: 145px;
+    width: 60px;
+  }
+
+  .big-christmas-box-top__image--8 {
+    display: none;
+  }
+
+  .big-christmas-box-top__image--9 {
+    top: 294px;
+    right: auto;
+    right: -30px;
+    display: block;
+    width: 58px;
+    -webkit-transform: rotate(-34.77deg);
+        -ms-transform: rotate(-34.77deg);
+            transform: rotate(-34.77deg);
+  }
+
+  .big-christmas-box-composition__tabs .tabs__btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .big-christmas-box-pack__left {
+    display: none;
+  }
+
+  .big-christmas-box-pack__center {
+    width: 100%;
+  }
+
+  .big-christmas-box-pack__fruit--1 {
+    top: 138px;
+    left: 37px;
+    width: 31px;
+  }
+
+  .big-christmas-box-pack__fruit--2 {
+    top: 195px;
+    right: -6px;
+    left: auto;
+    width: 28px;
+  }
+
+  .big-christmas-box-pack__fruit--3 {
+    top: 541px;
+    right: 7.67px;
+    left: auto;
+    width: 48.33px;
+  }
+
+  .big-christmas-box-pack__fruit--4 {
+    top: 216px;
+    right: auto;
+    left: 68px;
+    width: 30.22px;
+  }
+
+  .big-christmas-box-pack__fruit--5 {
+    top: 286px;
+    right: -32px;
+    width: 61px;
+  }
+
+  .big-christmas-box-pack__fruit--6 {
+    top: 202px;
+    right: auto;
+    left: -49px;
+    width: 102px;
+  }
+
+  .big-christmas-box-pack__fruit--7 {
+    top: 546px;
+    left: -9px;
+    display: block;
+    width: 42px;
+  }
+
+  .small-christmas-box-top {
+    min-height: 785px;
+  }
+
+  .small-christmas-box-top .top__inner {
+    margin-top: 110px;
+  }
+
+  .small-christmas-box-top__snail {
+    -webkit-transform: translate(-50%, calc(-100% + 16px));
+        -ms-transform: translate(-50%, calc(-100% + 16px));
+            transform: translate(-50%, calc(-100% + 16px));
+  }
+
+  .small-christmas-box-top__image--1 {
+    top: 130px;
+    left: -27px;
+    width: 203px;
+  }
+
+  .small-christmas-box-top__image--2 {
+    top: 509px;
+    right: -16px;
+    width: 223px;
+  }
+
+  .small-christmas-box-top__image--3 {
+    top: 71px;
+    left: 11px;
+    width: 40px;
+  }
+
+  .small-christmas-box-top__image--4 {
+    top: 554px;
+    left: 146px;
+    z-index: 1;
+    width: 77px;
+    -webkit-transform: rotate(-40.72deg);
+        -ms-transform: rotate(-40.72deg);
+            transform: rotate(-40.72deg);
+  }
+
+  .small-christmas-box-top__image--5 {
+    top: 87px;
+    right: 16px;
+    left: auto;
+    width: 45px;
+  }
+
+  .small-christmas-box-top__image--6 {
+    top: 532px;
+    right: auto;
+    left: 62px;
+    width: 22px;
+  }
+
+  .small-christmas-box-top__image--7 {
+    top: 65px;
+    right: auto;
+    left: 156px;
+    width: 59px;
+  }
+
+  .small-christmas-box-top__image--8 {
+    top: 311px;
+    right: 30px;
+    width: 42.5px;
+  }
+
+  .small-christmas-box-top__image--9 {
+    top: 596px;
+    left: 79px;
+    display: block;
+    width: 60px;
+  }
+
+  .small-christmas-box-composition__tabs .tabs__btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .small-christmas-box-composition__fruit--1 {
+    display: none;
+  }
+
+  .small-christmas-box-composition__fruit--2 {
+    display: none;
+  }
+
+  .small-christmas-box-composition__fruit--3 {
+    display: none;
+  }
+
+  .small-christmas-box-composition__fruit--4 {
+    display: none;
+  }
+
+  .small-christmas-box-pack__left {
+    display: none;
+  }
+
+  .small-christmas-box-pack__center {
+    width: 100%;
+  }
+
+  .small-christmas-box-pack__fruit--1 {
+    top: 219px;
+    left: -49px;
+    width: 102px;
+  }
+
+  .small-christmas-box-pack__fruit--2 {
+    top: 233px;
+    left: 68px;
+    width: 30.22px;
+  }
+
+  .small-christmas-box-pack__fruit--3 {
+    top: 155px;
+    left: 37px;
+    width: 31px;
+  }
+
+  .small-christmas-box-pack__fruit--4 {
+    top: 212px;
+    right: -6px;
+    width: 28px;
+  }
+
+  .small-christmas-box-pack__fruit--5 {
+    top: 303px;
+    right: -32px;
+    width: 61px;
+  }
+
+  .small-christmas-box-pack__fruit--6 {
+    top: 558px;
+    right: 7.67px;
+    width: 48.33px;
+  }
+
+  .small-christmas-box-pack__fruit--7 {
+    top: 563px;
+    left: -9px;
+    display: block;
+    width: 42px;
   }
 
   .footer__right {
@@ -17616,6 +19364,120 @@ body.color {
     left: 30px;
   }
 
+  .advent-calendar-top .top__head h1 + p,
+  .advent-calendar-top .top__head h2 + p {
+    margin-top: 24px;
+  }
+
+  .advent-calendar-top__snail {
+    -webkit-transform: translate(-50%, calc(-100% + 12px));
+        -ms-transform: translate(-50%, calc(-100% + 12px));
+            transform: translate(-50%, calc(-100% + 12px));
+  }
+
+  .advent-calendar-top__snail img {
+    width: 64px;
+    height: 82px;
+  }
+
+  .advent-calendar-top__snail-text {
+    top: -101px;
+    left: 46px;
+    min-width: 122px;
+  }
+
+  .advent-calendar-top__snail-text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .advent-calendar-pack__snail-text {
+    top: -100%;
+    left: 44%;
+    min-width: 154px;
+  }
+
+  .advent-calendar-pack__snail-text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .big-christmas-box-top .top__head h1 + p,
+  .big-christmas-box-top .top__head h2 + p {
+    margin-top: 24px;
+  }
+
+  .big-christmas-box-top__snail {
+    -webkit-transform: translate(-50%, calc(-100% + 12px));
+        -ms-transform: translate(-50%, calc(-100% + 12px));
+            transform: translate(-50%, calc(-100% + 12px));
+  }
+
+  .big-christmas-box-top__snail img {
+    width: 64px;
+    height: 82px;
+  }
+
+  .big-christmas-box-top__snail-text {
+    top: -132px;
+    left: 3px;
+    min-width: 122px;
+  }
+
+  .big-christmas-box-top__snail-text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .big-christmas-box-pack__snail-text {
+    top: -100%;
+    left: 44%;
+    min-width: 154px;
+  }
+
+  .big-christmas-box-pack__snail-text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .small-christmas-box-top .top__head h1 + p,
+  .small-christmas-box-top .top__head h2 + p {
+    margin-top: 24px;
+  }
+
+  .small-christmas-box-top__snail {
+    -webkit-transform: translate(-50%, calc(-100% + 12px));
+        -ms-transform: translate(-50%, calc(-100% + 12px));
+            transform: translate(-50%, calc(-100% + 12px));
+  }
+
+  .small-christmas-box-top__snail img {
+    width: 64px;
+    height: 82px;
+  }
+
+  .small-christmas-box-top__snail-text {
+    top: -132px;
+    left: 3px;
+    min-width: 122px;
+  }
+
+  .small-christmas-box-top__snail-text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .small-christmas-box-pack__snail-text {
+    top: -100%;
+    left: 44%;
+    min-width: 154px;
+  }
+
+  .small-christmas-box-pack__snail-text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
   .footer__background svg {
     width: 130%;
     height: auto;
@@ -17682,6 +19544,48 @@ body.color {
 
   .footer__nav .nav__item + .nav__item {
     margin-top: 36px;
+  }
+}
+
+@media (max-width: 665px) {
+  .advent-calendar-composition__tabs .content__list {
+    grid-template-columns: 100%;
+  }
+
+  .advent-calendar-composition__tabs .content__item:last-child:nth-child(3n) {
+    grid-column: 1/2;
+  }
+
+  .advent-calendar-pack__wrapper {
+    padding-top: 250px;
+  }
+
+  .big-christmas-box-composition__tabs .content__list {
+    grid-template-columns: 100%;
+    row-gap: 48px;
+  }
+
+  .big-christmas-box-pack__wrapper {
+    padding-top: 250px;
+  }
+
+  .small-christmas-box-composition__tabs .content__list {
+    grid-template-columns: 100%;
+    row-gap: 48px;
+  }
+
+  .small-christmas-box-composition__tabs .content__item:last-child:nth-child(odd),
+  .small-christmas-box-composition__tabs .content__item--horizontal {
+    grid-column: 1/2;
+  }
+
+  .small-christmas-box-composition__tabs .content__link--horizontal {
+    grid-template-columns: 100%;
+    row-gap: 24px;
+  }
+
+  .small-christmas-box-pack__wrapper {
+    padding-top: 250px;
   }
 }
 
@@ -18289,7 +20193,7 @@ body.color {
   }
 
   .order__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
   }
 
   .contacts__inner {
