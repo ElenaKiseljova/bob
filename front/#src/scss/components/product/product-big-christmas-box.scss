@@ -1,0 +1,31 @@
+.product-big-christmas-box {
+  .product__fruits--9 {
+    display: none !important;
+  }
+
+  .product__fruits--2 {
+    top: 690px;
+    left: 470px;
+
+    @media (max-width: 1717px) {
+      left: 66px;
+    }
+
+    @media (max-width: 1220px) {
+      left: 35px;
+    }
+
+    @media (max-width: 1023px) {
+      left: 21px;
+    }
+  }
+
+  .product__fruits--6 {
+    top: 584px;
+    right: 440px;
+
+    @media (max-width: 1220px) {
+      right: 303px;
+    }
+  }
+}
