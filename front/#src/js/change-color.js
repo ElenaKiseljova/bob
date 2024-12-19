@@ -136,8 +136,9 @@ if (blocks) {
         trigger: item,
         scroller: '.product__wrapper',
         scrub: true,
-        start: 'top center',
-        end: '+=100%',
+        start: 'top 67px',
+        end: 'top 30%',
+        // markers: true
       },
     });
   });
@@ -149,8 +150,8 @@ gsap.to('body', {
     trigger: '.product__new',
     scroller: '.product__wrapper',
     scrub: true,
-    start: 'top center',
-    end: '+=100%',
+    start: 'top 67px',
+    end: 'top 30%',
   },
 });
 locoScroll.on('scroll', ScrollTrigger.update);
