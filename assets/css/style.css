@@ -12966,6 +12966,14 @@ body.color {
   padding-top: 20px;
 }
 
+.advent-calendar-composition__tabs .tabs__btn {
+  font-family: "BebasNeuePro", sans-serif;
+  font-size: 25px;
+  line-height: 41.7px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .advent-calendar-composition__tabs .content__list {
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
@@ -17205,6 +17213,12 @@ body.color {
     top: 294px;
     right: -35px;
     width: 59px;
+  }
+
+  .advent-calendar-composition__tabs .tabs__btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .advent-calendar-composition__tabs .content__list {
