@@ -35,6 +35,18 @@
   }
 
   &__tabs {
+    .tabs__btn {
+      font-family: "BebasNeuePro", sans-serif;
+      font-size: 25px;
+      line-height: 41.7px;
+      font-weight: 400;
+
+      text-transform: uppercase;
+
+      @media (max-width: 1023px) {
+        width: fit-content;
+      }
+    }
     .content__list {
       grid-template-columns: repeat(3, 1fr);
 
