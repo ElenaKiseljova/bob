@@ -1,5 +1,7 @@
 <?php
 global $images;
+
+$cur_lang_code = function_exists('pll_current_language') ? (pll_current_language() === 'uk' ? 'ua' : pll_current_language()) : 'ua';
 ?>
 
 <?php if ($images && !empty($images) && is_array($images) && !is_wp_error($images)) : ?>
@@ -19,3 +21,9 @@ global $images;
 <img class="icon product__fruits product__fruits--7" src="<?= get_template_directory_uri(); ?>/assets/img/icons/apple-original.svg" alt="<?= get_bloginfo('name'); ?>" />
 <img class="icon product__fruits product__fruits--8" src="<?= get_template_directory_uri(); ?>/assets/img/icons/strawberry-2.svg" alt="<?= get_bloginfo('name'); ?>" />
 <img class="icon product__fruits product__fruits--9" src="<?= get_template_directory_uri(); ?>/assets/img/rolls/roll_2.png" alt="<?= get_bloginfo('name'); ?>" />
+
+<?php if ($cur_lang_code === 'ca') : ?>
+  <img class="icon product__fruits product__fruits--10" src="<?= get_template_directory_uri(); ?>/assets/img/eat&play/snail-sleigh-ca.png" alt="<?= get_bloginfo('name'); ?>" />
+<?php else : ?>
+  <img class="icon product__fruits product__fruits--10" src="<?= get_template_directory_uri(); ?>/assets/img/eat&play/snail-sleigh.png" alt="<?= get_bloginfo('name'); ?>" />
+<?php endif; ?>

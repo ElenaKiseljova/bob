@@ -4,7 +4,7 @@ global $images;
 
 <?php if ($images && !empty($images) && is_array($images) && !is_wp_error($images)) : ?>
   <?php foreach ($images as $key => $image) : ?>
-    <img class="icon product__play product__play--<?= $key + 1; ?>" src="<?= $image['image']; ?>" alt="<?= strip_tags(get_the_title()); ?>" />
+    <img class="icon product__package product__package--<?= $key + 1; ?>" src="<?= $image['image']; ?>" alt="<?= strip_tags(get_the_title()); ?>" />
 
     <?php if ($key === 1) break; ?>
   <?php endforeach; ?>

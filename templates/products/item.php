@@ -18,8 +18,9 @@ $colors = [
 
 $product_template = get_page_template_slug();
 $product_template = ($product_template && !empty($product_template) && !is_wp_error($product_template)) ? 'templates/products/templates/' . explode('.php', $product_template)[0] : '';
+$product_template = explode('single-products-', $product_template)[1] ?? explode('page-', $product_template)[1] ?? 'default';
 
-$block_class = !empty($product_template) ? 'product-' . explode('single-products-', $product_template)[1] : null;
+$block_class = 'product-' . $product_template;
 ?>
 <?php if (isset($index) && $archive && !empty($archive) && !is_wp_error($archive)) : ?>
   <?php
@@ -31,7 +32,7 @@ $block_class = !empty($product_template) ? 'product-' . explode('single-products
   $button_text = !empty($button_text) ? $button_text : __('Знайди свій смак', 'bob');
   ?>
 
-  <div class="product__block block-<?= $index; ?> <?= $block_class; ?>">
+  <div class="product__block block-<?= $index; ?> <?= $block_class; ?>" style="--z-block: calc(var(--blocks-count) - <?= $index ?? 0; ?>)">
     <section class="section-js product__item <?= ((int) $index === 1) ? 'section-first active' : 'section'; ?> section-<?= $index; ?>" data-scrollcolor="<?= !empty($background) ? $background : ($colors[$index] ?? '#ffffff'); ?>">
       <div class="product__text">
         <h2>
