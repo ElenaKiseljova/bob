@@ -20,7 +20,7 @@
     }
   }
 
-  &__package {
+  .product__package {
     &--1 {
       top: 837px;
       left: 140px;
@@ -157,7 +157,7 @@
     }
   }
 
-  &__fruits {
+  .product__fruits {
     &--1 {
       top: 1000px;
       left: -48px;
@@ -233,4 +233,3 @@
     }
   }
 }
-

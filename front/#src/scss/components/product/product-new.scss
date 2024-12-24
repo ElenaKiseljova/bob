@@ -1,0 +1,144 @@
+.product-new {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100vh;
+
+  min-height: 710px;
+
+  &.empty {
+    height: 220px;
+
+    min-height: auto;
+  }
+
+  &__content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 790px;
+
+    @media (max-width: 1023px) {
+      h2 {
+        max-width: 450px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      max-width: 340px;
+    }
+  }
+
+  &__descr {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 300px;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      max-width: 237px;
+    }
+  }
+  &__snail-move {
+    position: absolute;
+    top: -110px;
+    right: 40px;
+    img {
+      position: relative;
+      z-index: 10;
+    }
+  }
+  &__snail-text {
+    position: absolute;
+    z-index: 5;
+    top: -35px;
+    left: -85px;
+    width: 116px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url(../img/icons/orange-cloud.svg) no-repeat center center /
+      contain;
+    p {
+      text-align: center;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #043314;
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  .product__fruits {
+    &--1 {
+      top: 0;
+      left: 20%;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+    &--2 {
+      transform: scale(-1, 1);
+      top: 250px;
+      left: 10%;
+
+      @media (max-width: 1220px) {
+        left: 0;
+      }
+
+      @media (max-width: 767px) {
+        top: auto;
+        bottom: 150px;
+
+        width: 60px;
+      }
+    }
+    &--3 {
+      right: 0;
+      top: 20%;
+
+      @media (max-width: 767px) {
+        top: -50px;
+
+        width: 60px;
+      }
+    }
+    &--4 {
+      right: 0;
+      top: 380px;
+
+      @media (max-width: 767px) {
+        width: 60px;
+      }
+
+      @media (max-width: 550px) {
+        top: auto;
+        bottom: 0;
+      }
+    }
+    &--5 {
+      bottom: -150px;
+      left: 30%;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -62,7 +62,7 @@ gsap
       scrub: true,
     },
   })
-  .to(".product__snail-move", {
+  .to(".product-new__snail-move", {
     x:
       -document.querySelector(".product__new .product__text").offsetWidth / 2 +
       80,

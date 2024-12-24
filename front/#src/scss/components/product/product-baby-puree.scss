@@ -1,0 +1,164 @@
+.product-baby-puree {
+  .product__package {
+    &--1 {
+      top: 500px;
+      right: 20%;
+      transform: rotate(22deg);
+      width: 350px;
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    &--2 {
+      left: 0;
+      width: 500px;
+      top: 650px;
+      transform: rotate(16deg);
+
+      @media (max-width: 1439px) {
+        left: -90px;
+      }
+
+      @media (max-width: 1023px) {
+        width: 350px;
+      }
+
+      @media (max-width: 550px) {
+        top: 220px;
+
+        width: 250px;
+      }
+    }
+
+    &--3 {
+      width: 500px;
+      right: 3%;
+      transform: rotate(-14deg);
+      top: 1000px;
+
+      @media (max-width: 1439px) {
+        right: -100px;
+      }
+
+      @media (max-width: 1023px) {
+        width: 350px;
+      }
+
+      @media (max-width: 767px) {
+        top: 760px;
+      }
+
+      @media (max-width: 550px) {
+        top: 600px;
+        width: 250px;
+      }
+    }
+  }
+
+  .product__fruits {
+    &--1 {
+      left: 2%;
+      top: 380px;
+
+      @media (max-width: 1439px) {
+        top: 250px;
+      }
+
+      @media (max-width: 550px) {
+        top: 0;
+      }
+    }
+
+    &--2 {
+      top: 500px;
+      left: 2%;
+
+      @media (max-width: 550px) {
+        top: 700px;
+        width: 50px;
+      }
+    }
+
+    &--3 {
+      transform: rotate(80deg);
+      top: 520px;
+      width: 130px;
+      left: 12%;
+
+      @media (max-width: 1023px) {
+        width: 60px;
+      }
+
+      @media (max-width: 550px) {
+        top: 600px;
+        left: 0;
+        width: 80px;
+      }
+    }
+
+    &--4 {
+      left: 3%;
+      top: 650px;
+
+      @media (max-width: 550px) {
+        left: 0;
+        width: 60px;
+      }
+
+      @media (max-width: 550px) {
+        display: none;
+      }
+    }
+
+    &--5 {
+      right: 15%;
+      top: 350px;
+
+      @media (max-width: 1023px) {
+        top: 200px;
+        width: 60px;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      @media (max-width: 550px) {
+        width: 56px;
+      }
+    }
+
+    &--6 {
+      right: -70px;
+      width: 200px;
+      transform: rotate(-45deg);
+      top: 350px;
+
+      @media (max-width: 1023px) {
+        top: 300px;
+        right: -30px;
+        width: 100px;
+      }
+
+      @media (max-width: 550px) {
+        width: 77px;
+        right: 0;
+      }
+    }
+
+    &--7 {
+      right: 2%;
+      top: 550px;
+
+      @media (max-width: 1023px) {
+        width: 70px;
+      }
+
+      @media (max-width: 550px) {
+        width: 50px;
+      }
+    }
+  }
+}

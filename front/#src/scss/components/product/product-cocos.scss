@@ -1,0 +1,153 @@
+.product-cocos {
+  .product__package {
+    &--1 {
+      top: 550px;
+      left: 4%;
+      width: 450px;
+      transform: rotate(-21deg);
+
+      @media (max-width: 1439px) {
+        left: -100px;
+      }
+
+      @media (max-width: 1220px) {
+        width: 350px;
+      }
+
+      @media (max-width: 767px) {
+        width: 260px;
+        top: 400px;
+      }
+
+      @media (max-width: 550px) {
+        top: 270px;
+        left: -80px;
+        width: 180px;
+      }
+    }
+
+    &--2 {
+      top: 800px;
+      width: 450px;
+      right: 4%;
+      transform: rotate(16deg);
+
+      @media (max-width: 1439px) {
+        right: -100px;
+      }
+
+      @media (max-width: 1220px) {
+        width: 350px;
+      }
+
+      @media (max-width: 767px) {
+        top: 700px;
+        width: 260px;
+      }
+
+      @media (max-width: 550px) {
+        top: 600px;
+        right: -80px;
+        width: 180px;
+      }
+    }
+  }
+
+  .product__fruits {
+    &--1 {
+      top: 350px;
+      left: 28%;
+      width: 50px;
+    }
+
+    &--2 {
+      width: 110px;
+      bottom: 150px;
+      left: 0;
+
+      @media (max-width: 1439px) {
+        top: 780px;
+        bottom: auto;
+      }
+
+      @media (max-width: 767px) {
+        width: 80px;
+      }
+
+      @media (max-width: 550px) {
+        top: 500px;
+      }
+    }
+
+    &--3 {
+      width: 110px;
+      left: 10%;
+      bottom: 50px;
+
+      @media (max-width: 1439px) {
+        top: 850px;
+      }
+
+      @media (max-width: 1220px) {
+        left: 20%;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+
+        width: 80px;
+      }
+    }
+
+    &--4 {
+      width: 110px;
+      left: 0;
+      bottom: 0;
+
+      @media (max-width: 1439px) {
+        top: 920px;
+        bottom: auto;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+
+        width: 80px;
+      }
+    }
+
+    &--5 {
+      right: 35%;
+      width: 60px;
+      bottom: 100px;
+
+      @media (max-width: 1220px) {
+        display: none;
+      }
+    }
+
+    &--6 {
+      right: 28%;
+      width: 60px;
+      bottom: 150px;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &--7 {
+      top: 450px;
+      right: 8%;
+    }
+
+    &--8 {
+      top: 550px;
+      right: 1%;
+
+      @media (max-width: 1220px) {
+        top: 280px;
+      }
+    }
+  }
+}

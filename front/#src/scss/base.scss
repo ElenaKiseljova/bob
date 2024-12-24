@@ -3,8 +3,8 @@
 }
 
 body {
-  font-family: 'BebasNeuePro', sans-serif;
-  transition: 0.15s ease;
+  font-family: "BebasNeuePro", sans-serif;
+  transition: 0.3s ease;
   height: 100%;
   overflow-x: hidden !important;
   width: 100%;
@@ -182,7 +182,7 @@ body {
   }
 }
 
-html[lang='de'] {
+html[lang="de"] {
   .top.about .top__inner {
     margin-top: 350px;
     @media (max-width: 1023px) {
@@ -266,7 +266,7 @@ html[lang='de'] {
     }
   }
 }
-html[lang='cs'] {
+html[lang="cs"] {
   .slider__snail-text {
     p {
       padding: 0 15px;

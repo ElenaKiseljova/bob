@@ -1,4 +1,4 @@
-.product-big-christmas-box {
+.product-default {
   .product__package {
     &--1 {
       width: 600px;
@@ -64,21 +64,16 @@
     }
 
     &--2 {
-      top: 690px;
-      left: 470px;
-
+      top: 900px;
       width: 70px;
-
-      @media (max-width: 1717px) {
-        left: 66px;
-      }
+      left: 330px;
 
       @media (max-width: 1220px) {
-        left: 35px;
+        left: 210px;
       }
 
       @media (max-width: 1023px) {
-        left: 21px;
+        left: 210px;
       }
 
       @media (max-width: 767px) {
@@ -147,21 +142,20 @@
     }
 
     &--6 {
-      top: 584px;
-      right: 440px;
-
+      top: 750px;
       width: 100px;
+      right: 320px;
 
       @media (max-width: 1220px) {
-        top: 500px;
-        right: 303px;
         width: 70px;
+        top: 500px;
+        right: 250px;
       }
 
       @media (max-width: 1023px) {
+        width: 70px;
         top: 500px;
         right: 250px;
-        width: 70px;
       }
 
       @media (max-width: 767px) {
@@ -207,11 +201,8 @@
 
     &--9 {
       top: 1280px;
-      right: 150px;
-
-      display: none !important;
-
       width: 200px;
+      right: 150px;
 
       @media (max-width: 1220px) {
         top: 950px;

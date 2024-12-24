@@ -1,0 +1,183 @@
+.product-marmalade {
+  .product__package {
+    &--1 {
+      transform: rotate(-20deg);
+      top: 500px;
+      left: -60px;
+      width: 350px;
+
+      @media (max-width: 1439px) {
+        width: 280px;
+      }
+
+      @media (max-width: 1023px) {
+        top: 650px;
+        left: 100px;
+
+        width: 201px;
+      }
+
+      @media (max-width: 767px) {
+        left: -10px;
+        top: 400px;
+      }
+
+      @media (max-width: 550px) {
+        top: 430px;
+
+        width: 150px;
+      }
+    }
+
+    &--2 {
+      transform: rotate(-10deg);
+      top: 680px;
+
+      left: 10%;
+      width: 350px;
+
+      @media (max-width: 1439px) {
+        width: 280px;
+      }
+
+      @media (max-width: 1023px) {
+        display: none;
+
+        width: 201px;
+      }
+    }
+
+    &--3 {
+      transform: rotate(20deg);
+      top: 550px;
+      right: -50px;
+      width: 350px;
+
+      @media (max-width: 1439px) {
+        width: 280px;
+      }
+
+      @media (max-width: 1023px) {
+        display: none;
+
+        width: 201px;
+      }
+
+      @media (max-width: 767px) {
+        width: 50px;
+      }
+    }
+
+    &--4 {
+      transform: rotate(10deg);
+      top: 300px;
+      right: 5%;
+      width: 350px;
+
+      @media (max-width: 1439px) {
+        width: 280px;
+      }
+
+      @media (max-width: 1220px) {
+        right: -50px;
+      }
+
+      @media (max-width: 1023px) {
+        bottom: -150px;
+        top: auto;
+
+        width: 201px;
+      }
+
+      @media (max-width: 767px) {
+        bottom: -350px;
+      }
+
+      @media (max-width: 550px) {
+        bottom: -330px;
+        right: 0px;
+
+        width: 150px;
+      }
+    }
+  }
+
+  .product__fruits {
+    &--1 {
+      top: 150px;
+      left: 12%;
+
+      @media (max-width: 550px) {
+        width: 50px;
+      }
+    }
+
+    &--2 {
+      bottom: -150px;
+      left: -100px;
+    }
+
+    &--3 {
+      bottom: 0;
+      left: 5%;
+    }
+
+    &--4 {
+      top: 250px;
+      right: 20%;
+
+      @media (max-width: 1439px) {
+        right: 29%;
+      }
+
+      @media (max-width: 550px) {
+        width: 50px;
+      }
+    }
+
+    &--5 {
+      top: 740px;
+      width: 70px;
+      right: 20%;
+
+      @media (max-width: 1023px) {
+        right: 0;
+        width: 80px;
+        top: 40%;
+      }
+
+      @media (max-width: 550px) {
+        width: 50px;
+      }
+    }
+
+    &--6 {
+      top: 860px;
+      width: 110px;
+      right: 17%;
+
+      @media (max-width: 1023px) {
+        width: 75px;
+      }
+
+      @media (max-width: 767px) {
+        top: 450px;
+        right: 0;
+      }
+
+      @media (max-width: 550px) {
+        width: 50px;
+      }
+    }
+
+    &--7 {
+      bottom: -150px;
+
+      right: 20px;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}
