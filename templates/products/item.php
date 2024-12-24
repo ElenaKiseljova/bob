@@ -17,10 +17,18 @@ $colors = [
 ];
 
 $product_template = get_page_template_slug();
-$product_template = ($product_template && !empty($product_template) && !is_wp_error($product_template)) ? 'templates/products/templates/' . explode('.php', $product_template)[0] : '';
-$product_template = explode('single-products-', $product_template)[1] ?? explode('page-', $product_template)[1] ?? 'default';
 
-$block_class = 'product-' . $product_template;
+$is_template = !empty(locate_template($product_template));
+
+if ($is_template) {
+  $product_template = ($product_template && !empty($product_template) && !is_wp_error($product_template)) ? 'templates/products/templates/' . explode('.php', $product_template)[0] : '';
+
+  $block_slug = explode('single-products-', $product_template)[1] ?? explode('page-', $product_template)[1];
+} else {
+  $block_slug = 'default';
+}
+
+$block_class = 'product-' .  $block_slug;
 ?>
 <?php if (isset($index) && $archive && !empty($archive) && !is_wp_error($archive)) : ?>
   <?php
@@ -52,10 +60,10 @@ $block_class = 'product-' . $product_template;
     </section>
 
     <?php
-    $is_template = get_template_part($product_template);
-
     if ($is_template === false) {
       get_template_part('templates/products/templates/default');
+    } else {
+      get_template_part($product_template);
     }
     ?>
   </div>
