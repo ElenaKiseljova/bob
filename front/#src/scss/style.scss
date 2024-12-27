@@ -44,6 +44,8 @@
 @import "components/product/product-advent-calendar";
 @import "components/product/product-big-christmas-box";
 @import "components/product/product-small-christmas-box";
+@import "components/product/product-express-fruit-start";
+@import "components/product/product-express-snack-start";
 
 @import "components/hero-section.scss";
 @import "components/tabs.scss";
@@ -88,6 +90,14 @@
 @import "components/page/big-christmas-box/big-christmas-box-top.scss";
 @import "components/page/big-christmas-box/big-christmas-box-composition.scss";
 @import "components/page/big-christmas-box/big-christmas-box-pack.scss";
+
+@import "components/page/express-fruit-start/express-fruit-start-top.scss";
+@import "components/page/express-fruit-start/express-fruit-start-composition.scss";
+@import "components/page/express-fruit-start/express-fruit-start-pack.scss";
+
+@import "components/page/express-snack-start/express-snack-start-top.scss";
+@import "components/page/express-snack-start/express-snack-start-composition.scss";
+@import "components/page/express-snack-start/express-snack-start-pack.scss";
 
 @import "components/page/small-christmas-box/small-christmas-box-top.scss";
 @import "components/page/small-christmas-box/small-christmas-box-composition.scss";
