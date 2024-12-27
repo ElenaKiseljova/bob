@@ -3,6 +3,7 @@
   --section-height: 700;
 
   --pack-width: 503;
+  --pack-height: 358;
 
   display: block;
 
@@ -120,7 +121,7 @@
   &__snail {
     position: absolute;
 
-    top: calc(-68 / 358 * 100%);
+    top: calc(-68 / var(--pack-height) * 100%);
     left: calc(171 / var(--pack-width) * 100%);
 
     z-index: 11;
