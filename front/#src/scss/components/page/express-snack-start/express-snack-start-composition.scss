@@ -1,0 +1,107 @@
+.express-snack-start-composition {
+  --section-width: 1280;
+
+  .composition__inner {
+    padding-bottom: 0;
+  }
+
+  &__head {
+    margin-bottom: 70px;
+
+    h2 {
+      margin-bottom: 40px;
+
+      padding: 0 10px;
+    }
+
+    p {
+      padding: 0 10px;
+
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      /* or 140% */
+
+      text-align: center;
+
+      color: #043314;
+
+      & + p {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &__tabs {
+    .tabs__btn {
+      font-family: "BebasNeuePro", sans-serif;
+      font-size: 25px;
+      line-height: 41.7px;
+      font-weight: 400;
+
+      text-transform: uppercase;
+
+      @media (max-width: 1023px) {
+        width: fit-content;
+      }
+    }
+
+    .content__list {
+      &.col-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &.col-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      gap: 54px;
+
+      @media (max-width: 665px) {
+        &.col-2,
+        &.col-3 {
+          grid-template-columns: 100%;
+        }
+
+        row-gap: 48px;
+      }
+    }
+
+    .content__item {
+      max-width: 100%;
+    }
+
+    .content__image {
+      position: relative;
+
+      height: auto;
+
+      max-width: 302px;
+
+      margin-bottom: 24px;
+
+      &::before {
+        display: block;
+
+        padding-bottom: calc(242 / 302 * 100%);
+
+        content: "";
+      }
+
+      img {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .content__descr {
+      * + * {
+        margin-top: 16px;
+      }
+    }
+  }
+}
