@@ -48,6 +48,12 @@
       }
     }
 
+    .tabs__content {
+      @media (max-width: 665px) {
+        padding: 0 10px;
+      }
+    }
+
     .content__list {
       &.col-2 {
         grid-template-columns: repeat(2, 1fr);
