@@ -5240,6 +5240,79 @@ body.color {
   width: 200px;
 }
 
+.product-lucky-ticket .product__package--1 {
+  width: 600px;
+  left: -100px;
+  top: 750px;
+  -webkit-transform: rotate(-15.22deg);
+      -ms-transform: rotate(-15.22deg);
+          transform: rotate(-15.22deg);
+}
+
+.product-lucky-ticket .product__package--2 {
+  width: 600px;
+  right: -50px;
+  top: 650px;
+  -webkit-transform: rotate(15.29deg);
+      -ms-transform: rotate(15.29deg);
+          transform: rotate(15.29deg);
+}
+
+.product-lucky-ticket .product__fruits--1 {
+  width: 170px;
+  top: 700px;
+  left: 250px;
+}
+
+.product-lucky-ticket .product__fruits--2 {
+  top: 690px;
+  left: 470px;
+  width: 70px;
+}
+
+.product-lucky-ticket .product__fruits--3 {
+  top: 1000px;
+  width: 70px;
+  left: 370px;
+}
+
+.product-lucky-ticket .product__fruits--4 {
+  top: 1150px;
+  width: 90px;
+  left: 50px;
+}
+
+.product-lucky-ticket .product__fruits--5 {
+  top: 1358px;
+  width: 100px;
+  left: 270px;
+}
+
+.product-lucky-ticket .product__fruits--6 {
+  top: 584px;
+  right: 440px;
+  width: 100px;
+}
+
+.product-lucky-ticket .product__fruits--7 {
+  top: 1000px;
+  width: 100px;
+  right: 10px;
+}
+
+.product-lucky-ticket .product__fruits--8 {
+  top: 1200px;
+  width: 70px;
+  right: 10px;
+}
+
+.product-lucky-ticket .product__fruits--9 {
+  top: 1280px;
+  right: 150px;
+  display: none !important;
+  width: 200px;
+}
+
 .top {
   min-height: 770px;
   width: 100%;
@@ -7068,6 +7141,9 @@ body.color {
 .recipes__image--8,
 .recipes__image--10,
 .play__image--3,
+.lucky-ticket-top__image--8,
+.express-fruit-start-top__image--3,
+.express-snack-start-top__image--3,
 .advent-calendar-top__image--3,
 .big-christmas-box-top__image--3,
 .small-christmas-box-top__image--3,
@@ -7132,6 +7208,9 @@ body.color {
 .recipes__image--9,
 .recipes__image--11,
 .play__image--5,
+.lucky-ticket-top__image--5,
+.express-fruit-start-top__image--5,
+.express-snack-start-top__image--5,
 .advent-calendar-top__image--5,
 .big-christmas-box-top__image--5,
 .small-christmas-box-top__image--5,
@@ -7176,6 +7255,9 @@ body.color {
 .recipes__image--6,
 .recipes__image--12,
 .play__image--8,
+.lucky-ticket-top__image--1,
+.express-fruit-start-top__image--6,
+.express-snack-start-top__image--4,
 .advent-calendar-top__image--7,
 .big-christmas-box-top__image--7,
 .small-christmas-box-top__image--7,
@@ -15353,6 +15435,367 @@ body.color {
   display: none;
 }
 
+.lucky-ticket-top .top__inner {
+  margin-top: 246px;
+}
+
+.lucky-ticket-top .top__head {
+  z-index: 11;
+  width: 100%;
+}
+
+.lucky-ticket-top .top__head h1 {
+  font-size: 112px;
+  line-height: 75px;
+  letter-spacing: 0;
+}
+
+.lucky-ticket-top .top__head h1 + p {
+  margin-top: 22px;
+}
+
+.lucky-ticket-top .top__head h2 {
+  max-width: 585px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.48px;
+}
+
+.lucky-ticket-top .top__head h2 + img {
+  margin-top: 14px;
+}
+
+.lucky-ticket-top .top__head p {
+  max-width: 622px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.lucky-ticket-top .top__head p + p {
+  margin-top: 7px;
+}
+
+.lucky-ticket-top .top__head p + h2 {
+  margin-top: 19px;
+}
+
+.lucky-ticket-top .top__head img {
+  display: block;
+  width: 289px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.lucky-ticket-top__image--1 {
+  top: 17.7747625509%;
+  left: -4.0625%;
+  width: 9.24765625%;
+}
+
+.lucky-ticket-top__image--2 {
+  top: 20.8955223881%;
+  left: 267px;
+  width: 3.90625%;
+}
+
+.lucky-ticket-top__image--3 {
+  top: 29.4436906377%;
+  left: 7.890625%;
+  width: 4.375%;
+}
+
+.lucky-ticket-top__image--4 {
+  top: 55.0881953867%;
+  left: 19.296875%;
+  width: 5.390625%;
+}
+
+.lucky-ticket-top__image--5 {
+  top: 63.7720488467%;
+  left: 3.203125%;
+  width: 9.77421875%;
+}
+
+.lucky-ticket-top__image--6 {
+  top: 17.7747625509%;
+  right: 18.828125%;
+  width: 4.6875%;
+}
+
+.lucky-ticket-top__image--7 {
+  top: 32.2930800543%;
+  right: 6.09375%;
+  width: 5.46875%;
+}
+
+.lucky-ticket-top__image--8 {
+  top: 58.0732700136%;
+  right: 5.078125%;
+  width: 6.484375%;
+}
+
+.lucky-ticket-top__image--9 {
+  top: 69.3351424695%;
+  right: 16.796875%;
+  width: 6.71875%;
+}
+
+.lucky-ticket-composition {
+  --section-width: 1280;
+}
+
+.lucky-ticket-composition .composition__inner {
+  padding-bottom: 0;
+}
+
+.lucky-ticket-composition__head {
+  margin-bottom: 29px;
+}
+
+.lucky-ticket-composition__head h2 {
+  padding: 0 10px;
+}
+
+.lucky-ticket-composition__content {
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lucky-ticket-composition__picture {
+  display: block;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.lucky-ticket-composition__picture img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.lucky-ticket-composition__subtitle {
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 31px;
+  letter-spacing: 0.72;
+  text-transform: uppercase;
+}
+
+.lucky-ticket-composition__description {
+  max-width: 718px;
+  margin: 0 auto;
+  font-family: Circe;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.lucky-ticket-composition__fruit--1 {
+  top: 0;
+  right: calc(187 / var(--section-width) * 100%);
+  width: calc(50 / var(--section-width) * 100%);
+  -webkit-transform: rotate(75deg);
+      -ms-transform: rotate(75deg);
+          transform: rotate(75deg);
+}
+
+.lucky-ticket-composition__fruit--2 {
+  top: 129px;
+  right: calc(78 / var(--section-width) * 100%);
+  width: calc(62 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-composition__fruit--3 {
+  top: 50px;
+  right: calc(-47 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-composition__fruit--4 {
+  top: 97px;
+  left: calc(84 / var(--section-width) * 100%);
+  width: calc(70 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-composition__fruit--5 {
+  top: 416px;
+  left: calc(43 / var(--section-width) * 100%);
+  width: calc(89 / var(--section-width) * 100%);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.lucky-ticket-composition__fruit--6 {
+  bottom: 0;
+  left: calc(-16 / var(--section-width) * 100%);
+  width: calc(149 / var(--section-width) * 100%);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.lucky-ticket-composition__fruit--7 {
+  bottom: 0;
+  right: calc(47 / var(--section-width) * 100%);
+  width: calc(89 / var(--section-width) * 100%);
+  -webkit-transform: scale(-1, 1) rotate(15deg);
+      -ms-transform: scale(-1, 1) rotate(15deg);
+          transform: scale(-1, 1) rotate(15deg);
+}
+
+.lucky-ticket-get {
+  --section-width: 1280;
+  --section-height: 700;
+  display: block;
+  width: 100%;
+  min-height: calc(var(--section-height) * 1px);
+  max-width: unset;
+  margin: -80px 0 0;
+  padding-top: 80px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.lucky-ticket-get__wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.lucky-ticket-get__content {
+  width: 100%;
+  max-width: 692px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lucky-ticket-get__title {
+  font-size: 64px;
+  line-height: 75px;
+  text-transform: uppercase;
+}
+
+.lucky-ticket-get__subtitle,
+.lucky-ticket-get__list {
+  font-family: Circe;
+}
+
+.lucky-ticket-get__subtitle {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.lucky-ticket-get__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 25px;
+  padding: 81px 74px 85px 45px;
+  font-size: 22px;
+  line-height: 28px;
+  background: center/contain no-repeat url("../img/icons/cloud-lucky-ticket.svg");
+}
+
+.lucky-ticket-get__item {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.lucky-ticket-get__item:not(:first-child) {
+  margin-top: 10px;
+}
+
+.lucky-ticket-get__item::before {
+  padding-right: 10px;
+  content: "•";
+}
+
+.lucky-ticket-get__time {
+  width: 100%;
+  max-width: 585px;
+  margin: 0 auto 24px;
+  padding: 0 15px;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+}
+
+.lucky-ticket-get__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 172px;
+  min-height: 50px;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.lucky-ticket-get__fruit--1 {
+  top: calc(154 / var(--section-height) * 100%);
+  left: calc(185 / var(--section-width) * 100%);
+  width: calc(60 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-get__fruit--2 {
+  top: calc(114 / var(--section-height) * 100%);
+  right: calc(87 / var(--section-width) * 100%);
+  width: calc(80 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-get__fruit--3 {
+  top: calc(494 / var(--section-height) * 100%);
+  left: calc(20 / var(--section-width) * 100%);
+  width: calc(86 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-get__fruit--4 {
+  top: calc(289 / var(--section-height) * 100%);
+  right: calc(189 / var(--section-width) * 100%);
+  width: calc(70 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-get__fruit--5 {
+  top: calc(282 / var(--section-height) * 100%);
+  right: calc(-61.15 / var(--section-width) * 100%);
+  width: calc(151.15 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-get__fruit--6 {
+  top: calc(420 / var(--section-height) * 100%);
+  right: calc(43 / var(--section-width) * 100%);
+  width: calc(180 / var(--section-width) * 100%);
+}
+
+.lucky-ticket-get__fruit--7 {
+  display: none;
+}
+
 .footer {
   margin: 0 auto;
   position: relative;
@@ -15739,6 +16182,10 @@ body.color {
   }
 
   .product-express-snack-start .product__fruits--2 {
+    left: 66px;
+  }
+
+  .product-lucky-ticket .product__fruits--2 {
     left: 66px;
   }
 }
@@ -16893,6 +17340,59 @@ body.color {
   }
 
   .product-express-snack-start .product__fruits--9 {
+    top: 950px;
+  }
+
+  .product-lucky-ticket .product__package--1 {
+    width: 400px;
+  }
+
+  .product-lucky-ticket .product__package--2 {
+    width: 400px;
+    top: 500px;
+  }
+
+  .product-lucky-ticket .product__fruits--1 {
+    width: 130px;
+    left: 120px;
+  }
+
+  .product-lucky-ticket .product__fruits--2 {
+    left: 35px;
+  }
+
+  .product-lucky-ticket .product__fruits--3 {
+    top: 1050px;
+    left: 210px;
+  }
+
+  .product-lucky-ticket .product__fruits--4 {
+    top: 1200px;
+    left: 50px;
+  }
+
+  .product-lucky-ticket .product__fruits--5 {
+    top: 1200px;
+    left: 230px;
+  }
+
+  .product-lucky-ticket .product__fruits--6 {
+    top: 500px;
+    right: 303px;
+    width: 70px;
+  }
+
+  .product-lucky-ticket .product__fruits--7 {
+    width: 70px;
+    top: 850px;
+  }
+
+  .product-lucky-ticket .product__fruits--8 {
+    width: 70px;
+    top: 950px;
+  }
+
+  .product-lucky-ticket .product__fruits--9 {
     top: 950px;
   }
 
@@ -18242,6 +18742,59 @@ body.color {
   }
 
   .product-express-snack-start .product__fruits--9 {
+    top: 950px;
+  }
+
+  .product-lucky-ticket .product__package--1 {
+    width: 250px;
+    left: -50px;
+  }
+
+  .product-lucky-ticket .product__package--2 {
+    width: 250px;
+    top: 400px;
+  }
+
+  .product-lucky-ticket .product__fruits--1 {
+    top: 490px;
+  }
+
+  .product-lucky-ticket .product__fruits--2 {
+    left: 21px;
+  }
+
+  .product-lucky-ticket .product__fruits--3 {
+    top: 1050px;
+    left: 210px;
+  }
+
+  .product-lucky-ticket .product__fruits--4 {
+    top: 1200px;
+    left: 50px;
+  }
+
+  .product-lucky-ticket .product__fruits--5 {
+    top: 1200px;
+    left: 230px;
+  }
+
+  .product-lucky-ticket .product__fruits--6 {
+    top: 500px;
+    right: 250px;
+    width: 70px;
+  }
+
+  .product-lucky-ticket .product__fruits--7 {
+    width: 70px;
+    top: 850px;
+  }
+
+  .product-lucky-ticket .product__fruits--8 {
+    width: 70px;
+    top: 950px;
+  }
+
+  .product-lucky-ticket .product__fruits--9 {
     top: 950px;
   }
 
@@ -19991,6 +20544,135 @@ body.color {
     width: 42px;
   }
 
+  .lucky-ticket-top {
+    min-height: 785px;
+  }
+
+  .lucky-ticket-top .top__inner {
+    margin-top: 110px;
+  }
+
+  .lucky-ticket-top__image--1 {
+    display: none;
+  }
+
+  .lucky-ticket-top__image--2 {
+    display: none;
+  }
+
+  .lucky-ticket-top__image--3 {
+    top: 159px;
+    right: -29px;
+    left: auto;
+    width: 56px;
+    -webkit-transform: rotate(31deg);
+        -ms-transform: rotate(31deg);
+            transform: rotate(31deg);
+  }
+
+  .lucky-ticket-top__image--4 {
+    display: none;
+  }
+
+  .lucky-ticket-top__image--5 {
+    top: 650px;
+    left: -18px;
+    width: 125.11px;
+    rotate: -45deg;
+  }
+
+  .lucky-ticket-top__image--6 {
+    display: none;
+  }
+
+  .lucky-ticket-top__image--7 {
+    top: 60.1085481682%;
+    right: auto;
+    left: -25px;
+    width: 70px;
+  }
+
+  .lucky-ticket-top__image--8 {
+    top: 67px;
+    right: auto;
+    left: 10px;
+    width: 46px;
+  }
+
+  .lucky-ticket-top__image--9 {
+    top: 594px;
+    right: -36px;
+    width: 86px;
+  }
+
+  .lucky-ticket-composition__fruit--1 {
+    display: none;
+  }
+
+  .lucky-ticket-composition__fruit--2 {
+    display: none;
+  }
+
+  .lucky-ticket-composition__fruit--3 {
+    display: none;
+  }
+
+  .lucky-ticket-composition__fruit--4 {
+    display: none;
+  }
+
+  .lucky-ticket-composition__fruit--5 {
+    display: none;
+  }
+
+  .lucky-ticket-composition__fruit--6 {
+    display: none;
+  }
+
+  .lucky-ticket-composition__fruit--7 {
+    display: none;
+  }
+
+  .lucky-ticket-get__fruit--1 {
+    top: 76px;
+    right: 17px;
+    left: auto;
+    width: 31px;
+  }
+
+  .lucky-ticket-get__fruit--2 {
+    display: none;
+  }
+
+  .lucky-ticket-get__fruit--3 {
+    top: 624px;
+    right: 7.67px;
+    left: auto;
+    width: 48.33px;
+  }
+
+  .lucky-ticket-get__fruit--4 {
+    display: none;
+  }
+
+  .lucky-ticket-get__fruit--5 {
+    top: 81px;
+    right: auto;
+    left: -19px;
+    width: 61px;
+  }
+
+  .lucky-ticket-get__fruit--6 {
+    display: none;
+  }
+
+  .lucky-ticket-get__fruit--7 {
+    top: 629px;
+    left: -9px;
+    display: block;
+    width: 42px;
+  }
+
   .footer__right {
     right: 3%;
   }
@@ -21007,6 +21689,47 @@ body.color {
   }
 
   .product-express-snack-start .product__fruits--9 {
+    right: 0;
+  }
+
+  .product-lucky-ticket .product__package--1 {
+    width: 200px;
+  }
+
+  .product-lucky-ticket .product__package--2 {
+    top: 350px;
+    width: 200px;
+  }
+
+  .product-lucky-ticket .product__fruits--1 {
+    left: 0;
+  }
+
+  .product-lucky-ticket .product__fruits--2 {
+    display: none;
+  }
+
+  .product-lucky-ticket .product__fruits--3 {
+    left: 0;
+  }
+
+  .product-lucky-ticket .product__fruits--4 {
+    display: none;
+  }
+
+  .product-lucky-ticket .product__fruits--5 {
+    display: none;
+  }
+
+  .product-lucky-ticket .product__fruits--6 {
+    top: 400px;
+  }
+
+  .product-lucky-ticket .product__fruits--8 {
+    display: none;
+  }
+
+  .product-lucky-ticket .product__fruits--9 {
     right: 0;
   }
 
@@ -22326,6 +23049,94 @@ body.color {
     line-height: 16px;
   }
 
+  .lucky-ticket-top .top__head h1 {
+    font-size: 70px;
+    line-height: 64px;
+  }
+
+  .lucky-ticket-top .top__head h1 + p {
+    margin-top: 24px;
+  }
+
+  .lucky-ticket-top .top__head h2 {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.36px;
+  }
+
+  .lucky-ticket-top .top__head h2 + img {
+    margin-top: 15px;
+  }
+
+  .lucky-ticket-top .top__head p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .lucky-ticket-top .top__head p + p {
+    margin-top: 14px;
+  }
+
+  .lucky-ticket-top .top__head p + h2 {
+    margin-top: 16px;
+  }
+
+  .lucky-ticket-composition__head {
+    margin-bottom: 41px;
+  }
+
+  .lucky-ticket-composition__picture img {
+    max-width: 86.0058309038%;
+  }
+
+  .lucky-ticket-composition__subtitle {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 0.52;
+  }
+
+  .lucky-ticket-composition__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .lucky-ticket-get__wrapper {
+    padding-top: 150px;
+  }
+
+  .lucky-ticket-get__title {
+    font-size: 40px;
+    line-height: 75px;
+  }
+
+  .lucky-ticket-get__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .lucky-ticket-get__list {
+    margin-bottom: 18px;
+    padding: 89px 15px 79px;
+    font-size: 16px;
+    line-height: 23px;
+    background-size: auto 100%;
+  }
+
+  .lucky-ticket-get__item {
+    max-width: 80%;
+  }
+
+  .lucky-ticket-get__item:not(:first-child) {
+    margin-top: 15px;
+  }
+
+  .lucky-ticket-get__time {
+    margin-bottom: 18px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   .footer__background svg {
     width: 130%;
     height: auto;
@@ -22493,6 +23304,14 @@ body.color {
   .small-christmas-box-pack__wrapper {
     padding-top: 250px;
   }
+
+  .lucky-ticket-top .top__head h2 {
+    max-width: 300px;
+  }
+
+  .lucky-ticket-get__item {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -22647,6 +23466,12 @@ body.color {
 
   .accordion__bottom ul {
     display: block;
+  }
+}
+
+@media (max-width: 565px) {
+  .lucky-ticket-get__item {
+    max-width: 100%;
   }
 }
 
