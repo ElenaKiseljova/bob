@@ -1,0 +1,263 @@
+.lucky-ticket-get {
+  --section-width: 1280;
+  --section-height: 700;
+
+  display: block;
+
+  width: 100%;
+
+  min-height: calc(var(--section-height) * 1px);
+
+  max-width: unset;
+
+  margin: -80px 0 0;
+
+  padding-top: 80px;
+
+  background-color: transparent;
+
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+
+    width: 100%;
+
+    padding-top: 200px;
+    padding-bottom: 100px;
+
+    @media (max-width: 767px) {
+      padding-top: 150px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    max-width: 692px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 75px;
+
+    text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      font-size: 40px;
+      line-height: 75px;
+    }
+  }
+
+  &__subtitle,
+  &__list {
+    font-family: Circe;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 28px;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    padding: 81px 74px 85px 45px;
+
+    font-size: 22px;
+    line-height: 28px;
+
+    background: center / contain no-repeat
+      url("../img/icons/cloud-lucky-ticket.svg");
+
+    @media (max-width: 767px) {
+      margin-bottom: 18px;
+
+      padding: 89px 15px 79px;
+
+      font-size: 16px;
+      line-height: 23px;
+
+      background-size: auto 100%;
+    }
+  }
+
+  &__item {
+    width: fit-content;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &::before {
+      padding-right: 10px;
+
+      content: "\2022";
+    }
+
+    @media (max-width: 767px) {
+      max-width: 80%;
+
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: 665px) {
+      max-width: 90%;
+    }
+
+    @media (max-width: 565px) {
+      max-width: 100%;
+    }
+  }
+
+  &__time {
+    width: 100%;
+
+    max-width: 585px;
+
+    margin: 0 auto 24px;
+
+    padding: 0 15px;
+
+    font-size: 24px;
+    line-height: 29px;
+
+    text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      margin-bottom: 18px;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    min-width: 172px;
+    min-height: 50px;
+
+    margin: 0 auto;
+
+    padding: 10px 15px;
+  }
+
+  &__fruit {
+    &--1 {
+      top: calc(154 / var(--section-height) * 100%);
+      left: calc(185 / var(--section-width) * 100%);
+
+      width: calc(60 / var(--section-width) * 100%);
+
+      @media (max-width: 1023px) {
+        top: 76px;
+        right: 17px;
+        left: auto;
+
+        width: 31px;
+      }
+    }
+
+    &--2 {
+      top: calc(114 / var(--section-height) * 100%);
+      right: calc(87 / var(--section-width) * 100%);
+
+      width: calc(80 / var(--section-width) * 100%);
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    &--3 {
+      top: calc(494 / var(--section-height) * 100%);
+      left: calc(20 / var(--section-width) * 100%);
+
+      width: calc(86 / var(--section-width) * 100%);
+
+      @media (max-width: 1023px) {
+        top: 624px;
+        right: 7.67px;
+        left: auto;
+
+        width: 48.33px;
+      }
+    }
+
+    &--4 {
+      top: calc(289 / var(--section-height) * 100%);
+      right: calc(189 / var(--section-width) * 100%);
+
+      width: calc(70 / var(--section-width) * 100%);
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    &--5 {
+      top: calc(282 / var(--section-height) * 100%);
+      right: calc(-61.15 / var(--section-width) * 100%);
+
+      width: calc(151.15 / var(--section-width) * 100%);
+
+      @media (max-width: 1023px) {
+        top: 81px;
+        right: auto;
+        left: -19px;
+
+        width: 61px;
+      }
+    }
+
+    &--6 {
+      top: calc(420 / var(--section-height) * 100%);
+      right: calc(43 / var(--section-width) * 100%);
+
+      width: calc(180 / var(--section-width) * 100%);
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    &--7 {
+      display: none;
+
+      @media (max-width: 1023px) {
+        top: 629px;
+        left: -9px;
+
+        display: block;
+
+        width: 42px;
+      }
+    }
+  }
+}
