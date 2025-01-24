@@ -57,7 +57,7 @@ function bob_scripts()
     wp_enqueue_script('card-flip-script', get_template_directory_uri() . '/assets/js/card-flip.js', $deps = array(), $ver = null, $in_footer = true);
   }
 
-  if (is_singular('products') || (is_front_page() && !is_home()) || is_page_template('page-about.php') || is_page_template('page-eat-and-play.php')) {
+  if (is_singular('products') || (is_front_page() && !is_home()) || is_page_template('page-about.php') || is_page_template('page-eat-and-play.php') || is_page_template('page-lucky-ticket.php')) {
     wp_enqueue_script('background-fill-script', get_template_directory_uri() . '/assets/js/background-fill.js', $deps = array(), $ver = null, $in_footer = true);
   }
 

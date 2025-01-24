@@ -3,7 +3,6 @@ $title = get_field('title') ?? '';
 
 $image = get_field('image') ?? [];
 
-
 $subtitle = get_field('subtitle') ?? '';
 $description = get_field('description') ?? '';
 
