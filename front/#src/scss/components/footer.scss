@@ -124,7 +124,7 @@
         display: block;
         text-align: center;
         max-width: 130px;
-        font-family: 'Circe';
+        font-family: "Circe";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -206,15 +206,26 @@
         display: block;
       }
     }
+
     &__fruit {
       display: none;
     }
+
     &__background {
       &-mobile {
         display: block;
+
+        .shelf-health-footer & {
+          fill: #ffffff;
+        }
       }
+
       svg {
         fill: #a3cf44;
+
+        .lucky-ticket-footer & {
+          fill: #fa9ec4;
+        }
       }
     }
 
