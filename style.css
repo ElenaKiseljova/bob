@@ -7,15 +7,15 @@
   Text Domain: bob
 */
 
-@import url('assets/css/style.min.css');
+@import url("assets/css/style.min.css");
 
 * {
   overflow-wrap: normal !important;
 }
 
 .visually-hidden,
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -64,3 +64,101 @@ input[type='radio'].visually-hidden {
   display: none;
 }
 
+.text {
+  padding: 156px 0;
+
+  @media (max-width: 767px) {
+    padding: 90px 0;
+  }
+}
+
+.text__title {
+  margin-bottom: 50px;
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+
+    text-align: left;
+  }
+}
+
+.text__content {
+  font-family: "Circe";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+
+  color: #043314;
+
+  @media (max-width: 767px) {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  * + * {
+    margin-top: 30px;
+
+    @media (max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 700;
+
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 45px;
+    line-height: 50px;
+
+    @media (max-width: 767px) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+
+  h3 {
+    font-size: 35px;
+    line-height: 40px;
+
+    @media (max-width: 767px) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+
+  h4 {
+    font-size: 30px;
+    line-height: 35px;
+
+    @media (max-width: 767px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  h5 {
+    font-size: 25px;
+    line-height: 30px;
+
+    @media (max-width: 767px) {
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
+
+  h6 {
+    font-size: 20px;
+    line-height: 35px;
+
+    @media (max-width: 767px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
