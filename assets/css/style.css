@@ -23166,8 +23166,16 @@ body.color {
     display: block;
   }
 
+  .shelf-health-footer .footer__background-mobile {
+    fill: #ffffff;
+  }
+
   .footer__background svg {
     fill: #a3cf44;
+  }
+
+  .lucky-ticket-footer .footer__background svg {
+    fill: #fa9ec4;
   }
 
   .footer__right {
