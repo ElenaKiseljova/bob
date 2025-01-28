@@ -6,6 +6,8 @@
  */
 ?>
 
+
+
 <?php
 get_header();
 ?>
@@ -33,6 +35,7 @@ else :
 // Do something...
 endif;
 ?>
+
 
 <?php
 get_footer();

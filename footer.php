@@ -9,6 +9,8 @@ $color_background_cloud = get_field('color_background_cloud') && !empty(get_fiel
 // Page templates
 $is_shelf_health = is_page_template('page-shelf-health.php');
 $is_lucy_ticket = is_page_template('page-lucky-ticket.php');
+$is_express_snack_start = is_page_template('single-products-express-snack-start.php');
+$is_express_fruit_start = is_page_template('single-products-express-fruit-start.php');
 
 // Additional list of classes for Footer
 $footer_classes = '';
@@ -17,6 +19,10 @@ if ($is_shelf_health) {
   $footer_classes = 'footer--new shelf-health-footer';
 } else if ($is_lucy_ticket) {
   $footer_classes = 'lucky-ticket-footer';
+} else if ($is_express_snack_start) {
+  $footer_classes = 'express-snack-start-footer';
+} else if ($is_express_fruit_start) {
+  $footer_classes = 'express-fruit-start-footer';
 }
 
 ?>

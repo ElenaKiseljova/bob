@@ -3,7 +3,7 @@ $tabs = get_sub_field('tabs') ?? [];
 $pack = get_sub_field('pack') ?? [];
 ?>
 
-<section class="composition express-fruit-start-composition">
+<article class="composition express-fruit-start-composition">
   <div class="composition__wrapper">
     <div class="container">
       <div class="composition__inner">
@@ -194,4 +194,7 @@ $pack = get_sub_field('pack') ?? [];
     </div>
   <?php endif; ?>
 
-</section>
+  <?php
+  get_template_part('templates/lucky-ticket/section', '', ['class' => 'composition__next',]);
+  ?>
+</article>
