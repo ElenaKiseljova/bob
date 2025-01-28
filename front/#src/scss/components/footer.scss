@@ -215,7 +215,9 @@
       &-mobile {
         display: block;
 
-        .shelf-health-footer & {
+        .shelf-health-footer &,
+        .express-fruit-start-footer &,
+        .express-snack-start-footer & {
           fill: #ffffff;
         }
       }

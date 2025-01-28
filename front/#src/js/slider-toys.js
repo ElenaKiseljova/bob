@@ -1,9 +1,18 @@
 if (window.innerWidth > 1023) {
   let options = {};
+  let sliderToys = null;
+
+  const slidesLength = document.querySelectorAll(
+    ".play__slider .play__slide"
+  ).length;
 
   const btns = document.querySelector(".play__btns");
-  if (document.querySelectorAll(".play__slider .play__slide").length == 1) {
-    btns.style.display = "none";
+
+  if (slidesLength === 1) {
+    if (btns) {
+      btns.style.display = "none";
+    }
+
     options = {
       loop: false,
       navigation: false,
@@ -19,8 +28,11 @@ if (window.innerWidth > 1023) {
         },
       },
     };
-  } else {
-    btns.style.display = "";
+  } else if (slidesLength > 1) {
+    if (btns) {
+      btns.style.display = "";
+    }
+
     options = {
       loop: true,
       navigation: {
@@ -41,5 +53,8 @@ if (window.innerWidth > 1023) {
     };
   }
 
-  const sliderToys = new Swiper(".play__slider", options);
+  // Init only when slider exist
+  if (slidesLength) {
+    sliderToys = new Swiper(".play__slider", options);
+  }
 }
