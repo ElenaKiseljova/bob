@@ -193,8 +193,4 @@ $pack = get_sub_field('pack') ?? [];
       </div>
     </div>
   <?php endif; ?>
-
-  <?php
-  get_template_part('templates/lucky-ticket/section', '', ['class' => 'composition__next',]);
-  ?>
 </article>

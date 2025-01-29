@@ -14537,7 +14537,7 @@ body.color {
   max-width: unset;
   margin: -80px 0 0;
   padding-top: 80px;
-  background: transparent url(../img/lucky-ticket/bg-wave.svg) repeat-x 100px 100%/auto 158px;
+  background-color: transparent;
   overflow: hidden;
 }
 
@@ -20385,11 +20385,6 @@ body.color {
     width: fit-content;
   }
 
-  .express-fruit-start-pack {
-    background-position: 70px 100%;
-    background-size: auto 100px;
-  }
-
   .express-fruit-start-pack__left {
     display: none;
   }
@@ -23151,11 +23146,6 @@ body.color {
     line-height: 16px;
   }
 
-  .express-fruit-start-pack {
-    background-position: 30px 100%;
-    background-size: auto 86px;
-  }
-
   .express-fruit-start-pack__snail-text {
     top: -126%;
     left: 44%;
@@ -23375,7 +23365,6 @@ body.color {
   }
 
   .shelf-health-footer .footer__background-mobile,
-  .express-fruit-start-footer .footer__background-mobile,
   .express-snack-start-footer .footer__background-mobile {
     fill: #ffffff;
   }
